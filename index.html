@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TYRFLibrary & Knowledge</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; }
+    .tab { overflow: auto; background-color: #333; display: flex; flex-wrap: wrap; }
+    .tab button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      color: white;
+      flex: 1;
+    }
+    .tab button:hover { background-color: #444; }
+    .tab button.active { background-color: #007bff; }
+    .tabcontent { display: none; padding: 16px; background-color: white; }
+    .visible { display: block !important; }
+    .gallery-img { height: 100px; margin: 5px; }
+    #languageToggle { margin: 10px; float: right; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;" id="siteTitle">TYRFLibrary & Knowledge</h1>
+  <button id="languageToggle" onclick="toggleLanguage()">తెలుగు</button>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
+    <button class="tablinks" onclick="openTab(event, 'KGtoV')">KG–V</button>
+    <button class="tablinks" onclick="openTab(event, 'VItoX')">VI–X</button>
+    <button class="tablinks" onclick="openTab(event, 'Intermediate')">Intermediate</button>
+    <button class="tablinks" onclick="openTab(event, 'Universities')">Universities</button>
+    <button class="tablinks" onclick="openTab(event, 'Scholarships')">Scholarships</button>
+    <button class="tablinks" onclick="openTab(event, 'LibraryResources')">Library Resources</button>
+    <button class="tablinks" onclick="openTab(event, 'TYRFLibrary')">TYRFLibrary</button>
+    <button class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</button>
+    <button class="tablinks" onclick="openTab(event, 'ContactUs')">Contact Us</button>
+  </div>
+
+  <div id="Overview" class="tabcontent visible">
+    <h3>Overview</h3>
+    <p>Welcome to the TYRFLibrary & Knowledge Portal. This site provides educational resources from KG to PG in Telangana.</p>
+  </div>
+  <div id="KGtoV" class="tabcontent">
+    <h3>KG–V</h3>
+    <ul>
+      <li><a href="https://schooledu.telangana.gov.in/ISMS/" target="_blank">Telangana School Education Portal</a></li>
+      <li><a href="https://diksha.gov.in/" target="_blank">DIKSHA Portal</a></li>
+      <li><a href="https://ncert.nic.in/textbook.php" target="_blank">NCERT Books Online</a></li>
+      <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy (English/Telugu)</a></li>
+      <li><a href="https://epathshala.nic.in/" target="_blank">ePathshala</a></li>
+    </ul>
+  </div>
+  <div id="VItoX" class="tabcontent">
+    <h3>VI–X</h3>
+    <ul>
+      <li><a href="https://scert.telangana.gov.in/" target="_blank">SCERT Telangana</a></li>
+      <li><a href="https://ncert.nic.in/textbook.php" target="_blank">NCERT Books</a></li>
+      <li><a href="https://diksha.gov.in/" target="_blank">DIKSHA Resources</a></li>
+      <li><a href="https://ntpel.ac.in/" target="_blank">NPTEL Lectures</a></li>
+      <li><a href="https://www.olabs.edu.in/" target="_blank">Virtual Labs for Science</a></li>
+    </ul>
+  </div>
+  <div id="Intermediate" class="tabcontent">
+    <h3>Intermediate</h3>
+    <ul>
+      <li><a href="https://tsbie.cgg.gov.in/" target="_blank">TSBIE Official Site</a></li>
+      <li><a href="https://bieap.apcfss.in/" target="_blank">AP Board of Intermediate</a></li>
+      <li><a href="https://sanskrit.nic.in/" target="_blank">Sanskrit Resources</a></li>
+      <li><a href="https://www.nios.ac.in/" target="_blank">NIOS</a></li>
+      <li><a href="https://ndl.iitkgp.ac.in/" target="_blank">National Digital Library</a></li>
+    </ul>
+  </div>
+  <div id="Universities" class="tabcontent">
+    <h3>Universities</h3>
+    <ul>
+      <li><a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a></li>
+      <li><a href="https://www.jntuh.ac.in/" target="_blank">JNTU Hyderabad</a></li>
+      <li><a href="https://kakatiya.ac.in/" target="_blank">Kakatiya University</a></li>
+      <li><a href="https://www.telanganauniversity.ac.in/" target="_blank">Telangana University</a></li>
+      <li><a href="https://www.mguniversity.ac.in/" target="_blank">MG University</a></li>
+    </ul>
+  </div>
+  <div id="Scholarships" class="tabcontent">
+    <h3>Scholarships</h3>
+    <ul>
+      <li><a href="https://telanganaepass.cgg.gov.in/" target="_blank">TS ePASS</a></li>
+      <li><a href="https://scholarships.gov.in/" target="_blank">National Scholarship Portal</a></li>
+      <li><a href="https://vidyasaarathi.co.in/" target="_blank">Vidyasaarathi</a></li>
+      <li><a href="https://www.sitaramjindalfoundation.org/scholarships/" target="_blank">Sitaram Jindal Foundation</a></li>
+      <li><a href="https://www.buddy4study.com/" target="_blank">Buddy4Study</a></li>
+    </ul>
+  </div>
+  <div id="LibraryResources" class="tabcontent">
+    <h3>Library Resources</h3>
+    <p>Explore resources such as books, e-books, journals, question banks, magazines, and online PCs access available in Telangana libraries.</p>
+  </div>
+  <div id="TYRFLibrary" class="tabcontent">
+    <h3>TYRFLibrary Resources</h3>
+    <ul>
+      <li>Books: 2500+ across subjects</li>
+      <li>Magazines: Yojana, Science Reporter, Competition Success</li>
+      <li>Computers: 15 with internet access</li>
+      <li>Digital access to NDL and INFLIBNET</li>
+      <li>Reading Room available (9 AM – 8 PM)</li>
+    </ul>
+  </div>
+  <div id="Gallery" class="tabcontent">
+    <h3>Gallery</h3>
+    <div id="galleryContainer"></div>
+  </div>
+  <div id="ContactUs" class="tabcontent">
+    <h3>Contact Us</h3>
+    <p>Email: contact@tyrflibrary.org<br>Phone: +91-9876543210<br>Address: TYRF Campus, Telangana</p>
+  </div>
+
+  <script>
+    const images = ["gallery1.jpg", "gallery2.jpg", "gallery3.jpg"];
+    const galleryDiv = document.getElementById("galleryContainer");
+    images.forEach(img => {
+      const image = document.createElement("img");
+      image.src = "gallery/" + img;
+      image.className = "gallery-img";
+      galleryDiv.appendChild(image);
+    });
+
+    function openTab(evt, tabName) {
+      const tabcontent = document.getElementsByClassName("tabcontent");
+      for (let i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
+      const tablinks = document.getElementsByClassName("tablinks");
+      for (let i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    function toggleLanguage() {
+      const langBtn = document.getElementById("languageToggle");
+      const siteTitle = document.getElementById("siteTitle");
+      const current = langBtn.textContent.trim();
+      if (current === "తెలుగు") {
+        langBtn.textContent = "English";
+        siteTitle.textContent = "టైరఫ్ లైబ్రరీ & నోలెడ్జ్";
+      } else {
+        langBtn.textContent = "తెలుగు";
+        siteTitle.textContent = "TYRFLibrary & Knowledge";
+      }
+    }
+  </script>
+</body>
+</html>
