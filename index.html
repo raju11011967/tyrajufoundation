@@ -36,7 +36,6 @@
     <button onclick="openTab('sainik')">Sainik Schools</button>
     <button onclick="openTab('gallery')">Gallery</button>
   </nav>
-
   <div id="kgv" class="tab-content">
     <h2>KG–V Schools in Telangana</h2>
     <a href="https://school.edu.telangana.gov.in/KGV1">Anganwadi Directory</a>
@@ -50,7 +49,6 @@
     <a href="https://www.tssa.telangana.gov.in">SSA Telangana</a>
     <a href="https://play.google.com/store/apps/details?id=com.eschool.ts">eSchool App</a>
   </div>
-
   <div id="vix" class="tab-content">
     <h2>VI–X Schools in Telangana</h2>
     <a href="https://schooledu.telangana.gov.in">School Education Dept</a>
@@ -64,7 +62,6 @@
     <a href="https://samagra.telangana.gov.in">Samagra Shiksha</a>
     <a href="https://play.google.com/store/apps/details?id=in.gov.tgscert">SCERT App</a>
   </div>
-
   <div id="intermediate" class="tab-content">
     <h2>Intermediate Colleges</h2>
     <a href="https://tsbie.cgg.gov.in">TSBIE Official</a>
@@ -78,7 +75,6 @@
     <a href="https://manabadi.co.in">Manabadi</a>
     <a href="https://bie.tg.nic.in">Intermediate Updates</a>
   </div>
-
   <div id="universities" class="tab-content">
     <h2>Universities</h2>
     <a href="https://www.osmania.ac.in/">Osmania University</a>
@@ -92,7 +88,6 @@
     <a href="https://www.palamuruuniversity.ac.in/">Palamuru University</a>
     <a href="https://www.braou.ac.in/">BRAOU</a>
   </div>
-
   <div id="scholarships" class="tab-content">
     <h2>Scholarships</h2>
     <a href="https://scholarships.gov.in">NSP Portal</a>
@@ -106,7 +101,6 @@
     <a href="https://education.gov.in/scholarships">MHRD Scholarships</a>
     <a href="https://ssp.postmatric.karnataka.gov.in">SSP Postmatric</a>
   </div>
-
   <div id="library" class="tab-content">
     <h2>Library Resources</h2>
     <a href="https://ndl.iitkgp.ac.in">National Digital Library</a>
@@ -120,7 +114,6 @@
     <a href="https://ndl.gov.in">NDL Portal</a>
     <a href="https://libguides.tedu.in">Telangana EDU Lib</a>
   </div>
-
   <div id="admissions" class="tab-content">
     <h2>Admissions</h2>
     <a href="https://tsbie.cgg.gov.in">Intermediate Admissions</a>
@@ -134,7 +127,6 @@
     <a href="https://tspolycet.nic.in">TS POLYCET</a>
     <a href="https://tsparamed.tsche.in">Paramedical</a>
   </div>
-
   <div id="gurukulas" class="tab-content">
     <h2>Gurukulas</h2>
     <a href="https://tgtwgurukulam.telangana.gov.in">Tribal Gurukulam</a>
@@ -148,7 +140,6 @@
     <a href="https://tgtwgurukulam.telangana.gov.in/notifications">Notifications</a>
     <a href="https://mjptbcwreis.telangana.gov.in/studentLogin">Student Login</a>
   </div>
-
   <div id="sainik" class="tab-content">
     <h2>Sainik Schools</h2>
     <a href="https://sainikschooltvm.nic.in">Sainik School TVM</a>
@@ -162,26 +153,22 @@
     <a href="https://sainikschoolamaravathinagar.edu.in">Amaravathi Nagar</a>
     <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
   </div>
-
   <div id="gallery" class="tab-content">
     <h2>Gallery</h2>
     <input type="file" id="fileInput" multiple accept="image/*,video/*" />
     <div id="galleryContainer"></div>
   </div>
-
   <script>
     function openTab(id) {
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
-
     function toggleLanguage() {
       const buttons = document.querySelectorAll("nav button");
       buttons.forEach(btn => {
         btn.textContent = translateLabel(btn.textContent);
       });
     }
-
     function translateLabel(text) {
       const telugu = {
         "KG–V": "కెజి–ఐదు",
@@ -197,7 +184,6 @@
       };
       return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
     }
-
     document.getElementById('fileInput').addEventListener('change', function (event) {
       const gallery = document.getElementById('galleryContainer');
       Array.from(event.target.files).forEach(file => {
