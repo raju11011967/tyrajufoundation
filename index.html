@@ -152,12 +152,32 @@
     <a href="https://sainikschoolrewa.ac.in">Rewa Sainik</a>
     <a href="https://sainikschoolamaravathinagar.edu.in">Amaravathi Nagar</a>
     <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
-  </div>
-  <div id="gallery" class="tab-content">
-    <h2>Gallery</h2>
-    <input type="file" id="fileInput" multiple accept="image/*,video/*" />
-    <div id="galleryContainer"></div>
-  </div>
+  <!-- Gallery Upload Form -->
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  <input type="file" name="mediaFile" required>
+  <button type="submit">Upload</button>
+</form>
+<!-- Display Gallery -->
+<div id="gallery">
+  <?php
+    $files = array_diff(scandir('gallery_uploads'), ['.', '..']);
+    foreach ($files as $file) {
+      $filePath = 'gallery_uploads/' . $file;
+      $isVideo = preg_match('/\.(mp4|webm|ogg)$/i', $file);
+      echo '<div style="margin: 10px 0;">';
+      if ($isVideo) {
+        echo "<video width='320' controls><source src='$filePath' type='video/mp4'></video>";
+      } else {
+        echo "<img src='$filePath' width='200'>";
+      }
+      echo "<form action='delete.php' method='post' style='display:inline;'>
+              <input type='hidden' name='file' value='$file'>
+              <button type='submit' onclick=\"return confirm('Delete this file?')\">Delete</button>
+            </form>";
+      echo '</div>';
+    }
+  ?>
+</div>
   <script>
     function openTab(id) {
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
