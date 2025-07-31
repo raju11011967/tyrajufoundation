@@ -1,117 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Telangana Education Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Include your CSS and JS for tabs, Telugu toggle -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Telangana Education Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      background: #0078D7;
+    }
+    .tabs button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      background: #0078D7;
+      color: white;
+      cursor: pointer;
+    }
+    .tabs button:hover,
+    .tabs button.active {
+      background: #005A9E;
+    }
+    .tab-content {
+      display: none;
+      padding: 16px;
+      background: white;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    #gallery-preview img {
+      max-width: 100px;
+      margin: 5px;
+    }
+    #toggle-lang {
+      float: right;
+      margin: 10px;
+      padding: 6px 12px;
+      background: #FF8800;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
+  <button id="toggle-lang">తెలుగు</button>
 
-<!-- Language toggle button -->
-<button id="toggle-lang">తెలుగు / English</button>
+  <div class="tabs">
+    <button class="tab-link active" data-tab="overview">Overview</button>
+    <button class="tab-link" data-tab="kgv">KG–V</button>
+    <button class="tab-link" data-tab="vix">VI–X</button>
+    <button class="tab-link" data-tab="inter">Intermediate</button>
+    <button class="tab-link" data-tab="unis">Universities</button>
+    <button class="tab-link" data-tab="scholar">Scholarships</button>
+    <button class="tab-link" data-tab="library">Library</button>
+    <button class="tab-link" data-tab="admission">Admissions</button>
+    <button class="tab-link" data-tab="gurukula">Gurukulas</button>
+    <button class="tab-link" data-tab="sainik">Sainik Schools</button>
+    <button class="tab-link" data-tab="gallery">Gallery</button>
+    <button class="tab-link" data-tab="contact">Contact Us</button>
+    <button class="tab-link" data-tab="tyrf">TYRFLibrary</button>
+  </div>
 
-<!-- Tab headers -->
-<ul class="tabs">
-  <li data-target="kgv">KG–V</li>
-  <li data-target="vi_x">VI–X</li>
-  <li data-target="inter">Intermediate</li>
-  <li data-target="unis">Universities</li>
-  <li data-target="scholar">Scholarships</li>
-  <li data-target="library">Library Resources</li>
-  <li data-target="admission">Admissions</li>
-  <li data-target="gurukula">Gurukulas</li>
-  <li data-target="sainik">Sainik Schools</li>
-  <li data-target="gallery">Gallery</li>
-  <li data-target="contact">Contact Us</li>
-  <li data-target="tyrf">TYRF Library</li>
-</ul>
+  <div id="overview" class="tab-content active">
+    <h2>Welcome to Telangana Education Portal</h2>
+    <p>This portal provides access to educational resources from KG to PG in Telangana. Explore schools, colleges, scholarships, and digital libraries.</p>
+  </div>
 
-<!-- Tab contents -->
-<div id="kgv" class="tab-content">
-  <h2>Primary Education (KG–Class V)</h2>
-  <ul>
-    <li><a href="https://schooledu.telangana.gov.in/SCHOOLEDUCATION/" target="_blank">Telangana School Education (ISMS Portal)</a></li>
-    <li><a href="https://play.google.com/store/apps/details?id=com.ap.diksha&hl=en_IN" target="_blank">DIKSHA – KG‑5 Digital Learning Platform</a></li>
-    <li><a href="https://kys.udiseplus.gov.in/" target="_blank">Know Your School – Telangana U‑DISE School Finder</a></li>
-  </ul>
-</div>
+  <div id="kgv" class="tab-content">
+    <h2>KG–V</h2>
+    <ul>
+      <li><a href="https://schooledu.telangana.gov.in/" target="_blank">Telangana School Education Dept</a></li>
+      <li><a href="https://diksha.gov.in/" target="_blank">DIKSHA Platform for Young Learners</a></li>
+      <li><a href="https://pmposhan.education.gov.in/" target="_blank">Mid-Day Meal Program</a></li>
+    </ul>
+  </div>
 
-<div id="vi_x" class="tab-content" style="display:none;">
-  <h2>Secondary Education (VI–Class X)</h2>
-  <ul>
-    <li><a href="https://bse.telangana.gov.in/Index.aspx" target="_blank">Board of Secondary Education Telangana (SSC)</a></li>
-    <li><a href="https://en.vikaspedia.in/viewcontent/education/education‑best‑practices/remote‑learning‑initiatives‑in‑telangana/remote‑learning‑initiatives‑in‑telangana" target="_blank">Digital & Remote Learning Initiatives</a></li>
-  </ul>
-</div>
+  <div id="vix" class="tab-content">
+    <h2>VI–X</h2>
+    <ul>
+      <li><a href="https://bse.telangana.gov.in/" target="_blank">Board of Secondary Education</a></li>
+      <li><a href="https://scert.telangana.gov.in/" target="_blank">SCERT Telangana</a></li>
+    </ul>
+  </div>
 
-<div id="inter" class="tab-content" style="display:none;">
-  <h2>Intermediate (Class XI–XII)</h2>
-  <ul>
-    <li><a href="https://ccetg.cgg.gov.in/" target="_blank">CCE – Collegiate & Technical Education Dept Telangana</a></li>
-  </ul>
-</div>
+  <div id="inter" class="tab-content">
+    <h2>Intermediate</h2>
+    <ul>
+      <li><a href="https://tsbie.cgg.gov.in/" target="_blank">TSBIE - Intermediate Board</a></li>
+      <li><a href="https://bie.tg.nic.in/" target="_blank">Intermediate Public Exams Info</a></li>
+    </ul>
+  </div>
 
-<div id="unis" class="tab-content" style="display:none;">
-  <h2>Universities & Open Learning</h2>
-  <ul>
-    <li><a href="https://dost.cgg.gov.in" target="_blank">DOST – Degree Online Services Telangana</a></li>
-    <li><a href="https://braou.ac.in" target="_blank">Dr. B. R. Ambedkar Open University (TOSS)</a></li>
-    <li><a href="https://www.telanganaopenschool.org/" target="_blank">Telangana Open School Society (TOSS)</a></li>
-  </ul>
-</div>
+  <div id="unis" class="tab-content">
+    <h2>Universities</h2>
+    <ul>
+      <li><a href="https://dost.cgg.gov.in/" target="_blank">DOST Admission Portal</a></li>
+      <li><a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a></li>
+      <li><a href="https://www.braou.ac.in/" target="_blank">BRAOU – Open University</a></li>
+    </ul>
+  </div>
+  <div id="scholar" class="tab-content">
+    <h2>Scholarships</h2>
+    <ul>
+      <li><a href="https://telanganaepass.cgg.gov.in/" target="_blank">ePASS Scholarship Portal</a></li>
+      <li><a href="https://scholarships.gov.in/" target="_blank">National Scholarship Portal (NSP)</a></li>
+      <li><a href="https://minority.telangana.gov.in/" target="_blank">Minority Welfare Scholarships</a></li>
+    </ul>
+  </div>
 
-<div id="scholar" class="tab-content" style="display:none;">
-  <h2>Scholarships & Financial Aid</h2>
-  <ul>
-    <li><a href="https://telanganaepass.cgg.gov.in/" target="_blank">Telangana ePASS Scholarship Portal (Pre, Post & Overseas)</a></li>
-    <li><a href="https://telanganaepass.cgg.gov.in/OverseasLinks.do" target="_blank">Overseas Scholarship Schemes (AOVN / Minority / MJPOVN)</a></li>
-    <li><a href="https://services.india.gov.in/service/detail/telangana--student‑scholarship‑application‑form‑fresh" target="_blank">NSP / Student Scholarship via MeeSeva</a></li>
-  </ul>
-</div>
+  <div id="library" class="tab-content">
+    <h2>Library Resources</h2>
+    <ul>
+      <li><a href="https://ndl.iitkgp.ac.in/" target="_blank">National Digital Library</a></li>
+      <li><a href="https://epathshala.nic.in/" target="_blank">ePathshala - Textbooks & eContent</a></li>
+      <li><a href="https://diksha.gov.in/" target="_blank">DIKSHA Library</a></li>
+    </ul>
+  </div>
 
-<div id="library" class="tab-content" style="display:none;">
-  <h2>Library Resources & Textbooks</h2>
-  <ul>
-    <li><a href="https://schooledu.telangana.gov.in/SCHOOLEDUCATION/" target="_blank">Telangana School Education Dept – ISMS Digital Library</a></li>
-    <li><a href="https://en.vikaspedia.in/viewcontent/education/education‑best‑practices/remote‑learning‑initiatives‑in‑telangana/remote‑learning‑initiatives‑in‑telangana" target="_blank">DIKSHA Content & Remote‑Learning Tools</a></li>
-  </ul>
-</div>
+  <div id="admission" class="tab-content">
+    <h2>Admissions</h2>
+    <ul>
+      <li><a href="https://dost.cgg.gov.in/" target="_blank">Degree Admissions (DOST)</a></li>
+      <li><a href="https://toss.cgg.gov.in/" target="_blank">Open School Admissions (TOSS)</a></li>
+    </ul>
+  </div>
 
-<div id="admission" class="tab-content" style="display:none;">
-  <h2>Admissions</h2>
-  <ul>
-    <li><a href="https://dost.cgg.gov.in" target="_blank">DOST – Degree College Admissions</a></li>
-    <li><a href="https://www.telanganaopenschool.org/" target="_blank">TOSS Admissions (Open & Distance Learning)</a></li>
-  </ul>
-</div>
+  <div id="gurukula" class="tab-content">
+    <h2>Gurukulas</h2>
+    <ul>
+      <li><a href="https://tgtwgurukulam.telangana.gov.in/" target="_blank">Telangana Tribal Welfare Gurukulam</a></li>
+      <li><a href="https://mjptbcwreis.telangana.gov.in/" target="_blank">MJPTBC Gurukula Admissions</a></li>
+    </ul>
+  </div>
 
-<div id="gurukula" class="tab-content" style="display:none;">
-  <h2>Gurukula / Tribal Residential Schools</h2>
-  <ul>
-    <li><a href="https://services.india.gov.in/service/detail/telangana-department-of-school-education-a-school-registration-application-form-1" target="_blank">Tribal Welfare Schools / ITDA Link</a></li>
-  </ul>
-</div>
+  <div id="sainik" class="tab-content">
+    <h2>Sainik Schools</h2>
+    <ul>
+      <li><a href="https://sainikschooladmission.in/" target="_blank">All India Sainik School Admissions</a></li>
+      <li><a href="https://sainikschoolkakapathar.org/" target="_blank">Example Sainik School (Kakapathar)</a></li>
+    </ul>
+  </div>
 
-<div id="sainik" class="tab-content" style="display:none;">
-  <h2>Sainik Schools</h2>
-  <p>(Links to state or Central Sainik School admissions pages can be added if available)</p>
-</div>
+  <div id="gallery" class="tab-content">
+    <h2>Gallery</h2>
+    <input type="file" id="imageUpload" multiple accept="image/*" />
+    <div id="gallery-preview"></div>
+  </div>
 
-<div id="gallery" class="tab-content" style="display:none;">
-  <h2>Gallery</h2>
-  <p>— Your image upload widget / gallery fix should go here —</p>
-</div>
+  <div id="contact" class="tab-content">
+    <h2>Contact Us</h2>
+    <p>Email: info@telanganaedu.in</p>
+    <p>Phone: +91-12345-67890</p>
+    <p>Address: Hyderabad, Telangana, India</p>
+  </div>
 
-<div id="contact" class="tab-content" style="display:none;">
-  <h2>Contact Us</h2>
-  <p>— Include address, emails, phone numbers here —</p>
-</div>
+  <div id="tyrf" class="tab-content">
+    <h2>TYRFLibrary</h2>
+    <ul>
+      <li><a href="https://tyrf.org/library" target="_blank">Visit TYRF Digital Library</a></li>
+    </ul>
+  </div>
 
-<div id="tyrf" class="tab-content" style="display:none;">
-  <h2>TYRFLibrary</h2>
-  <p>— Embed or link to TYRF Library content or portal here —</p>
-</div>
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
 
+    // Telugu toggle
+    let telugu = false;
+    document.getElementById('toggle-lang').addEventListener('click', () => {
+      telugu = !telugu;
+      document.getElementById('toggle-lang').innerText = telugu ? 'English' : 'తెలుగు';
+
+      const translations = {
+        "Overview": "అవలోకనం",
+        "KG–V": "కేజీ - 5వ తరగతి",
+        "VI–X": "6వ - 10వ తరగతి",
+        "Intermediate": "ఇంటర్మీడియట్",
+        "Universities": "విశ్వవిద్యాలయాలు",
+        "Scholarships": "స్కాలర్షిప్లు",
+        "Library": "గ్రంథాలయం",
+        "Admissions": "అడ్మిషన్లు",
+        "Gurukulas": "గురుకులాలు",
+        "Sainik Schools": "సైనిక్ పాఠశాలలు",
+        "Gallery": "గ్యాలరీ",
+        "Contact Us": "మమ్మల్ని సంప్రదించండి",
+        "TYRFLibrary": "టిఐఆర్‌ఎఫ్ లైబ్రరీ"
+      };
+
+      tabs.forEach(tab => {
+        const key = tab.textContent.trim();
+        tab.textContent = telugu ? translations[key] || key : Object.keys(translations).find(k => translations[k] === key) || key;
+      });
+    });
+
+    // Gallery Upload Preview
+    document.getElementById('imageUpload').addEventListener('change', function () {
+      const preview = document.getElementById('gallery-preview');
+      preview.innerHTML = '';
+      Array.from(this.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          preview.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+  </script>
 </body>
 </html>
