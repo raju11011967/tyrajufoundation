@@ -3,70 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Telangana Education Portal</title>
+  <title>TY RAJU FOUNDATION</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e6f0ff;
-      color: #003366;
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #0059b3;
-    }
-    nav button {
-      flex: 1;
-      padding: 10px;
-      background: #0059b3;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    nav button:hover, nav button.active {
-      background-color: #003d66;
-    }
-    section {
-      display: none;
-      padding: 20px;
-    }
-    section.active {
-      display: block;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-    ul li a {
-      color: #003366;
-      text-decoration: none;
-    }
-    ul li a:hover {
-      text-decoration: underline;
-    }
-    .gallery img {
-      max-width: 100px;
-      margin: 5px;
-    }
+    body { font-family: Arial, sans-serif; background-color: #e8f0ff; margin: 0; padding: 0; }
+    header { background-color: #004080; color: white; padding: 1rem; text-align: center; }
+    nav { display: flex; flex-wrap: wrap; background-color: #0066cc; justify-content: center; }
+    nav button { background: none; color: white; border: none; padding: 1rem; cursor: pointer; }
+    nav button:hover, nav button.active { background-color: #004080; }
+    .tab-content { display: none; padding: 1rem; }
+    .tab-content.active { display: block; }
+    a { color: #003366; text-decoration: none; display: block; margin: 0.5rem 0; }
+    .lang-toggle { float: right; background: #004080; color: white; border: none; padding: 0.5rem; margin-top: -3rem; margin-right: 1rem; cursor: pointer; }
+    .gallery img { max-width: 100px; margin: 0.5rem; display: inline-block; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Telangana Education Portal - TYRFLibrary</h1>
-    <button onclick="toggleLang()">తెలుగు / English</button>
+    <h1>Telangana Education Portal</h1>
+    <button class="lang-toggle" onclick="toggleLanguage()">తెలుగు</button>
   </header>
-  <nav>
-    <button onclick="openTab('kg')">KG–V</button>
-    <button onclick="openTab('vi-x')">VI–X</button>
+  <nav id="tabs">
+    <button onclick="openTab('kgv')">KG–V</button>
+    <button onclick="openTab('vix')">VI–X</button>
     <button onclick="openTab('intermediate')">Intermediate</button>
     <button onclick="openTab('universities')">Universities</button>
     <button onclick="openTab('scholarships')">Scholarships</button>
@@ -77,203 +35,160 @@
     <button onclick="openTab('gallery')">Gallery</button>
   </nav>
 
-  <section id="kg" class="active">
-    <h2>KG–V</h2>
-    <ul>
-      <li><a href="https://www.kgschools.org/school1" target="_blank">School 1</a></li>
-      <li><a href="https://www.kgschools.org/school2" target="_blank">School 2</a></li>
-      <li><a href="https://www.kgschools.org/school3" target="_blank">School 3</a></li>
-      <li><a href="https://www.kgschools.org/school4" target="_blank">School 4</a></li>
-      <li><a href="https://www.kgschools.org/school5" target="_blank">School 5</a></li>
-      <li><a href="https://www.kgschools.org/school6" target="_blank">School 6</a></li>
-      <li><a href="https://www.kgschools.org/school7" target="_blank">School 7</a></li>
-      <li><a href="https://www.kgschools.org/school8" target="_blank">School 8</a></li>
-      <li><a href="https://www.kgschools.org/school9" target="_blank">School 9</a></li>
-      <li><a href="https://www.kgschools.org/school10" target="_blank">School 10</a></li>
-    </ul>
-  </section>
-  
-  <section id="vi-x">
-    <h2>VI–X</h2>
-    <ul>
-      <li><a href="#" target="_blank">High School 1</a></li>
-      <li><a href="#" target="_blank">High School 2</a></li>
-      <li><a href="#" target="_blank">High School 3</a></li>
-      <li><a href="#" target="_blank">High School 4</a></li>
-      <li><a href="#" target="_blank">High School 5</a></li>
-      <li><a href="#" target="_blank">High School 6</a></li>
-      <li><a href="#" target="_blank">High School 7</a></li>
-      <li><a href="#" target="_blank">High School 8</a></li>
-      <li><a href="#" target="_blank">High School 9</a></li>
-      <li><a href="#" target="_blank">High School 10</a></li>
-    </ul>
-  </section>
+  <div id="kgv" class="tab-content active">
+    <h2>KG–V Schools in Telangana</h2>
+    <a href="https://www.telangana.gov.in/KGV1" target="_blank">KGV School 1</a>
+    <a href="https://www.telangana.gov.in/KGV2" target="_blank">KGV School 2</a>
+    <a href="https://www.telangana.gov.in/KGV3" target="_blank">KGV School 3</a>
+    <a href="https://www.telangana.gov.in/KGV4" target="_blank">KGV School 4</a>
+    <a href="https://www.telangana.gov.in/KGV5" target="_blank">KGV School 5</a>
+    <a href="https://www.telangana.gov.in/KGV6" target="_blank">KGV School 6</a>
+    <a href="https://www.telangana.gov.in/KGV7" target="_blank">KGV School 7</a>
+    <a href="https://www.telangana.gov.in/KGV8" target="_blank">KGV School 8</a>
+    <a href="https://www.telangana.gov.in/KGV9" target="_blank">KGV School 9</a>
+    <a href="https://www.telangana.gov.in/KGV10" target="_blank">KGV School 10</a>
+  </div>
 
-  <section id="intermediate">
-    <h2>Intermediate</h2>
-    <ul>
-      <li><a href="#" target="_blank">Junior College 1</a></li>
-      <li><a href="#" target="_blank">Junior College 2</a></li>
-      <li><a href="#" target="_blank">Junior College 3</a></li>
-      <li><a href="#" target="_blank">Junior College 4</a></li>
-      <li><a href="#" target="_blank">Junior College 5</a></li>
-      <li><a href="#" target="_blank">Junior College 6</a></li>
-      <li><a href="#" target="_blank">Junior College 7</a></li>
-      <li><a href="#" target="_blank">Junior College 8</a></li>
-      <li><a href="#" target="_blank">Junior College 9</a></li>
-      <li><a href="#" target="_blank">Junior College 10</a></li>
-    </ul>
-  </section>
+  <div id="vix" class="tab-content">
+    <h2>VI–X Schools in Telangana</h2>
+    <a href="https://schooledu.telangana.gov.in/1" target="_blank">School 1</a>
+    <a href="https://schooledu.telangana.gov.in/2" target="_blank">School 2</a>
+    <a href="https://schooledu.telangana.gov.in/3" target="_blank">School 3</a>
+    <a href="https://schooledu.telangana.gov.in/4" target="_blank">School 4</a>
+    <a href="https://schooledu.telangana.gov.in/5" target="_blank">School 5</a>
+    <a href="https://schooledu.telangana.gov.in/6" target="_blank">School 6</a>
+    <a href="https://schooledu.telangana.gov.in/7" target="_blank">School 7</a>
+    <a href="https://schooledu.telangana.gov.in/8" target="_blank">School 8</a>
+    <a href="https://schooledu.telangana.gov.in/9" target="_blank">School 9</a>
+    <a href="https://schooledu.telangana.gov.in/10" target="_blank">School 10</a>
+  </div>
 
-  <section id="universities">
+  <div id="intermediate" class="tab-content">
+    <h2>Intermediate Colleges</h2>
+    <a href="https://tsbie.cgg.gov.in/institute1" target="_blank">College 1</a>
+    <a href="https://tsbie.cgg.gov.in/institute2" target="_blank">College 2</a>
+    <a href="https://tsbie.cgg.gov.in/institute3" target="_blank">College 3</a>
+    <a href="https://tsbie.cgg.gov.in/institute4" target="_blank">College 4</a>
+    <a href="https://tsbie.cgg.gov.in/institute5" target="_blank">College 5</a>
+    <a href="https://tsbie.cgg.gov.in/institute6" target="_blank">College 6</a>
+    <a href="https://tsbie.cgg.gov.in/institute7" target="_blank">College 7</a>
+    <a href="https://tsbie.cgg.gov.in/institute8" target="_blank">College 8</a>
+    <a href="https://tsbie.cgg.gov.in/institute9" target="_blank">College 9</a>
+    <a href="https://tsbie.cgg.gov.in/institute10" target="_blank">College 10</a>
+  </div>
+
+  <div id="universities" class="tab-content">
     <h2>Universities</h2>
-    <ul>
-      <li><a href="https://www.osmania.ac.in" target="_blank">Osmania University</a></li>
-      <li><a href="https://www.jntuh.ac.in" target="_blank">JNTU Hyderabad</a></li>
-      <li><a href="https://www.kakatiya.ac.in" target="_blank">Kakatiya University</a></li>
-      <li><a href="https://www.telanganauniversity.ac.in" target="_blank">Telangana University</a></li>
-      <li><a href="https://www.mguniversity.ac.in" target="_blank">Mahatma Gandhi University</a></li>
-      <li><a href="https://www.satuniversity.ac.in" target="_blank">Satavahana University</a></li>
-      <li><a href="https://www.brabupraengg.ac.in" target="_blank">BRAOU</a></li>
-      <li><a href="https://www.pjtsau.edu.in" target="_blank">PJTSAU</a></li>
-      <li><a href="https://www.skltshu.ac.in" target="_blank">SKLTSHU</a></li>
-      <li><a href="https://www.rgukt.ac.in" target="_blank">RGUKT Basar</a></li>
-    </ul>
-  </section>
+    <a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a>
+    <a href="https://kakatiya.ac.in/" target="_blank">Kakatiya University</a>
+    <a href="https://www.jntuh.ac.in/" target="_blank">JNTU Hyderabad</a>
+    <a href="https://www.uohyd.ac.in/" target="_blank">University of Hyderabad</a>
+    <a href="https://www.mguniversity.ac.in/" target="_blank">MG University</a>
+    <a href="https://www.telanganauniversity.ac.in/" target="_blank">Telangana University</a>
+    <a href="https://www.pjtsau.edu.in/" target="_blank">PJTS Agricultural University</a>
+    <a href="https://www.satavahana.ac.in/" target="_blank">Satavahana University</a>
+    <a href="https://www.palamuruuniversity.ac.in/" target="_blank">Palamuru University</a>
+    <a href="https://www.braou.ac.in/" target="_blank">BRAOU</a>
+  </div>
 
-  <section id="scholarships">
+  <div id="scholarships" class="tab-content">
     <h2>Scholarships</h2>
-    <ul>
-      <li><a href="#" target="_blank">Scholarship 1</a></li>
-      <li><a href="#" target="_blank">Scholarship 2</a></li>
-      <li><a href="#" target="_blank">Scholarship 3</a></li>
-      <li><a href="#" target="_blank">Scholarship 4</a></li>
-      <li><a href="#" target="_blank">Scholarship 5</a></li>
-      <li><a href="#" target="_blank">Scholarship 6</a></li>
-      <li><a href="#" target="_blank">Scholarship 7</a></li>
-      <li><a href="#" target="_blank">Scholarship 8</a></li>
-      <li><a href="#" target="_blank">Scholarship 9</a></li>
-      <li><a href="#" target="_blank">Scholarship 10</a></li>
-    </ul>
-  </section>
+    <a href="https://telanganaepass.cgg.gov.in/" target="_blank">ePASS Scholarship</a>
+    <a href="https://scholarships.gov.in/" target="_blank">National Scholarship Portal</a>
+    <a href="https://www.nsp.gov.in/" target="_blank">NSP Schemes</a>
+    <a href="https://ugc.ac.in/" target="_blank">UGC Scholarships</a>
+    <a href="https://education.gov.in/" target="_blank">Ministry of Education Schemes</a>
+    <a href="https://www.buddy4study.com/" target="_blank">Buddy4Study Portal</a>
+    <a href="https://vidyasaarathi.co.in/" target="_blank">Vidyasaarathi</a>
+    <a href="https://www.aicte-india.org/schemes" target="_blank">AICTE Scholarships</a>
+    <a href="https://dst.gov.in/" target="_blank">DST INSPIRE</a>
+    <a href="https://scholarshiparena.in/" target="_blank">Scholarship Arena</a>
+  </div>
 
-  <section id="library">
+  <div id="library" class="tab-content">
     <h2>Library Resources</h2>
-    <ul>
-      <li><a href="#" target="_blank">Library Link 1</a></li>
-      <li><a href="#" target="_blank">Library Link 2</a></li>
-      <li><a href="#" target="_blank">Library Link 3</a></li>
-      <li><a href="#" target="_blank">Library Link 4</a></li>
-      <li><a href="#" target="_blank">Library Link 5</a></li>
-      <li><a href="#" target="_blank">Library Link 6</a></li>
-      <li><a href="#" target="_blank">Library Link 7</a></li>
-      <li><a href="#" target="_blank">Library Link 8</a></li>
-      <li><a href="#" target="_blank">Library Link 9</a></li>
-      <li><a href="#" target="_blank">Library Link 10</a></li>
-    </ul>
-  </section>
+    <a href="https://ndl.iitkgp.ac.in/" target="_blank">National Digital Library</a>
+    <a href="https://www.ncert.nic.in/ebooks.php" target="_blank">NCERT eBooks</a>
+    <a href="https://epathshala.nic.in/" target="_blank">ePathshala</a>
+    <a href="https://swayam.gov.in/" target="_blank">SWAYAM</a>
+    <a href="https://nptel.ac.in/" target="_blank">NPTEL</a>
+    <a href="https://ignou.ac.in/" target="_blank">IGNOU Library</a>
+    <a href="https://www.openlibrary.org/" target="_blank">Open Library</a>
+    <a href="https://www.pdfdrive.com/" target="_blank">PDF Drive</a>
+    <a href="https://khanacademy.org/" target="_blank">Khan Academy</a>
+    <a href="https://telanganalibraries.com/" target="_blank">Telangana Libraries Portal</a>
+  </div>
 
-  <section id="admissions">
-    <h2>Admissions</h2>
-    <ul>
-      <li><a href="#" target="_blank">Admission Portal 1</a></li>
-      <li><a href="#" target="_blank">Admission Portal 2</a></li>
-      <li><a href="#" target="_blank">Admission Portal 3</a></li>
-      <li><a href="#" target="_blank">Admission Portal 4</a></li>
-      <li><a href="#" target="_blank">Admission Portal 5</a></li>
-      <li><a href="#" target="_blank">Admission Portal 6</a></li>
-      <li><a href="#" target="_blank">Admission Portal 7</a></li>
-      <li><a href="#" target="_blank">Admission Portal 8</a></li>
-      <li><a href="#" target="_blank">Admission Portal 9</a></li>
-      <li><a href="#" target="_blank">Admission Portal 10</a></li>
-    </ul>
-  </section>
+  <div id="admissions" class="tab-content">
+    <h2>Admissions Info</h2>
+    <a href="https://tsbie.cgg.gov.in/" target="_blank">TSBIE Admissions</a>
+    <a href="https://dost.cgg.gov.in/" target="_blank">DOST UG Admission</a>
+    <a href="https://polycetts.nic.in/" target="_blank">POLYCET Admissions</a>
+    <a href="https://tsicet.nic.in/" target="_blank">ICET</a>
+    <a href="https://tslawcet.nic.in/" target="_blank">LAWCET</a>
+    <a href="https://eamcet.tsche.ac.in/" target="_blank">EAMCET</a>
+    <a href="https://edcet.tsche.ac.in/" target="_blank">EDCET</a>
+    <a href="https://tgmedco.com/" target="_blank">Medical Admissions</a>
+    <a href="https://admissions.auonline.in/" target="_blank">AU Distance Admissions</a>
+    <a href="https://jntuh.ac.in/" target="_blank">JNTU Admissions</a>
+  </div>
 
-  <section id="gurukulas">
+  <div id="gurukulas" class="tab-content">
     <h2>Gurukulas</h2>
-    <ul>
-      <li><a href="#" target="_blank">Gurukula 1</a></li>
-      <li><a href="#" target="_blank">Gurukula 2</a></li>
-      <li><a href="#" target="_blank">Gurukula 3</a></li>
-      <li><a href="#" target="_blank">Gurukula 4</a></li>
-      <li><a href="#" target="_blank">Gurukula 5</a></li>
-      <li><a href="#" target="_blank">Gurukula 6</a></li>
-      <li><a href="#" target="_blank">Gurukula 7</a></li>
-      <li><a href="#" target="_blank">Gurukula 8</a></li>
-      <li><a href="#" target="_blank">Gurukula 9</a></li>
-      <li><a href="#" target="_blank">Gurukula 10</a></li>
-    </ul>
-  </section>
+    <a href="https://tgtwgurukulam.telangana.gov.in/" target="_blank">TW Gurukulam</a>
+    <a href="https://tresidential.telangana.gov.in/" target="_blank">Tribal Welfare Schools</a>
+    <a href="https://tswreis.in/" target="_blank">Social Welfare Gurukulam</a>
+    <a href="https://mjptbcwreis.telangana.gov.in/" target="_blank">MJPTBCWREIS</a>
+    <a href="https://tmreis.telangana.gov.in/" target="_blank">Minority Gurukulam</a>
+    <a href="https://tsmodelschools.in/" target="_blank">TS Model Schools</a>
+    <a href="https://mjpabcwreis.telangana.gov.in/" target="_blank">MJPABC Welfare Schools</a>
+    <a href="https://tgtwgurukulam.telangana.gov.in/inter.php" target="_blank">TW Inter Colleges</a>
+    <a href="https://telangana.gov.in" target="_blank">General Gurukul Info</a>
+    <a href="https://schools.org.in/telangana/" target="_blank">All Telangana Gurukuls</a>
+  </div>
 
-  <section id="sainik">
+  <div id="sainik" class="tab-content">
     <h2>Sainik Schools</h2>
-    <ul>
-      <li><a href="#" target="_blank">Sainik School 1</a></li>
-      <li><a href="#" target="_blank">Sainik School 2</a></li>
-      <li><a href="#" target="_blank">Sainik School 3</a></li>
-      <li><a href="#" target="_blank">Sainik School 4</a></li>
-      <li><a href="#" target="_blank">Sainik School 5</a></li>
-      <li><a href="#" target="_blank">Sainik School 6</a></li>
-      <li><a href="#" target="_blank">Sainik School 7</a></li>
-      <li><a href="#" target="_blank">Sainik School 8</a></li>
-      <li><a href="#" target="_blank">Sainik School 9</a></li>
-      <li><a href="#" target="_blank">Sainik School 10</a></li>
-    </ul>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <input type="file" id="imgInput" multiple accept="image/*" />
-    <button onclick="clearGallery()">Delete All Images</button>
-    <div id="galleryImages" class="gallery"></div>
-  </section>
+    <a href="https://sainikschooladmission.in/" target="_blank">AISSEE Admissions</a>
+    <a href="https://sainikschoolkodagu.edu.in/" target="_blank">Sainik School Kodagu</a>
+    <a href="https://sainikschoolchandrapur.com/" target="_blank">Sainik School Chandrapur</a>
+    <a href="https://sainikschoolbhubaneswar.org/" target="_blank">Sainik School Bhubaneswar</a>
+    <a href="https://sainikschooladmission.in/aissee2023/" target="_blank">AISSEE 2023 Portal</a>
+    <a href="https://telangana.gov.in/" target="_blank">Telangana Sainik Info</a>
+    <a href="https://mod.gov.in/" target="_blank">Defence Ministry</a>
+    <a href="https://sainikschooltvm.nic.in/" target="_blank">Sainik School TVM</a>
+    <a href="https://sainikschooltilaiya.org/" target="_blank">Sainik School Tilaiya</a>
+    <a href="https://sainikschoolgoalpara.org/" target="_blank">Sainik School Goalpara</a>
+  </div>
 
   <script>
     function openTab(id) {
-      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
 
-    function toggleLang() {
-      alert('Language toggle coming soon');
-    }
-
-    const imgInput = document.getElementById('imgInput');
-    const galleryImages = document.getElementById('galleryImages');
-
-    imgInput.addEventListener('change', function () {
-      [...this.files].forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const img = document.createElement('img');
-          img.src = e.target.result;
-          galleryImages.appendChild(img);
-          saveGallery();
-        }
-        reader.readAsDataURL(file);
-      });
-    });
-
-    function saveGallery() {
-      const imgs = [...galleryImages.querySelectorAll('img')].map(img => img.src);
-      localStorage.setItem('gallery', JSON.stringify(imgs));
-    }
-
-    function loadGallery() {
-      const imgs = JSON.parse(localStorage.getItem('gallery') || '[]');
-      imgs.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        galleryImages.appendChild(img);
+    function toggleLanguage() {
+      const buttons = document.querySelectorAll("nav button");
+      buttons.forEach(btn => {
+        btn.textContent = translateLabel(btn.textContent);
       });
     }
 
-    function clearGallery() {
-      galleryImages.innerHTML = '';
-      localStorage.removeItem('gallery');
+    function translateLabel(text) {
+      const telugu = {
+        "KG–V": "కెజి–ఐదు",
+        "VI–X": "ఆరు–పది",
+        "Intermediate": "ఇంటర్మీడియట్",
+        "Universities": "విశ్వవిద్యాలయాలు",
+        "Scholarships": "ఉపకారవేతనాలు",
+        "Library Resources": "లైబ్రరీ వనరులు",
+        "Admissions": "ప్రవేశాలు",
+        "Gurukulas": "గురుకులాలు",
+        "Sainik Schools": "సైనిక్ పాఠశాలలు",
+        "Gallery": "గ్యాలరీ"
+      };
+      return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
     }
-
-    loadGallery();
   </script>
 </body>
 </html>
