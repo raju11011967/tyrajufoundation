@@ -1,98 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Telangana Education Portal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TY RAJU FOUNDATION</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #e8f0ff;
+      background-color: #f0f8ff;
       margin: 0;
       color: #000;
     }
     header {
-      background-color: #004080;
+      background-color: #0059b3;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 1rem;
     }
     nav {
       display: flex;
       flex-wrap: wrap;
-      background: #0073e6;
+      background-color: #0073e6;
       justify-content: center;
     }
     nav button {
-      background: #005bb5;
+      background: none;
       border: none;
       color: white;
-      padding: 12px 16px;
-      margin: 4px;
+      padding: 1rem;
       cursor: pointer;
     }
-    nav button:hover {
-      background: #003d80;
+    nav button.active {
+      background-color: #0059b3;
     }
     .tab-content {
       display: none;
-      padding: 20px;
+      padding: 1rem;
     }
-    .active {
+    .tab-content.active {
       display: block;
     }
     a {
-      color: #004080;
+      color: #0059b3;
+      display: block;
+      margin-bottom: 0.5rem;
     }
-    #galleryContainer img {
-      max-width: 150px;
-      margin: 10px;
+    .gallery img {
+      max-width: 100px;
+      margin: 0.5rem;
+    }
+    #languageToggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem;
+      background-color: white;
+      border: 1px solid #0059b3;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Telangana Education Portal</h1>
-    <button onclick="toggleLanguage()">తెలుగు</button>
+    <button id="languageToggle">తెలుగు</button>
   </header>
   <nav>
-    <button onclick="showTab('Overview')">Overview</button>
-    <button onclick="showTab('KG-V')">KG–V</button>
-    <button onclick="showTab('VI-X')">VI–X</button>
-    <button onclick="showTab('Intermediate')">Intermediate</button>
-    <button onclick="showTab('Universities')">Universities</button>
-    <button onclick="showTab('Scholarships')">Scholarships</button>
-    <button onclick="showTab('Library')">Library Resources</button>
-    <button onclick="showTab('Admissions')">Admissions</button>
-    <button onclick="showTab('Gurukulas')">Gurukulas</button>
-    <button onclick="showTab('SainikSchools')">Sainik Schools</button>
-    <button onclick="showTab('Gallery')">Gallery</button>
-    <button onclick="showTab('Contact')">Contact Us</button>
-    <button onclick="showTab('TYRFLibrary')">TYRFLibrary</button>
+    <button class="tab-link active" data-tab="overview">Overview</button>
+    <button class="tab-link" data-tab="kg">KG–V</button>
+    <button class="tab-link" data-tab="highschool">VI–X</button>
+    <button class="tab-link" data-tab="intermediate">Intermediate</button>
+    <button class="tab-link" data-tab="universities">Universities</button>
+    <button class="tab-link" data-tab="scholarships">Scholarships</button>
+    <button class="tab-link" data-tab="library">Library Resources</button>
+    <button class="tab-link" data-tab="admissions">Admissions</button>
+    <button class="tab-link" data-tab="gurukulas">Gurukulas</button>
+    <button class="tab-link" data-tab="sainik">Sainik Schools</button>
+    <button class="tab-link" data-tab="gallery">Gallery</button>
+    <button class="tab-link" data-tab="contact">Contact Us</button>
+    <button class="tab-link" data-tab="tyrflib">TYRFLibrary</button>
   </nav>
 
-  <div id="Overview" class="tab-content active">
+  <div id="overview" class="tab-content active">
     <h2>Overview</h2>
-    <p>This portal covers KG to PG education information in Telangana.</p>
-  </div>
-  
-  <!-- Repeat similar blocks below -->
-  <div id="KG-V" class="tab-content">
-    <h2>KG–V Schools</h2>
-    <ul>
-      <li><a href="https://school1.example.com" target="_blank">Model School 1</a></li>
-      <li><a href="https://school2.example.com" target="_blank">Model School 2</a></li>
-      <!-- Add up to 10 links -->
-    </ul>
+    <p>This portal provides information about Telangana’s KG to PG education, scholarships, admissions, and digital libraries.</p>
   </div>
 
-  <div id="Gallery" class="tab-content">
+  <div id="kg" class="tab-content">
+    <h2>KG–V Schools</h2>
+    <a href="https://school.edu/tskg1">TS Govt Primary School 1</a>
+    <a href="https://school.edu/tskg2">TS Govt Primary School 2</a>
+    <a href="https://school.edu/tskg3">TS Govt Primary School 3</a>
+    <a href="https://school.edu/tskg4">TS Govt Primary School 4</a>
+    <a href="https://school.edu/tskg5">TS Govt Primary School 5</a>
+    <a href="https://school.edu/tskg6">TS Govt Primary School 6</a>
+    <a href="https://school.edu/tskg7">TS Govt Primary School 7</a>
+    <a href="https://school.edu/tskg8">TS Govt Primary School 8</a>
+    <a href="https://school.edu/tskg9">TS Govt Primary School 9</a>
+    <a href="https://school.edu/tskg10">TS Govt Primary School 10</a>
+  </div>
+
+  <div id="highschool" class="tab-content">
+    <h2>VI–X High Schools</h2>
+    <a href="https://tsmodelschools.in">TS Model Schools</a>
+    <a href="https://bse.telangana.gov.in">BSE Telangana</a>
+    <a href="https://school.edu/tshigh1">TS High School 1</a>
+    <a href="https://school.edu/tshigh2">TS High School 2</a>
+    <a href="https://school.edu/tshigh3">TS High School 3</a>
+    <a href="https://school.edu/tshigh4">TS High School 4</a>
+    <a href="https://school.edu/tshigh5">TS High School 5</a>
+    <a href="https://school.edu/tshigh6">TS High School 6</a>
+    <a href="https://school.edu/tshigh7">TS High School 7</a>
+    <a href="https://school.edu/tshigh8">TS High School 8</a>
+  </div>
+
+  <div id="intermediate" class="tab-content">
+    <h2>Intermediate Colleges</h2>
+    <a href="https://tsbie.cgg.gov.in">TSBIE Official Site</a>
+    <a href="https://tsmodelschools.in">TS Model Jr Colleges</a>
+    <a href="https://inter.edu/freecolleges1">Free College 1</a>
+    <a href="https://inter.edu/freecolleges2">Free College 2</a>
+    <a href="https://inter.edu/freecolleges3">Free College 3</a>
+    <a href="https://inter.edu/freecolleges4">Free College 4</a>
+    <a href="https://inter.edu/freecolleges5">Free College 5</a>
+    <a href="https://inter.edu/freecolleges6">Free College 6</a>
+    <a href="https://inter.edu/freecolleges7">Free College 7</a>
+    <a href="https://inter.edu/freecolleges8">Free College 8</a>
+  </div>
+
+  <div id="universities" class="tab-content">
+    <h2>Universities in Telangana</h2>
+    <a href="https://www.osmania.ac.in/">Osmania University</a>
+    <a href="https://www.jntuh.ac.in/">JNTU Hyderabad</a>
+    <a href="https://kakatiya.ac.in/">Kakatiya University</a>
+    <a href="https://www.braou.ac.in/">BRAOU</a>
+    <a href="https://www.mguniversity.ac.in/">Mahatma Gandhi University</a>
+    <a href="https://www.telanganauniversity.ac.in/">Telangana University</a>
+    <a href="https://www.satavahana.ac.in/">Satavahana University</a>
+    <a href="https://www.pjtsau.edu.in/">PJTSAU</a>
+    <a href="https://www.rgukt.ac.in/">RGUKT Basar</a>
+    <a href="https://www.cuk.ac.in/">Central University of Hyderabad</a>
+  </div>
+
+  <div id="scholarships" class="tab-content">
+    <h2>Scholarships</h2>
+    <a href="https://telanganaepass.cgg.gov.in">TS ePASS</a>
+    <a href="https://scholarships.gov.in">National Scholarships</a>
+    <a href="https://www.insPIRE.gov.in">INSPIRE Scholarship</a>
+    <a href="https://www.aicte-india.org/schemes/students-development-schemes">AICTE Schemes</a>
+    <a href="https://www.nsp.gov.in">NSP Portal</a>
+    <a href="https://minorityaffairs.gov.in">Minority Affairs Schemes</a>
+    <a href="https://ugc.ac.in">UGC Scholarships</a>
+    <a href="https://scholarships.gov.in/fresh">Fresh Applications</a>
+    <a href="https://scholarships.gov.in/renewal">Renewals</a>
+    <a href="https://sje.telangana.gov.in">Social Welfare Dept</a>
+  </div>
+
+  <div id="library" class="tab-content">
+    <h2>Library Resources</h2>
+    <a href="https://ndl.iitkgp.ac.in/">National Digital Library</a>
+    <a href="https://epathshala.nic.in/">ePathshala</a>
+    <a href="https://nroer.gov.in/">NROER</a>
+    <a href="https://diksha.gov.in/">DIKSHA</a>
+    <a href="https://ignou.ac.in/">IGNOU Library</a>
+    <a href="https://library.osmania.ac.in/">OU Library</a>
+    <a href="https://lib.jntuh.ac.in/">JNTU Library</a>
+    <a href="https://ndl.gov.in/">NDL India</a>
+    <a href="https://www.khanacademy.org/">Khan Academy</a>
+    <a href="https://nptel.ac.in/">NPTEL</a>
+  </div>
+
+  <div id="admissions" class="tab-content">
+    <h2>Admissions</h2>
+    <a href="https://dost.cgg.gov.in">DOST</a>
+    <a href="https://tsbie.cgg.gov.in">TSBIE</a>
+    <a href="https://polycet.sbtet.telangana.gov.in/">POLYCET</a>
+    <a href="https://edcet.tsche.ac.in/">EDCET</a>
+    <a href="https://lawcet.tsche.ac.in/">LAWCET</a>
+    <a href="https://eamcet.tsche.ac.in/">EAMCET</a>
+    <a href="https://icet.tsche.ac.in/">ICET</a>
+    <a href="https://pecet.tsche.ac.in/">PECET</a>
+    <a href="https://pgecet.tsche.ac.in/">PGECET</a>
+    <a href="https://tsmodelschools.in/">Model School Admissions</a>
+  </div>
+
+  <div id="gurukulas" class="tab-content">
+    <h2>Gurukulas</h2>
+    <a href="https://tgtwgurukulam.telangana.gov.in/">TW Gurukulam</a>
+    <a href="https://mjptbcwreis.telangana.gov.in/">MJPTBC Welfare</a>
+    <a href="https://tswreis.ac.in/">SW Residential</a>
+    <a href="https://tswreis.in/">Social Welfare Gurukulas</a>
+    <a href="https://mjptbcwreis.telangana.gov.in/">BC Welfare Gurukulas</a>
+    <a href="https://tgtwgurukulam.telangana.gov.in/">Tribal Gurukulas</a>
+    <a href="https://tswreis.ac.in/">Welfare Residential Schools</a>
+    <a href="https://telangana.gov.in/">Telangana Welfare</a>
+    <a href="https://schooledu.telangana.gov.in/">School Education Portal</a>
+    <a href="https://education.telangana.gov.in/">Education Dept</a>
+  </div>
+
+  <div id="sainik" class="tab-content">
+    <h2>Sainik Schools</h2>
+    <a href="https://www.sainikschooltgm.org/">Sainik School Kazipet</a>
+    <a href="https://www.sainikschooladmission.in/">All India Sainik Admission</a>
+    <a href="https://sainikschooltgm.org/">TGM Official Site</a>
+    <a href="https://sainikschool.in/">Sainik Portal</a>
+    <a href="https://sainikschoolsociety.in/">Sainik Schools Society</a>
+    <a href="https://education.telangana.gov.in/">Telangana Education</a>
+    <a href="https://www.india.gov.in/">India Portal</a>
+    <a href="https://mod.gov.in/">Ministry of Defence</a>
+    <a href="https://scholarships.gov.in/">Scholarship Portal</a>
+    <a href="https://www.kvsonlineadmission.kvs.gov.in/">KVS Admissions</a>
+  </div>
+
+  <div id="gallery" class="tab-content">
     <h2>Gallery</h2>
-    <input type="file" id="imgInput" multiple />
-    <button onclick="deleteAllImages()">Delete All Images</button>
+    <input type="file" id="imageUpload" accept="image/*" multiple>
+    <button onclick="clearGallery()">Delete All Images</button>
     <div id="galleryContainer"></div>
   </div>
 
+  <div id="contact" class="tab-content">
+    <h2>Contact Us</h2>
+    <p>Email: support@telanganaedu.in</p>
+    <p>Phone: +91-40-12345678</p>
+  </div>
+
+  <div id="tyrflib" class="tab-content">
+    <h2>TYRFLibrary</h2>
+    <p>Digital library initiatives by Telangana Youth Reading Forum.</p>
+  </div>
+
+  <script>
+    const tabLinks = document.querySelectorAll(".tab-link");
+    const tabContents = document.querySelectorAll(".tab-content");
+    tabLinks.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabLinks.forEach((b) => b.classList.remove("active"));
+        tabContents.forEach((tab) => tab.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+      });
+    });
+
+    const imageUpload = document.getElementById("imageUpload");
+    const galleryContainer = document.getElementById("galleryContainer");
+    imageUpload.addEventListener("change", (event) => {
+      [...event.target.files].forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = document.createElement("img");
+          img.src = e.target.result;
+          galleryContainer.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+    function clearGallery() {
+      galleryContainer.innerHTML = "";
+    }
+
+    document.getElementById("languageToggle").addEventListener("click", () => {
+      alert("Telugu translation toggle coming soon!");
+    });
+  </script>
+</body>
+</html>
   <!-- Add similar blocks for VI-X, Intermediate, Universities, etc., each with 10 links -->
   <script>
     function showTab(tabId) {
