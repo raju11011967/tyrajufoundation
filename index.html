@@ -216,19 +216,34 @@
     });
 
     // Gallery Upload Preview
-    document.getElementById('imageUpload').addEventListener('change', function () {
-  const preview = document.getElementById('gallery-preview');
-  preview.innerHTML = '';
-  Array.from(this.files).forEach(file => {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const img = document.createElement('img');
-      img.src = e.target.result;
-      preview.appendChild(img);
-    };
-    reader.readAsDataURL(file);
+    <script>
+  let uploadedImages = [];
+
+  document.getElementById('imageUpload').addEventListener('change', function () {
+    Array.from(this.files).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        uploadedImages.push(e.target.result);
+        renderGallery();
+      };
+      reader.readAsDataURL(file);
+    });
   });
-});
+
+  function renderGallery() {
+    const preview = document.getElementById('gallery-preview');
+    preview.innerHTML = '';
+    uploadedImages.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      preview.appendChild(img);
+    });
+  }
+
+  // Call this again every time the gallery tab is shown
+  document.querySelector('[data-tab="gallery"]').addEventListener('click', renderGallery);
+</script>
+
 
   </script>
 </body>
