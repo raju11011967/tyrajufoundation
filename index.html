@@ -7,225 +7,273 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #e8f0fe;
-      margin: 0;
-      padding: 0;
+      background-color: #e6f0ff;
+      color: #003366;
     }
     header {
-      background-color: #0d47a1;
+      background-color: #004080;
       color: white;
-      padding: 1rem;
+      padding: 10px;
       text-align: center;
     }
     nav {
       display: flex;
       flex-wrap: wrap;
-      background-color: #1565c0;
+      background-color: #0059b3;
     }
     nav button {
       flex: 1;
-      padding: 1rem;
-      background-color: #1976d2;
+      padding: 10px;
+      background: #0059b3;
       color: white;
       border: none;
       cursor: pointer;
-      font-weight: bold;
     }
     nav button:hover, nav button.active {
-      background-color: #0d47a1;
+      background-color: #003d66;
     }
     section {
       display: none;
-      padding: 1rem;
+      padding: 20px;
     }
     section.active {
       display: block;
     }
-    a {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #0d47a1;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-    #galleryContainer img {
-      max-width: 150px;
-      margin: 10px;
-      display: inline-block;
+    ul li {
+      margin-bottom: 8px;
     }
-    #galleryControls {
-      margin-top: 1rem;
+    ul li a {
+      color: #003366;
+      text-decoration: none;
+    }
+    ul li a:hover {
+      text-decoration: underline;
+    }
+    .gallery img {
+      max-width: 100px;
+      margin: 5px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Telangana Education Portal</h1>
-    <button onclick="toggleLanguage()">తెలుగు / English</button>
+    <h1>Telangana Education Portal - TYRFLibrary</h1>
+    <button onclick="toggleLang()">తెలుగు / English</button>
   </header>
   <nav>
-    <button onclick="showTab('overview')" class="active">Overview</button>
-    <button onclick="showTab('kgv')">KG–V</button>
-    <button onclick="showTab('vix')">VI–X</button>
-    <button onclick="showTab('intermediate')">Intermediate</button>
-    <button onclick="showTab('universities')">Universities</button>
-    <button onclick="showTab('scholarships')">Scholarships</button>
-    <button onclick="showTab('library')">Library Resources</button>
-    <button onclick="showTab('admissions')">Admissions</button>
-    <button onclick="showTab('gurukulas')">Gurukulas</button>
-    <button onclick="showTab('sainik')">Sainik Schools</button>
-    <button onclick="showTab('gallery')">Gallery</button>
-    <button onclick="showTab('contact')">Contact Us</button>
-    <button onclick="showTab('tyrflibrary')">TYRFLibrary</button>
+    <button onclick="openTab('kg')">KG–V</button>
+    <button onclick="openTab('vi-x')">VI–X</button>
+    <button onclick="openTab('intermediate')">Intermediate</button>
+    <button onclick="openTab('universities')">Universities</button>
+    <button onclick="openTab('scholarships')">Scholarships</button>
+    <button onclick="openTab('library')">Library Resources</button>
+    <button onclick="openTab('admissions')">Admissions</button>
+    <button onclick="openTab('gurukulas')">Gurukulas</button>
+    <button onclick="openTab('sainik')">Sainik Schools</button>
+    <button onclick="openTab('gallery')">Gallery</button>
   </nav>
 
-  <section id="overview" class="active">
-    <h2>Overview</h2>
-    <p>Welcome to the Telangana Education Portal — from KG to PG.</p>
+  <section id="kg" class="active">
+    <h2>KG–V</h2>
+    <ul>
+      <li><a href="https://www.kgschools.org/school1" target="_blank">School 1</a></li>
+      <li><a href="https://www.kgschools.org/school2" target="_blank">School 2</a></li>
+      <li><a href="https://www.kgschools.org/school3" target="_blank">School 3</a></li>
+      <li><a href="https://www.kgschools.org/school4" target="_blank">School 4</a></li>
+      <li><a href="https://www.kgschools.org/school5" target="_blank">School 5</a></li>
+      <li><a href="https://www.kgschools.org/school6" target="_blank">School 6</a></li>
+      <li><a href="https://www.kgschools.org/school7" target="_blank">School 7</a></li>
+      <li><a href="https://www.kgschools.org/school8" target="_blank">School 8</a></li>
+      <li><a href="https://www.kgschools.org/school9" target="_blank">School 9</a></li>
+      <li><a href="https://www.kgschools.org/school10" target="_blank">School 10</a></li>
+    </ul>
   </section>
-
-  <section id="kgv">
-    <h2>KG–V Schools</h2>
-    <a href="https://example.com/kg1" target="_blank">KG School 1</a>
-    <a href="https://example.com/kg2" target="_blank">KG School 2</a>
-    <!-- Repeat until 10 links -->
-  </section>
-
-  <section id="vix">
-    <h2>VI–X Schools</h2>
-    <a href="https://example.com/vix1" target="_blank">High School 1</a>
-    <a href="https://example.com/vix2" target="_blank">High School 2</a>
+  
+  <section id="vi-x">
+    <h2>VI–X</h2>
+    <ul>
+      <li><a href="#" target="_blank">High School 1</a></li>
+      <li><a href="#" target="_blank">High School 2</a></li>
+      <li><a href="#" target="_blank">High School 3</a></li>
+      <li><a href="#" target="_blank">High School 4</a></li>
+      <li><a href="#" target="_blank">High School 5</a></li>
+      <li><a href="#" target="_blank">High School 6</a></li>
+      <li><a href="#" target="_blank">High School 7</a></li>
+      <li><a href="#" target="_blank">High School 8</a></li>
+      <li><a href="#" target="_blank">High School 9</a></li>
+      <li><a href="#" target="_blank">High School 10</a></li>
+    </ul>
   </section>
 
   <section id="intermediate">
-    <h2>Intermediate Colleges</h2>
-    <a href="https://example.com/inter1" target="_blank">College 1</a>
+    <h2>Intermediate</h2>
+    <ul>
+      <li><a href="#" target="_blank">Junior College 1</a></li>
+      <li><a href="#" target="_blank">Junior College 2</a></li>
+      <li><a href="#" target="_blank">Junior College 3</a></li>
+      <li><a href="#" target="_blank">Junior College 4</a></li>
+      <li><a href="#" target="_blank">Junior College 5</a></li>
+      <li><a href="#" target="_blank">Junior College 6</a></li>
+      <li><a href="#" target="_blank">Junior College 7</a></li>
+      <li><a href="#" target="_blank">Junior College 8</a></li>
+      <li><a href="#" target="_blank">Junior College 9</a></li>
+      <li><a href="#" target="_blank">Junior College 10</a></li>
+    </ul>
   </section>
 
   <section id="universities">
-    <h2>Universities in Telangana</h2>
-    <a href="https://www.osmania.ac.in" target="_blank">Osmania University</a>
-    <a href="https://www.kakatiya.ac.in" target="_blank">Kakatiya University</a>
-    <a href="https://www.jntuh.ac.in" target="_blank">JNTU Hyderabad</a>
-    <!-- add 7 more -->
+    <h2>Universities</h2>
+    <ul>
+      <li><a href="https://www.osmania.ac.in" target="_blank">Osmania University</a></li>
+      <li><a href="https://www.jntuh.ac.in" target="_blank">JNTU Hyderabad</a></li>
+      <li><a href="https://www.kakatiya.ac.in" target="_blank">Kakatiya University</a></li>
+      <li><a href="https://www.telanganauniversity.ac.in" target="_blank">Telangana University</a></li>
+      <li><a href="https://www.mguniversity.ac.in" target="_blank">Mahatma Gandhi University</a></li>
+      <li><a href="https://www.satuniversity.ac.in" target="_blank">Satavahana University</a></li>
+      <li><a href="https://www.brabupraengg.ac.in" target="_blank">BRAOU</a></li>
+      <li><a href="https://www.pjtsau.edu.in" target="_blank">PJTSAU</a></li>
+      <li><a href="https://www.skltshu.ac.in" target="_blank">SKLTSHU</a></li>
+      <li><a href="https://www.rgukt.ac.in" target="_blank">RGUKT Basar</a></li>
+    </ul>
   </section>
 
   <section id="scholarships">
     <h2>Scholarships</h2>
-    <a href="https://telanganaepass.cgg.gov.in" target="_blank">ePASS Portal</a>
-    <!-- Add more scholarship links -->
+    <ul>
+      <li><a href="#" target="_blank">Scholarship 1</a></li>
+      <li><a href="#" target="_blank">Scholarship 2</a></li>
+      <li><a href="#" target="_blank">Scholarship 3</a></li>
+      <li><a href="#" target="_blank">Scholarship 4</a></li>
+      <li><a href="#" target="_blank">Scholarship 5</a></li>
+      <li><a href="#" target="_blank">Scholarship 6</a></li>
+      <li><a href="#" target="_blank">Scholarship 7</a></li>
+      <li><a href="#" target="_blank">Scholarship 8</a></li>
+      <li><a href="#" target="_blank">Scholarship 9</a></li>
+      <li><a href="#" target="_blank">Scholarship 10</a></li>
+    </ul>
   </section>
 
   <section id="library">
     <h2>Library Resources</h2>
-    <a href="https://ndl.iitkgp.ac.in" target="_blank">National Digital Library</a>
+    <ul>
+      <li><a href="#" target="_blank">Library Link 1</a></li>
+      <li><a href="#" target="_blank">Library Link 2</a></li>
+      <li><a href="#" target="_blank">Library Link 3</a></li>
+      <li><a href="#" target="_blank">Library Link 4</a></li>
+      <li><a href="#" target="_blank">Library Link 5</a></li>
+      <li><a href="#" target="_blank">Library Link 6</a></li>
+      <li><a href="#" target="_blank">Library Link 7</a></li>
+      <li><a href="#" target="_blank">Library Link 8</a></li>
+      <li><a href="#" target="_blank">Library Link 9</a></li>
+      <li><a href="#" target="_blank">Library Link 10</a></li>
+    </ul>
   </section>
 
   <section id="admissions">
     <h2>Admissions</h2>
-    <a href="https://tsbie.cgg.gov.in" target="_blank">TS BIE</a>
-    <!-- Add more links -->
+    <ul>
+      <li><a href="#" target="_blank">Admission Portal 1</a></li>
+      <li><a href="#" target="_blank">Admission Portal 2</a></li>
+      <li><a href="#" target="_blank">Admission Portal 3</a></li>
+      <li><a href="#" target="_blank">Admission Portal 4</a></li>
+      <li><a href="#" target="_blank">Admission Portal 5</a></li>
+      <li><a href="#" target="_blank">Admission Portal 6</a></li>
+      <li><a href="#" target="_blank">Admission Portal 7</a></li>
+      <li><a href="#" target="_blank">Admission Portal 8</a></li>
+      <li><a href="#" target="_blank">Admission Portal 9</a></li>
+      <li><a href="#" target="_blank">Admission Portal 10</a></li>
+    </ul>
   </section>
 
   <section id="gurukulas">
-    <h2>Gurukula Schools</h2>
-    <a href="https://tgtwgurukulam.telangana.gov.in" target="_blank">TS Tribal Welfare Gurukulam</a>
+    <h2>Gurukulas</h2>
+    <ul>
+      <li><a href="#" target="_blank">Gurukula 1</a></li>
+      <li><a href="#" target="_blank">Gurukula 2</a></li>
+      <li><a href="#" target="_blank">Gurukula 3</a></li>
+      <li><a href="#" target="_blank">Gurukula 4</a></li>
+      <li><a href="#" target="_blank">Gurukula 5</a></li>
+      <li><a href="#" target="_blank">Gurukula 6</a></li>
+      <li><a href="#" target="_blank">Gurukula 7</a></li>
+      <li><a href="#" target="_blank">Gurukula 8</a></li>
+      <li><a href="#" target="_blank">Gurukula 9</a></li>
+      <li><a href="#" target="_blank">Gurukula 10</a></li>
+    </ul>
   </section>
 
   <section id="sainik">
     <h2>Sainik Schools</h2>
-    <a href="https://sainikschooltvm.nic.in" target="_blank">Sainik School Example</a>
+    <ul>
+      <li><a href="#" target="_blank">Sainik School 1</a></li>
+      <li><a href="#" target="_blank">Sainik School 2</a></li>
+      <li><a href="#" target="_blank">Sainik School 3</a></li>
+      <li><a href="#" target="_blank">Sainik School 4</a></li>
+      <li><a href="#" target="_blank">Sainik School 5</a></li>
+      <li><a href="#" target="_blank">Sainik School 6</a></li>
+      <li><a href="#" target="_blank">Sainik School 7</a></li>
+      <li><a href="#" target="_blank">Sainik School 8</a></li>
+      <li><a href="#" target="_blank">Sainik School 9</a></li>
+      <li><a href="#" target="_blank">Sainik School 10</a></li>
+    </ul>
   </section>
 
   <section id="gallery">
     <h2>Gallery</h2>
-    <input type="file" id="imgInput" multiple />
-    <div id="galleryContainer"></div>
-    <div id="galleryControls">
-      <button onclick="deleteAllImages()">Delete All Images</button>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@telanganaedu.gov.in</p>
-  </section>
-
-  <section id="tyrflibrary">
-    <h2>TYRF Library</h2>
-    <p>Digital resources for all levels.</p>
+    <input type="file" id="imgInput" multiple accept="image/*" />
+    <button onclick="clearGallery()">Delete All Images</button>
+    <div id="galleryImages" class="gallery"></div>
   </section>
 
   <script>
-    function showTab(tabId) {
-      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
-      document.getElementById(tabId).classList.add('active');
+    function openTab(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
     }
 
-    function toggleLanguage() {
-      const labels = {
-        "Overview": "వలోకనం",
-        "KG–V": "కేజీ–ఐదు",
-        "VI–X": "ఆరు–పది",
-        "Intermediate": "ఇంటర్",
-        "Universities": "విశ్వవిద్యాలయాలు",
-        "Scholarships": "ఉపకార వేతనాలు",
-        "Library Resources": "గ్రంథాలయ వనరులు",
-        "Admissions": "ప్రవేశాలు",
-        "Gurukulas": "గురుకులాలు",
-        "Sainik Schools": "సైనిక్ పాఠశాలలు",
-        "Gallery": "గ్యాలరీ",
-        "Contact Us": "సంప్రదించండి",
-        "TYRFLibrary": "టీవైఆర్ఎఫ్ లైబ్రరీ"
-      };
-      const navButtons = document.querySelectorAll('nav button');
-      navButtons.forEach(btn => {
-        const text = btn.textContent.trim();
-        if (labels[text]) {
-          btn.textContent = labels[text];
-        } else {
-          const engLabel = Object.keys(labels).find(k => labels[k] === text);
-          if (engLabel) btn.textContent = engLabel;
-        }
-      });
+    function toggleLang() {
+      alert('Language toggle coming soon');
     }
 
-    function saveImagesToLocal() {
-      const gallery = document.getElementById("galleryContainer");
-      const imgs = [...gallery.querySelectorAll("img")].map(img => img.src);
-      localStorage.setItem("galleryImages", JSON.stringify(imgs));
-    }
+    const imgInput = document.getElementById('imgInput');
+    const galleryImages = document.getElementById('galleryImages');
 
-    function loadImagesFromLocal() {
-      const gallery = document.getElementById("galleryContainer");
-      const imgs = JSON.parse(localStorage.getItem("galleryImages") || "[]");
-      imgs.forEach(src => {
-        const img = new Image();
-        img.src = src;
-        gallery.appendChild(img);
-      });
-    }
-
-    function deleteAllImages() {
-      localStorage.removeItem("galleryImages");
-      document.getElementById("galleryContainer").innerHTML = "";
-    }
-
-    document.getElementById("imgInput").addEventListener("change", function(event) {
-      const gallery = document.getElementById("galleryContainer");
-      [...event.target.files].forEach(file => {
+    imgInput.addEventListener('change', function () {
+      [...this.files].forEach(file => {
         const reader = new FileReader();
-        reader.onload = function(e) {
-          const img = new Image();
+        reader.onload = function (e) {
+          const img = document.createElement('img');
           img.src = e.target.result;
-          gallery.appendChild(img);
-          saveImagesToLocal();
-        };
+          galleryImages.appendChild(img);
+          saveGallery();
+        }
         reader.readAsDataURL(file);
       });
     });
 
-    window.onload = loadImagesFromLocal;
+    function saveGallery() {
+      const imgs = [...galleryImages.querySelectorAll('img')].map(img => img.src);
+      localStorage.setItem('gallery', JSON.stringify(imgs));
+    }
+
+    function loadGallery() {
+      const imgs = JSON.parse(localStorage.getItem('gallery') || '[]');
+      imgs.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        galleryImages.appendChild(img);
+      });
+    }
+
+    function clearGallery() {
+      galleryImages.innerHTML = '';
+      localStorage.removeItem('gallery');
+    }
+
+    loadGallery();
   </script>
 </body>
 </html>
