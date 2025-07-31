@@ -217,18 +217,19 @@
 
     // Gallery Upload Preview
     document.getElementById('imageUpload').addEventListener('change', function () {
-      const preview = document.getElementById('gallery-preview');
-      preview.innerHTML = '';
-      Array.from(this.files).forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const img = document.createElement('img');
-          img.src = e.target.result;
-          preview.appendChild(img);
-        };
-        reader.readAsDataURL(file);
-      });
-    });
+  const preview = document.getElementById('gallery-preview');
+  preview.innerHTML = '';
+  Array.from(this.files).forEach(file => {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      preview.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  });
+});
+
   </script>
 </body>
 </html>
