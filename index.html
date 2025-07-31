@@ -1,182 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TYRF Library & Knowledge</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e8f5e9;
-      margin: 0;
-      padding: 0;
-    }
-    .tab {
-      overflow: hidden;
-      background-color: #2e7d32;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .tab button {
-      background-color: inherit;
-      flex: 1;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-      color: white;
-    }
-    .tab button:hover {
-      background-color: #388e3c;
-    }
-    .tab button.active {
-      background-color: #43a047;
-    }
-    .tabcontent {
-      display: none;
-      padding: 20px;
-      border-top: none;
-    }
-    #languageToggle {
-      margin: 10px;
-      padding: 8px 12px;
-      background: #66bb6a;
-      color: white;
-      border: none;
-      cursor: pointer;
-      float: right;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Telangana Education Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include your CSS and JS for tabs, Telugu toggle -->
 </head>
 <body>
-  <button id="languageToggle" onclick="toggleLanguage()">తెలుగు</button>
-  <h1 id="siteTitle">TYRF Library & Knowledge</h1>
 
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Overview')" id="defaultOpen">Overview</button>
-    <button class="tablinks" onclick="openTab(event, 'KGV')">KG – V</button>
-    <button class="tablinks" onclick="openTab(event, 'VIX')">VI – X</button>
-    <button class="tablinks" onclick="openTab(event, 'Intermediate')">Intermediate</button>
-    <button class="tablinks" onclick="openTab(event, 'Universities')">Universities</button>
-    <button class="tablinks" onclick="openTab(event, 'Scholarships')">Scholarships</button>
-    <button class="tablinks" onclick="openTab(event, 'LibraryResources')">Library Resources</button>
-    <button class="tablinks" onclick="openTab(event, 'TYRFLibrary')">TYRF Library</button>
-    <button class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</button>
-    <button class="tablinks" onclick="openTab(event, 'Contact')">Contact Us</button>
-  </div>
+<!-- Language toggle button -->
+<button id="toggle-lang">తెలుగు / English</button>
 
-  <div id="Overview" class="tabcontent">
-    <h3>Overview</h3>
-    <p>Edit this directly in HTML to update your content.</p>
-    <p>This portal provides information on education from KG to PG in Telangana.</p>
-  </div>
+<!-- Tab headers -->
+<ul class="tabs">
+  <li data-target="kgv">KG–V</li>
+  <li data-target="vi_x">VI–X</li>
+  <li data-target="inter">Intermediate</li>
+  <li data-target="unis">Universities</li>
+  <li data-target="scholar">Scholarships</li>
+  <li data-target="library">Library Resources</li>
+  <li data-target="admission">Admissions</li>
+  <li data-target="gurukula">Gurukulas</li>
+  <li data-target="sainik">Sainik Schools</li>
+  <li data-target="gallery">Gallery</li>
+  <li data-target="contact">Contact Us</li>
+  <li data-target="tyrf">TYRF Library</li>
+</ul>
 
-  <div id="KGV" class="tabcontent">
-    <h3>KG to V Schools</h3>
-    <ul>
-      <li><a href="https://schooledu.telangana.gov.in/ISMS/#" target="_blank">Telangana School Education Portal</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=school.edu.isms" target="_blank">ISMS Mobile App</a></li>
-      <li><a href="https://teacherinfo.telangana.gov.in/" target="_blank">Teacher Info Portal</a></li>
-      <li><a href="https://ssa.telangana.gov.in/" target="_blank">Samagra Shiksha Telangana</a></li>
-      <li><a href="https://telanganamschools.cgg.gov.in/" target="_blank">Model Schools Directory</a></li>
-    </ul>
-  </div>
+<!-- Tab contents -->
+<div id="kgv" class="tab-content">
+  <h2>Primary Education (KG–Class V)</h2>
+  <ul>
+    <li><a href="https://schooledu.telangana.gov.in/SCHOOLEDUCATION/" target="_blank">Telangana School Education (ISMS Portal)</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.ap.diksha&hl=en_IN" target="_blank">DIKSHA – KG‑5 Digital Learning Platform</a></li>
+    <li><a href="https://kys.udiseplus.gov.in/" target="_blank">Know Your School – Telangana U‑DISE School Finder</a></li>
+  </ul>
+</div>
 
-  <div id="VIX" class="tabcontent">
-    <h3>VI to X Schools</h3>
-    <ul>
-      <li><a href="https://tsresidential.cgg.gov.in/" target="_blank">TS Residential Schools</a></li>
-      <li><a href="https://telanganamschools.cgg.gov.in/" target="_blank">Model Schools</a></li>
-      <li><a href="https://treis.telangana.gov.in/" target="_blank">REIS</a></li>
-      <li><a href="https://schooledu.telangana.gov.in/ISMS/" target="_blank">School Info Portal</a></li>
-      <li><a href="https://bse.telangana.gov.in/" target="_blank">Board of Secondary Education</a></li>
-    </ul>
-  </div>
+<div id="vi_x" class="tab-content" style="display:none;">
+  <h2>Secondary Education (VI–Class X)</h2>
+  <ul>
+    <li><a href="https://bse.telangana.gov.in/Index.aspx" target="_blank">Board of Secondary Education Telangana (SSC)</a></li>
+    <li><a href="https://en.vikaspedia.in/viewcontent/education/education‑best‑practices/remote‑learning‑initiatives‑in‑telangana/remote‑learning‑initiatives‑in‑telangana" target="_blank">Digital & Remote Learning Initiatives</a></li>
+  </ul>
+</div>
 
-  <div id="Intermediate" class="tabcontent">
-    <h3>Intermediate Colleges (Free)</h3>
-    <ul>
-      <li><a href="https://tsbie.cgg.gov.in/" target="_blank">TSBIE Official Site</a></li>
-      <li><a href="https://tsmodelschools.in/" target="_blank">Model Junior Colleges</a></li>
-      <li><a href="https://www.tswreis.ac.in/" target="_blank">Social Welfare Junior Colleges</a></li>
-      <li><a href="https://www.tgtwgurukulam.telangana.gov.in/" target="_blank">Tribal Welfare Colleges</a></li>
-      <li><a href="https://tgtelangana.gov.in/" target="_blank">TS Govt Free Colleges</a></li>
-    </ul>
-  </div>
+<div id="inter" class="tab-content" style="display:none;">
+  <h2>Intermediate (Class XI–XII)</h2>
+  <ul>
+    <li><a href="https://ccetg.cgg.gov.in/" target="_blank">CCE – Collegiate & Technical Education Dept Telangana</a></li>
+  </ul>
+</div>
 
-  <div id="Universities" class="tabcontent">
-    <h3>Universities</h3>
-    <ul>
-      <li><a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a></li>
-      <li><a href="https://www.jntuh.ac.in/" target="_blank">JNTU Hyderabad</a></li>
-      <li><a href="https://www.kakatiya.ac.in/" target="_blank">Kakatiya University</a></li>
-      <li><a href="https://www.telanganauniversity.ac.in/" target="_blank">Telangana University</a></li>
-      <li><a href="https://www.mguniversity.ac.in/" target="_blank">MG University</a></li>
-    </ul>
-  </div>
+<div id="unis" class="tab-content" style="display:none;">
+  <h2>Universities & Open Learning</h2>
+  <ul>
+    <li><a href="https://dost.cgg.gov.in" target="_blank">DOST – Degree Online Services Telangana</a></li>
+    <li><a href="https://braou.ac.in" target="_blank">Dr. B. R. Ambedkar Open University (TOSS)</a></li>
+    <li><a href="https://www.telanganaopenschool.org/" target="_blank">Telangana Open School Society (TOSS)</a></li>
+  </ul>
+</div>
 
-  <div id="Scholarships" class="tabcontent">
-    <h3>Scholarships</h3>
-    <ul>
-      <li><a href="https://telanganaepass.cgg.gov.in/" target="_blank">Telangana ePASS</a></li>
-      <li><a href="https://scholarships.gov.in/" target="_blank">National Scholarship Portal</a></li>
-      <li><a href="https://jnanabhumi.ap.gov.in/" target="_blank">Jnanabhumi Scholarships</a></li>
-      <li><a href="https://www.minorityaffairs.gov.in/" target="_blank">Minority Affairs Scholarships</a></li>
-      <li><a href="https://ugc.ac.in/" target="_blank">UGC Scholarships</a></li>
-    </ul>
-  </div>
+<div id="scholar" class="tab-content" style="display:none;">
+  <h2>Scholarships & Financial Aid</h2>
+  <ul>
+    <li><a href="https://telanganaepass.cgg.gov.in/" target="_blank">Telangana ePASS Scholarship Portal (Pre, Post & Overseas)</a></li>
+    <li><a href="https://telanganaepass.cgg.gov.in/OverseasLinks.do" target="_blank">Overseas Scholarship Schemes (AOVN / Minority / MJPOVN)</a></li>
+    <li><a href="https://services.india.gov.in/service/detail/telangana--student‑scholarship‑application‑form‑fresh" target="_blank">NSP / Student Scholarship via MeeSeva</a></li>
+  </ul>
+</div>
 
-  <div id="LibraryResources" class="tabcontent">
-    <h3>Library Resources</h3>
-    <p>Available materials:</p>
-    <ul>
-      <li>Books: Textbooks, Reference books</li>
-      <li>Magazines: Competitive, Academic</li>
-      <li>Newspapers: Telugu and English</li>
-      <li>Computers with Internet</li>
-      <li>Study Rooms</li>
-    </ul>
-  </div>
+<div id="library" class="tab-content" style="display:none;">
+  <h2>Library Resources & Textbooks</h2>
+  <ul>
+    <li><a href="https://schooledu.telangana.gov.in/SCHOOLEDUCATION/" target="_blank">Telangana School Education Dept – ISMS Digital Library</a></li>
+    <li><a href="https://en.vikaspedia.in/viewcontent/education/education‑best‑practices/remote‑learning‑initiatives‑in‑telangana/remote‑learning‑initiatives‑in‑telangana" target="_blank">DIKSHA Content & Remote‑Learning Tools</a></li>
+  </ul>
+</div>
 
-  <div id="TYRFLibrary" class="tabcontent">
-    <h3>TYRF Library</h3>
-    <p>Editable section. Add information about your local library, special resources, or events.</p>
-  </div>
+<div id="admission" class="tab-content" style="display:none;">
+  <h2>Admissions</h2>
+  <ul>
+    <li><a href="https://dost.cgg.gov.in" target="_blank">DOST – Degree College Admissions</a></li>
+    <li><a href="https://www.telanganaopenschool.org/" target="_blank">TOSS Admissions (Open & Distance Learning)</a></li>
+  </ul>
+</div>
 
-  <div id="Gallery" class="tabcontent">
-    <h3>Gallery</h3>
-    <div>
-      <img src="gallery/img1.jpg" width="200" alt="Gallery Image 1" />
-      <img src="gallery/img2.jpg" width="200" alt="Gallery Image 2" />
-      <!-- Add more images in the gallery folder -->
-    </div>
-  </div>
+<div id="gurukula" class="tab-content" style="display:none;">
+  <h2>Gurukula / Tribal Residential Schools</h2>
+  <ul>
+    <li><a href="https://services.india.gov.in/service/detail/telangana-department-of-school-education-a-school-registration-application-form-1" target="_blank">Tribal Welfare Schools / ITDA Link</a></li>
+  </ul>
+</div>
 
-  <div id="Contact" class="tabcontent">
-    <h3>Contact Us</h3>
-    <p>You can edit this section directly in HTML.</p>
-    <p>Email: info@tyrf.org<br />Phone: 040-12345678</p>
-  </div>
+<div id="sainik" class="tab-content" style="display:none;">
+  <h2>Sainik Schools</h2>
+  <p>(Links to state or Central Sainik School admissions pages can be added if available)</p>
+</div>
 
-  <script>
-    function openTab(evt, tabName) {
-      const tabcontent = document.getElementsByClassName("tabcontent");
-      for (let i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
-      const tablinks = document.getElementsByClassName("tablinks");
-      for (let i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
+<div id="gallery" class="tab-content" style="display:none;">
+  <h2>Gallery</h2>
+  <p>— Your image upload widget / gallery fix should go here —</p>
+</div>
 
-    document.getElementById("defaultOpen").click();
+<div id="contact" class="tab-content" style="display:none;">
+  <h2>Contact Us</h2>
+  <p>— Include address, emails, phone numbers here —</p>
+</div>
 
-    function toggleLanguage() {
-      const isEnglish = document.getElementById("languageToggle").innerText === "తెలుగు";
-      document.getElementById("languageToggle").innerText = isEnglish ? "English" : "తెలుగు";
-      document.getElementById("siteTitle").innerText = isEnglish ? "టైఆర్ఎఫ్ లైబ్రరీ & నాలెడ్జ్" : "TYRF Library & Knowledge";
-      // Add more translation logic as needed here
-    }
-  </script>
+<div id="tyrf" class="tab-content" style="display:none;">
+  <h2>TYRFLibrary</h2>
+  <p>— Embed or link to TYRF Library content or portal here —</p>
+</div>
+
 </body>
 </html>
