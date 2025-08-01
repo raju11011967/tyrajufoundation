@@ -5,75 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TY RAJU FOUNDATION</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #f0f0f0; /* Light gray background */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f2ff; /* Very light blue background */
         }
-        header { 
-            background-color: #333; /* Dark gray header */
-            color: white; 
-            padding: 1rem; 
-            text-align: center; 
+        header {
+            background-color: #004d99; /* Dark blue header */
+            color: white;
+            padding: 1rem;
+            text-align: center;
         }
-        nav { 
-            display: flex; 
-            flex-wrap: wrap; 
-            background-color: #555; /* Slightly lighter dark gray nav bar */
-            justify-content: center; 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #0066cc; /* Medium blue nav bar */
+            justify-content: center;
         }
-        nav button { 
-            background: none; 
-            color: white; 
-            border: none; 
-            padding: 1rem; 
-            cursor: pointer; 
+        nav button {
+            background: none;
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
         }
-        nav button:hover, nav button.active { 
-            background-color: #777; /* Hover color */
+        nav button:hover, nav button.active {
+            background-color: #0059b3; /* Hover color */
         }
-        .tab-content { 
-            display: none; 
-            padding: 1rem; 
+        .tab-content {
+            display: none;
+            padding: 1rem;
+            background-color: #fff; /* White background for content */
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .tab-content.active { 
-            display: block; 
+        .tab-content.active {
+            display: block;
         }
-        a { 
-            color: #000; 
-            text-decoration: none; 
-            display: block; 
-            margin: 0.5rem 0; 
+        a {
+            color: #004d99; /* Blue color for links */
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
-        .lang-toggle { 
-            float: right; 
-            background: #333; 
-            color: white; 
-            border: none; 
-            padding: 0.5rem; 
-            margin-top: -3rem; 
-            margin-right: 1rem; 
-            cursor: pointer; 
+        a:hover {
+            background-color: #e6f2ff; /* Light blue hover background */
         }
-        .gallery-item { 
-            display: inline-block; 
-            position: relative; 
-            margin: 0.5rem; 
+        .lang-toggle {
+            float: right;
+            background: #004d99;
+            color: white;
+            border: 1px solid white;
+            padding: 0.5rem;
+            margin-top: -3rem;
+            margin-right: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
         }
-        .gallery-item img, .gallery-item video { 
-            max-width: 150px; 
-            height: auto; 
-            display: block; 
+        .gallery-item {
+            display: inline-block;
+            position: relative;
+            margin: 0.5rem;
+            border: 1px solid #ddd;
+            padding: 4px;
+            border-radius: 4px;
         }
-        .gallery-item button { 
-            position: absolute; 
-            bottom: 0; 
-            right: 0; 
-            background: red; 
-            color: white; 
-            border: none; 
-            cursor: pointer; 
+        .gallery-item img, .gallery-item video {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+        .gallery-item button {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            background: #cc0000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -240,6 +257,7 @@
             if (selectedTab) {
                 selectedTab.classList.add('active');
             }
+            // Add the "active" class to the clicked button
             event.target.classList.add('active');
         }
 
@@ -266,6 +284,7 @@
                 "Sainik Schools": "సైనిక్ పాఠశాలలు",
                 "Gallery": "గ్యాలరీ"
             };
+            // This logic allows for toggling back and forth
             return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
         }
 
@@ -352,7 +371,11 @@
             }
 
             loadGallery();
-            openTab('home');
+            // This is the important part, we need to ensure a tab is open on page load
+            const initialTab = document.querySelector('nav button.active');
+            if (initialTab) {
+                openTab(initialTab.getAttribute('onclick').match(/'(.*?)'/)[1]);
+            }
         });
     </script>
 </body>
