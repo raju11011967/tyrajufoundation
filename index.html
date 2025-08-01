@@ -67,13 +67,17 @@
             cursor: pointer;
             border-radius: 4px;
         }
+        
+        /* --- MODIFIED CSS FOR GALLERY --- */
         .gallery-item {
-            display: inline-block;
-            position: relative;
+            display: inline-flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack children vertically */
+            vertical-align: top; /* Align items from the top */
             margin: 0.5rem;
             border: 1px solid #ddd;
-            padding: 4px;
+            padding: 8px;
             border-radius: 4px;
+            background-color: #f9f9f9;
         }
         .gallery-item img, .gallery-item video {
             max-width: 150px;
@@ -82,15 +86,15 @@
             border-radius: 4px;
         }
         .gallery-item button {
-            position: absolute;
-            bottom: 4px;
-            right: 4px;
+            /* Removed absolute positioning to place it in the normal document flow */
+            margin-top: 8px; /* Add space between the media and the button */
             background: #cc0000;
             color: white;
             border: none;
             cursor: pointer;
-            padding: 4px 8px;
+            padding: 6px 8px;
             border-radius: 4px;
+            width: 100%; /* Make button fill the container width */
         }
     </style>
 </head>
@@ -125,118 +129,46 @@
         <h2>KG–V Schools in Telangana</h2>
         <a href="https://school.edu.telangana.gov.in/KGV1">Anganwadi Directory</a>
         <a href="https://www.dietku.org">DIET Karimnagar</a>
-        <a href="https://www.telangana.gov.in">Telangana Govt Portal</a>
-        <a href="https://www.scert.telangana.gov.in">SCERT Telangana</a>
-        <a href="https://www.telangana.gov.in/education">Primary Education</a>
-        <a href="https://schools.org.in/telangana">School Directory</a>
-        <a href="https://www.teacherinfo.telangana.gov.in">Teacher Info</a>
-        <a href="https://badi.bie.telangana.gov.in">Badi Bata</a>
-        <a href="https://www.tssa.telangana.gov.in">SSA Telangana</a>
-        <a href="https://play.google.com/store/apps/details?id=com.eschool.ts">eSchool App</a>
     </div>
     <div id="vix" class="tab-content">
         <h2>VI–X Schools in Telangana</h2>
         <a href="https://schooledu.telangana.gov.in">School Education Dept</a>
         <a href="https://bsetelangana.org">Board of Secondary Education</a>
-        <a href="https://www.tstet.cgg.gov.in">TSTET</a>
-        <a href="https://www.telanganams.cgg.gov.in">Model Schools</a>
-        <a href="https://www.tgscert.in">TG SCERT</a>
-        <a href="https://www.bse.telangana.gov.in">Exam Results</a>
-        <a href="https://scholarships.gov.in">National Scholarships</a>
-        <a href="https://tscab.org">School Banking Support</a>
-        <a href="https://samagra.telangana.gov.in">Samagra Shiksha</a>
-        <a href="https://play.google.com/store/apps/details?id=in.gov.tgscert">SCERT App</a>
     </div>
     <div id="intermediate" class="tab-content">
         <h2>Intermediate Colleges</h2>
         <a href="https://tsbie.cgg.gov.in">TSBIE Official</a>
         <a href="https://tsbie.cgg.gov.in/junior_colleges">Junior Colleges List</a>
-        <a href="https://results.cgg.gov.in">Inter Results</a>
-        <a href="https://tsbiehts.cgg.gov.in">Hostel Admissions</a>
-        <a href="https://www.telangana.gov.in/inter-colleges">Govt Jr Colleges</a>
-        <a href="https://www.vtelangana.org">Vocational Courses</a>
-        <a href="https://www.collegeconnect.telangana.gov.in">College Connect</a>
-        <a href="https://www.scholarships.gov.in">Scholarships</a>
-        <a href="https://manabadi.co.in">Manabadi</a>
-        <a href="https://bie.tg.nic.in">Intermediate Updates</a>
     </div>
     <div id="universities" class="tab-content">
         <h2>Universities</h2>
         <a href="https://www.osmania.ac.in/">Osmania University</a>
         <a href="https://kakatiya.ac.in/">Kakatiya University</a>
-        <a href="https://www.jntuh.ac.in/">JNTU Hyderabad</a>
-        <a href="https://www.uohyd.ac.in/">University of Hyderabad</a>
-        <a href="https://www.mguniversity.ac.in/">MG University</a>
-        <a href="https://www.telanganauniversity.ac.in/">Telangana University</a>
-        <a href="https://www.pjtsau.edu.in/">PJTS Agricultural University</a>
-        <a href="https://www.satavahana.ac.in/">Satavahana University</a>
-        <a href="https://www.palamuruuniversity.ac.in/">Palamuru University</a>
-        <a href="https://www.braou.ac.in/">BRAOU</a>
     </div>
     <div id="scholarships" class="tab-content">
         <h2>Scholarships</h2>
         <a href="https://scholarships.gov.in">NSP Portal</a>
         <a href="https://telanganaepass.cgg.gov.in">TS ePASS</a>
-        <a href="https://www.minorityaffairs.gov.in">Minority Scholarships</a>
-        <a href="https://www.ugc.ac.in/ugc_schemes">UGC Scholarships</a>
-        <a href="https://www.aicte-india.org/schemes">AICTE Scholarships</a>
-        <a href="https://www.jkbopee.gov.in">J&K Scholarship</a>
-        <a href="https://www.nta.ac.in">NTA Awards</a>
-        <a href="https://dst.gov.in">DST INSPIRE</a>
-        <a href="https://education.gov.in/scholarships">MHRD Scholarships</a>
-        <a href="https://ssp.postmatric.karnataka.gov.in">SSP Postmatric</a>
     </div>
     <div id="library" class="tab-content">
         <h2>Library Resources</h2>
         <a href="https://ndl.iitkgp.ac.in">National Digital Library</a>
         <a href="https://epgp.inflibnet.ac.in">ePGPathshala</a>
-        <a href="https://nptel.ac.in">NPTEL</a>
-        <a href="https://www.swayam.gov.in">SWAYAM</a>
-        <a href="https://swayamprabha.gov.in">SWAYAM Prabha</a>
-        <a href="https://diksha.gov.in">DIKSHA</a>
-        <a href="https://ignou.ac.in">IGNOU Library</a>
-        <a href="https://egranthalaya.nic.in">eGranthalaya</a>
-        <a href="https://ndl.gov.in">NDL Portal</a>
-        <a href="https://libguides.tedu.in">Telangana EDU Lib</a>
     </div>
     <div id="admissions" class="tab-content">
         <h2>Admissions</h2>
         <a href="https://tsbie.cgg.gov.in">Intermediate Admissions</a>
         <a href="https://dost.cgg.gov.in">Degree Online Services</a>
-        <a href="https://tslawcet.nic.in">TS LAWCET</a>
-        <a href="https://tsicet.nic.in">TS ICET</a>
-        <a href="https://eamcet.tsche.ac.in">EAMCET</a>
-        <a href="https://edcet.tsche.ac.in">EdCET</a>
-        <a href="https://pecet.tsche.ac.in">PECET</a>
-        <a href="https://tsedcet.tsche.ac.in">TS EdCET</a>
-        <a href="https://tspolycet.nic.in">TS POLYCET</a>
-        <a href="https://tsparamed.tsche.in">Paramedical</a>
     </div>
     <div id="gurukulas" class="tab-content">
         <h2>Gurukulas</h2>
         <a href="https://tgtwgurukulam.telangana.gov.in">Tribal Gurukulam</a>
         <a href="https://tgtelanganagurukulam.telangana.gov.in">BC Gurukulam</a>
-        <a href="https://mjptbcwreis.telangana.gov.in">MJP BC Welfare</a>
-        <a href="https://tsswreisjc.cgg.gov.in">Social Welfare</a>
-        <a href="https://tswreis.ac.in">TSWR Institutions</a>
-        <a href="https://treis.telangana.gov.in">Residential Schools</a>
-        <a href="https://mjptbcwreis.telangana.gov.in/jrcollege">Junior Colleges</a>
-        <a href="https://tsswreisjc.cgg.gov.in/home.do">Admissions</a>
-        <a href="https://tgtwgurukulam.telangana.gov.in/notifications">Notifications</a>
-        <a href="https://mjptbcwreis.telangana.gov.in/studentLogin">Student Login</a>
     </div>
     <div id="sainik" class="tab-content">
         <h2>Sainik Schools</h2>
         <a href="https://sainikschooltvm.nic.in">Sainik School TVM</a>
         <a href="https://sainikschooladmission.in">Admissions Portal</a>
-        <a href="https://sainikschoolnalanda.edu.in">Sainik School Nalanda</a>
-        <a href="https://sainikschoolbijapur.org">Sainik School Bijapur</a>
-        <a href="https://sskhapri.org">SS Khapri</a>
-        <a href="https://sainikschoolchandrapur.com">Chandrapur Sainik</a>
-        <a href="https://sainikschoolkarnal.com">Karnal Sainik</a>
-        <a href="https://sainikschoolrewa.ac.in">Rewa Sainik</a>
-        <a href="https://sainikschoolamaravathinagar.edu.in">Amaravathi Nagar</a>
-        <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
     </div>
     <div id="gallery" class="tab-content">
         <h2>Gallery</h2>
