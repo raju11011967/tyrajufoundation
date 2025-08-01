@@ -1,324 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TY RAJU FOUNDATION</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #e8f0ff; margin: 0; padding: 0; }
-    header { background-color: #004080; color: white; padding: 1rem; text-align: center; }
-    nav { display: flex; flex-wrap: wrap; background-color: #0066cc; justify-content: center; }
-    nav button { background: none; color: white; border: none; padding: 1rem; cursor: pointer; }
-    nav button:hover, nav button.active { background-color: #004080; }
-    .tab-content { display: none; padding: 1rem; }
-    .tab-content.active { display: block; }
-    a { color: #003366; text-decoration: none; display: block; margin: 0.5rem 0; }
-    .lang-toggle { float: right; background: #004080; color: white; border: none; padding: 0.5rem; margin-top: -3rem; margin-right: 1rem; cursor: pointer; }
-    .gallery-item { display: inline-block; position: relative; margin: 0.5rem; }
-    .gallery-item img, .gallery-item video { max-width: 150px; height: auto; display: block; }
-    .gallery-item button { 
-      position: absolute; 
-      bottom: 0; /* Changed from top: 0 to bottom: 0 */
-      right: 0; 
-      background: red; 
-      color: white; 
-      border: none; 
-      cursor: pointer; 
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TY RAJU FOUNDATION</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        header { 
+            background-color: #333; /* Dark gray header */
+            color: white; 
+            padding: 1rem; 
+            text-align: center; 
+        }
+        nav { 
+            display: flex; 
+            flex-wrap: wrap; 
+            background-color: #555; /* Slightly lighter dark gray nav bar */
+            justify-content: center; 
+        }
+        nav button { 
+            background: none; 
+            color: white; 
+            border: none; 
+            padding: 1rem; 
+            cursor: pointer; 
+        }
+        nav button:hover, nav button.active { 
+            background-color: #777; /* Hover color */
+        }
+        .tab-content { 
+            display: none; 
+            padding: 1rem; 
+        }
+        .tab-content.active { 
+            display: block; 
+        }
+        a { 
+            color: #000; 
+            text-decoration: none; 
+            display: block; 
+            margin: 0.5rem 0; 
+        }
+        .lang-toggle { 
+            float: right; 
+            background: #333; 
+            color: white; 
+            border: none; 
+            padding: 0.5rem; 
+            margin-top: -3rem; 
+            margin-right: 1rem; 
+            cursor: pointer; 
+        }
+        .gallery-item { 
+            display: inline-block; 
+            position: relative; 
+            margin: 0.5rem; 
+        }
+        .gallery-item img, .gallery-item video { 
+            max-width: 150px; 
+            height: auto; 
+            display: block; 
+        }
+        .gallery-item button { 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            background: red; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>TY RAJU FOUNDATION</h1>
-    <button class="lang-toggle" onclick="toggleLanguage()">తెలుగు</button>
-  </header>
-  <nav id="tabs">
-    <button onclick="openTab('home')" class="active">Home</button>
-    <button onclick="openTab('overview')">Overview</button>
-    <button onclick="openTab('kgv')">KG–V</button>
-    <button onclick="openTab('vix')">VI–X</button>
-    <button onclick="openTab('intermediate')">Intermediate</button>
-    <button onclick="openTab('universities')">Universities</button>
-    <button onclick="openTab('scholarships')">Scholarships</button>
-    <button onclick="openTab('library')">Library Resources</button>
-    <button onclick="openTab('admissions')">Admissions</button>
-    <button onclick="openTab('gurukulas')">Gurukulas</button>
-    <button onclick="openTab('sainik')">Sainik Schools</button>
-    <button onclick="openTab('gallery')">Gallery</button>
-  </nav>
-  <div id="home" class="tab-content active">
-    <h2>Welcome to TY Raju Foundation</h2>
-    <p contenteditable="true">You can edit this area to customize the home page text.</p>
-  </div>
-  <div id="overview" class="tab-content">
-    <h2>Overview</h2>
-    <p>TY Raju Foundation supports free education from KG to PG in Telangana. Explore scholarships, admissions, libraries, and special institutions.</p>
-  </div>
-  <div id="kgv" class="tab-content">
-    <h2>KG–V Schools in Telangana</h2>
-    <a href="https://school.edu.telangana.gov.in/KGV1">Anganwadi Directory</a>
-    <a href="https://www.dietku.org">DIET Karimnagar</a>
-    <a href="https://www.telangana.gov.in">Telangana Govt Portal</a>
-    <a href="https://www.scert.telangana.gov.in">SCERT Telangana</a>
-    <a href="https://www.telangana.gov.in/education">Primary Education</a>
-    <a href="https://schools.org.in/telangana">School Directory</a>
-    <a href="https://www.teacherinfo.telangana.gov.in">Teacher Info</a>
-    <a href="https://badi.bie.telangana.gov.in">Badi Bata</a>
-    <a href="https://www.tssa.telangana.gov.in">SSA Telangana</a>
-    <a href="https://play.google.com/store/apps/details?id=com.eschool.ts">eSchool App</a>
-  </div>
-  <div id="vix" class="tab-content">
-    <h2>VI–X Schools in Telangana</h2>
-    <a href="https://schooledu.telangana.gov.in">School Education Dept</a>
-    <a href="https://bsetelangana.org">Board of Secondary Education</a>
-    <a href="https://www.tstet.cgg.gov.in">TSTET</a>
-    <a href="https://www.telanganams.cgg.gov.in">Model Schools</a>
-    <a href="https://www.tgscert.in">TG SCERT</a>
-    <a href="https://www.bse.telangana.gov.in">Exam Results</a>
-    <a href="https://scholarships.gov.in">National Scholarships</a>
-    <a href="https://tscab.org">School Banking Support</a>
-    <a href="https://samagra.telangana.gov.in">Samagra Shiksha</a>
-    <a href="https://play.google.com/store/apps/details?id=in.gov.tgscert">SCERT App</a>
-  </div>
-  <div id="intermediate" class="tab-content">
-    <h2>Intermediate Colleges</h2>
-    <a href="https://tsbie.cgg.gov.in">TSBIE Official</a>
-    <a href="https://tsbie.cgg.gov.in/junior_colleges">Junior Colleges List</a>
-    <a href="https://results.cgg.gov.in">Inter Results</a>
-    <a href="https://tsbiehts.cgg.gov.in">Hostel Admissions</a>
-    <a href="https://www.telangana.gov.in/inter-colleges">Govt Jr Colleges</a>
-    <a href="https://www.vtelangana.org">Vocational Courses</a>
-    <a href="https://www.collegeconnect.telangana.gov.in">College Connect</a>
-    <a href="https://www.scholarships.gov.in">Scholarships</a>
-    <a href="https://manabadi.co.in">Manabadi</a>
-    <a href="https://bie.tg.nic.in">Intermediate Updates</a>
-  </div>
-  <div id="universities" class="tab-content">
-    <h2>Universities</h2>
-    <a href="https://www.osmania.ac.in/">Osmania University</a>
-    <a href="https://kakatiya.ac.in/">Kakatiya University</a>
-    <a href="https://www.jntuh.ac.in/">JNTU Hyderabad</a>
-    <a href="https://www.uohyd.ac.in/">University of Hyderabad</a>
-    <a href="https://www.mguniversity.ac.in/">MG University</a>
-    <a href="https://www.telanganauniversity.ac.in/">Telangana University</a>
-    <a href="https://www.pjtsau.edu.in/">PJTS Agricultural University</a>
-    <a href="https://www.satavahana.ac.in/">Satavahana University</a>
-    <a href="https://www.palamuruuniversity.ac.in/">Palamuru University</a>
-    <a href="https://www.braou.ac.in/">BRAOU</a>
-  </div>
-  <div id="scholarships" class="tab-content">
-    <h2>Scholarships</h2>
-    <a href="https://scholarships.gov.in">NSP Portal</a>
-    <a href="https://telanganaepass.cgg.gov.in">TS ePASS</a>
-    <a href="https://www.minorityaffairs.gov.in">Minority Scholarships</a>
-    <a href="https://www.ugc.ac.in/ugc_schemes">UGC Scholarships</a>
-    <a href="https://www.aicte-india.org/schemes">AICTE Scholarships</a>
-    <a href="https://www.jkbopee.gov.in">J&K Scholarship</a>
-    <a href="https://www.nta.ac.in">NTA Awards</a>
-    <a href="https://dst.gov.in">DST INSPIRE</a>
-    <a href="https://education.gov.in/scholarships">MHRD Scholarships</a>
-    <a href="https://ssp.postmatric.karnataka.gov.in">SSP Postmatric</a>
-  </div>
-  <div id="library" class="tab-content">
-    <h2>Library Resources</h2>
-    <a href="https://ndl.iitkgp.ac.in">National Digital Library</a>
-    <a href="https://epgp.inflibnet.ac.in">ePGPathshala</a>
-    <a href="https://nptel.ac.in">NPTEL</a>
-    <a href="https://www.swayam.gov.in">SWAYAM</a>
-    <a href="https://swayamprabha.gov.in">SWAYAM Prabha</a>
-    <a href="https://diksha.gov.in">DIKSHA</a>
-    <a href="https://ignou.ac.in">IGNOU Library</a>
-    <a href="https://egranthalaya.nic.in">eGranthalaya</a>
-    <a href="https://ndl.gov.in">NDL Portal</a>
-    <a href="https://libguides.tedu.in">Telangana EDU Lib</a>
-  </div>
-  <div id="admissions" class="tab-content">
-    <h2>Admissions</h2>
-    <a href="https://tsbie.cgg.gov.in">Intermediate Admissions</a>
-    <a href="https://dost.cgg.gov.in">Degree Online Services</a>
-    <a href="https://tslawcet.nic.in">TS LAWCET</a>
-    <a href="https://tsicet.nic.in">TS ICET</a>
-    <a href="https://eamcet.tsche.ac.in">EAMCET</a>
-    <a href="https://edcet.tsche.ac.in">EdCET</a>
-    <a href="https://pecet.tsche.ac.in">PECET</a>
-    <a href="https://tsedcet.tsche.ac.in">TS EdCET</a>
-    <a href="https://tspolycet.nic.in">TS POLYCET</a>
-    <a href="https://tsparamed.tsche.in">Paramedical</a>
-  </div>
-  <div id="gurukulas" class="tab-content">
-    <h2>Gurukulas</h2>
-    <a href="https://tgtwgurukulam.telangana.gov.in">Tribal Gurukulam</a>
-    <a href="https://tgtelanganagurukulam.telangana.gov.in">BC Gurukulam</a>
-    <a href="https://mjptbcwreis.telangana.gov.in">MJP BC Welfare</a>
-    <a href="https://tsswreisjc.cgg.gov.in">Social Welfare</a>
-    <a href="https://tswreis.ac.in">TSWR Institutions</a>
-    <a href="https://treis.telangana.gov.in">Residential Schools</a>
-    <a href="https://mjptbcwreis.telangana.gov.in/jrcollege">Junior Colleges</a>
-    <a href="https://tsswreisjc.cgg.gov.in/home.do">Admissions</a>
-    <a href="https://tgtwgurukulam.telangana.gov.in/notifications">Notifications</a>
-    <a href="https://mjptbcwreis.telangana.gov.in/studentLogin">Student Login</a>
-  </div>
-  <div id="sainik" class="tab-content">
-    <h2>Sainik Schools</h2>
-    <a href="https://sainikschooltvm.nic.in">Sainik School TVM</a>
-    <a href="https://sainikschooladmission.in">Admissions Portal</a>
-    <a href="https://sainikschoolnalanda.edu.in">Sainik School Nalanda</a>
-    <a href="https://sainikschoolbijapur.org">Sainik School Bijapur</a>
-    <a href="https://sskhapri.org">SS Khapri</a>
-    <a href="https://sainikschoolchandrapur.com">Chandrapur Sainik</a>
-    <a href="https://sainikschoolkarnal.com">Karnal Sainik</a>
-    <a href="https://sainikschoolrewa.ac.in">Rewa Sainik</a>
-    <a href="https://sainikschoolamaravathinagar.edu.in">Amaravathi Nagar</a>
-    <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
-  </div>
-  <div id="gallery" class="tab-content">
-    <h2>Gallery</h2>
-    <label for="fileInput">Upload Images or Videos</label>
-    <input type="file" id="fileInput" multiple accept="image/*,video/*" /><br /><br />
-    <div id="galleryContainer" class="gallery-container"></div>
-  </div>
+    <header>
+        <h1>TY RAJU FOUNDATION</h1>
+        <button class="lang-toggle" onclick="toggleLanguage()">తెలుగు</button>
+    </header>
+    <nav id="tabs">
+        <button onclick="openTab('home')" class="active">Home</button>
+        <button onclick="openTab('overview')">Overview</button>
+        <button onclick="openTab('kgv')">KG–V</button>
+        <button onclick="openTab('vix')">VI–X</button>
+        <button onclick="openTab('intermediate')">Intermediate</button>
+        <button onclick="openTab('universities')">Universities</button>
+        <button onclick="openTab('scholarships')">Scholarships</button>
+        <button onclick="openTab('library')">Library Resources</button>
+        <button onclick="openTab('admissions')">Admissions</button>
+        <button onclick="openTab('gurukulas')">Gurukulas</button>
+        <button onclick="openTab('sainik')">Sainik Schools</button>
+        <button onclick="openTab('gallery')">Gallery</button>
+    </nav>
+    <div id="home" class="tab-content active">
+        <h2>Welcome to TY Raju Foundation</h2>
+        <p contenteditable="true">You can edit this area to customize the home page text.</p>
+    </div>
+    <div id="overview" class="tab-content">
+        <h2>Overview</h2>
+        <p>TY Raju Foundation supports free education from KG to PG in Telangana. Explore scholarships, admissions, libraries, and special institutions.</p>
+    </div>
+    <div id="kgv" class="tab-content">
+        <h2>KG–V Schools in Telangana</h2>
+        <a href="https://school.edu.telangana.gov.in/KGV1">Anganwadi Directory</a>
+        <a href="https://www.dietku.org">DIET Karimnagar</a>
+        <a href="https://www.telangana.gov.in">Telangana Govt Portal</a>
+        <a href="https://www.scert.telangana.gov.in">SCERT Telangana</a>
+        <a href="https://www.telangana.gov.in/education">Primary Education</a>
+        <a href="https://schools.org.in/telangana">School Directory</a>
+        <a href="https://www.teacherinfo.telangana.gov.in">Teacher Info</a>
+        <a href="https://badi.bie.telangana.gov.in">Badi Bata</a>
+        <a href="https://www.tssa.telangana.gov.in">SSA Telangana</a>
+        <a href="https://play.google.com/store/apps/details?id=com.eschool.ts">eSchool App</a>
+    </div>
+    <div id="vix" class="tab-content">
+        <h2>VI–X Schools in Telangana</h2>
+        <a href="https://schooledu.telangana.gov.in">School Education Dept</a>
+        <a href="https://bsetelangana.org">Board of Secondary Education</a>
+        <a href="https://www.tstet.cgg.gov.in">TSTET</a>
+        <a href="https://www.telanganams.cgg.gov.in">Model Schools</a>
+        <a href="https://www.tgscert.in">TG SCERT</a>
+        <a href="https://www.bse.telangana.gov.in">Exam Results</a>
+        <a href="https://scholarships.gov.in">National Scholarships</a>
+        <a href="https://tscab.org">School Banking Support</a>
+        <a href="https://samagra.telangana.gov.in">Samagra Shiksha</a>
+        <a href="https://play.google.com/store/apps/details?id=in.gov.tgscert">SCERT App</a>
+    </div>
+    <div id="intermediate" class="tab-content">
+        <h2>Intermediate Colleges</h2>
+        <a href="https://tsbie.cgg.gov.in">TSBIE Official</a>
+        <a href="https://tsbie.cgg.gov.in/junior_colleges">Junior Colleges List</a>
+        <a href="https://results.cgg.gov.in">Inter Results</a>
+        <a href="https://tsbiehts.cgg.gov.in">Hostel Admissions</a>
+        <a href="https://www.telangana.gov.in/inter-colleges">Govt Jr Colleges</a>
+        <a href="https://www.vtelangana.org">Vocational Courses</a>
+        <a href="https://www.collegeconnect.telangana.gov.in">College Connect</a>
+        <a href="https://www.scholarships.gov.in">Scholarships</a>
+        <a href="https://manabadi.co.in">Manabadi</a>
+        <a href="https://bie.tg.nic.in">Intermediate Updates</a>
+    </div>
+    <div id="universities" class="tab-content">
+        <h2>Universities</h2>
+        <a href="https://www.osmania.ac.in/">Osmania University</a>
+        <a href="https://kakatiya.ac.in/">Kakatiya University</a>
+        <a href="https://www.jntuh.ac.in/">JNTU Hyderabad</a>
+        <a href="https://www.uohyd.ac.in/">University of Hyderabad</a>
+        <a href="https://www.mguniversity.ac.in/">MG University</a>
+        <a href="https://www.telanganauniversity.ac.in/">Telangana University</a>
+        <a href="https://www.pjtsau.edu.in/">PJTS Agricultural University</a>
+        <a href="https://www.satavahana.ac.in/">Satavahana University</a>
+        <a href="https://www.palamuruuniversity.ac.in/">Palamuru University</a>
+        <a href="https://www.braou.ac.in/">BRAOU</a>
+    </div>
+    <div id="scholarships" class="tab-content">
+        <h2>Scholarships</h2>
+        <a href="https://scholarships.gov.in">NSP Portal</a>
+        <a href="https://telanganaepass.cgg.gov.in">TS ePASS</a>
+        <a href="https://www.minorityaffairs.gov.in">Minority Scholarships</a>
+        <a href="https://www.ugc.ac.in/ugc_schemes">UGC Scholarships</a>
+        <a href="https://www.aicte-india.org/schemes">AICTE Scholarships</a>
+        <a href="https://www.jkbopee.gov.in">J&K Scholarship</a>
+        <a href="https://www.nta.ac.in">NTA Awards</a>
+        <a href="https://dst.gov.in">DST INSPIRE</a>
+        <a href="https://education.gov.in/scholarships">MHRD Scholarships</a>
+        <a href="https://ssp.postmatric.karnataka.gov.in">SSP Postmatric</a>
+    </div>
+    <div id="library" class="tab-content">
+        <h2>Library Resources</h2>
+        <a href="https://ndl.iitkgp.ac.in">National Digital Library</a>
+        <a href="https://epgp.inflibnet.ac.in">ePGPathshala</a>
+        <a href="https://nptel.ac.in">NPTEL</a>
+        <a href="https://www.swayam.gov.in">SWAYAM</a>
+        <a href="https://swayamprabha.gov.in">SWAYAM Prabha</a>
+        <a href="https://diksha.gov.in">DIKSHA</a>
+        <a href="https://ignou.ac.in">IGNOU Library</a>
+        <a href="https://egranthalaya.nic.in">eGranthalaya</a>
+        <a href="https://ndl.gov.in">NDL Portal</a>
+        <a href="https://libguides.tedu.in">Telangana EDU Lib</a>
+    </div>
+    <div id="admissions" class="tab-content">
+        <h2>Admissions</h2>
+        <a href="https://tsbie.cgg.gov.in">Intermediate Admissions</a>
+        <a href="https://dost.cgg.gov.in">Degree Online Services</a>
+        <a href="https://tslawcet.nic.in">TS LAWCET</a>
+        <a href="https://tsicet.nic.in">TS ICET</a>
+        <a href="https://eamcet.tsche.ac.in">EAMCET</a>
+        <a href="https://edcet.tsche.ac.in">EdCET</a>
+        <a href="https://pecet.tsche.ac.in">PECET</a>
+        <a href="https://tsedcet.tsche.ac.in">TS EdCET</a>
+        <a href="https://tspolycet.nic.in">TS POLYCET</a>
+        <a href="https://tsparamed.tsche.in">Paramedical</a>
+    </div>
+    <div id="gurukulas" class="tab-content">
+        <h2>Gurukulas</h2>
+        <a href="https://tgtwgurukulam.telangana.gov.in">Tribal Gurukulam</a>
+        <a href="https://tgtelanganagurukulam.telangana.gov.in">BC Gurukulam</a>
+        <a href="https://mjptbcwreis.telangana.gov.in">MJP BC Welfare</a>
+        <a href="https://tsswreisjc.cgg.gov.in">Social Welfare</a>
+        <a href="https://tswreis.ac.in">TSWR Institutions</a>
+        <a href="https://treis.telangana.gov.in">Residential Schools</a>
+        <a href="https://mjptbcwreis.telangana.gov.in/jrcollege">Junior Colleges</a>
+        <a href="https://tsswreisjc.cgg.gov.in/home.do">Admissions</a>
+        <a href="https://tgtwgurukulam.telangana.gov.in/notifications">Notifications</a>
+        <a href="https://mjptbcwreis.telangana.gov.in/studentLogin">Student Login</a>
+    </div>
+    <div id="sainik" class="tab-content">
+        <h2>Sainik Schools</h2>
+        <a href="https://sainikschooltvm.nic.in">Sainik School TVM</a>
+        <a href="https://sainikschooladmission.in">Admissions Portal</a>
+        <a href="https://sainikschoolnalanda.edu.in">Sainik School Nalanda</a>
+        <a href="https://sainikschoolbijapur.org">Sainik School Bijapur</a>
+        <a href="https://sskhapri.org">SS Khapri</a>
+        <a href="https://sainikschoolchandrapur.com">Chandrapur Sainik</a>
+        <a href="https://sainikschoolkarnal.com">Karnal Sainik</a>
+        <a href="https://sainikschoolrewa.ac.in">Rewa Sainik</a>
+        <a href="https://sainikschoolamaravathinagar.edu.in">Amaravathi Nagar</a>
+        <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
+    </div>
+    <div id="gallery" class="tab-content">
+        <h2>Gallery</h2>
+        <label for="fileInput">Upload Images or Videos</label>
+        <input type="file" id="fileInput" multiple accept="image/*,video/*" /><br /><br />
+        <div id="galleryContainer" class="gallery-container"></div>
+    </div>
+    <script>
+        // Tab switching logic
+        function openTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('#tabs button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+            event.target.classList.add('active');
+        }
 
-  <script>
-    // Tab switching logic
-    function openTab(tabId) {
-      // Hide all tab content
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      // Remove active class from all buttons
-      document.querySelectorAll('#tabs button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      // Show the selected tab
-      const selectedTab = document.getElementById(tabId);
-      if (selectedTab) {
-        selectedTab.classList.add('active');
-      }
-      // Add active class to the clicked button
-      event.target.classList.add('active');
-    }
+        // Language toggle logic
+        function toggleLanguage() {
+            const buttons = document.querySelectorAll("nav button");
+            buttons.forEach(btn => {
+                btn.textContent = translateLabel(btn.textContent);
+            });
+        }
 
-    // Language toggle logic
-    function toggleLanguage() {
-      const buttons = document.querySelectorAll("nav button");
-      buttons.forEach(btn => {
-        btn.textContent = translateLabel(btn.textContent);
-      });
-    }
+        function translateLabel(text) {
+            const telugu = {
+                "Home": "హోం",
+                "Overview": "అవలోకనం",
+                "KG–V": "కెజి–ఐదు",
+                "VI–X": "ఆరు–పది",
+                "Intermediate": "ఇంటర్మీడియట్",
+                "Universities": "విశ్వవిద్యాలయాలు",
+                "Scholarships": "ఉపకారవేతనాలు",
+                "Library Resources": "లైబ్రరీ వనరులు",
+                "Admissions": "ప్రవేశాలు",
+                "Gurukulas": "గురుకులాలు",
+                "Sainik Schools": "సైనిక్ పాఠశాలలు",
+                "Gallery": "గ్యాలరీ"
+            };
+            return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
+        }
 
-    function translateLabel(text) {
-      const telugu = {
-        "Home": "హోం",
-        "Overview": "అవలోకనం",
-        "KG–V": "కెజి–ఐదు",
-        "VI–X": "ఆరు–పది",
-        "Intermediate": "ఇంటర్మీడియట్",
-        "Universities": "విశ్వవిద్యాలయాలు",
-        "Scholarships": "ఉపకారవేతనాలు",
-        "Library Resources": "లైబ్రరీ వనరులు",
-        "Admissions": "ప్రవేశాలు",
-        "Gurukulas": "గురుకులాలు",
-        "Sainik Schools": "సైనిక్ పాఠశాలలు",
-        "Gallery": "గ్యాలరీ"
-      };
-      return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
-    }
+        // --- LOCAL STORAGE INTEGRATION ---
+        function saveHomeContent() {
+            const homeContent = document.querySelector('#home p[contenteditable="true"]');
+            if (homeContent) {
+                localStorage.setItem('homeContent', homeContent.innerHTML);
+            }
+        }
 
-    // --- LOCAL STORAGE INTEGRATION ---
+        function saveGallery() {
+            const galleryItems = [];
+            document.querySelectorAll('#galleryContainer .gallery-item').forEach(item => {
+                const media = item.querySelector('img, video');
+                galleryItems.push({
+                    src: media.src,
+                    type: media.tagName.toLowerCase()
+                });
+            });
+            localStorage.setItem('galleryItems', JSON.stringify(galleryItems));
+        }
 
-    // Function to save home page content
-    function saveHomeContent() {
-      const homeContent = document.querySelector('#home p[contenteditable="true"]');
-      if (homeContent) {
-        localStorage.setItem('homeContent', homeContent.innerHTML);
-      }
-    }
+        function loadGallery() {
+            const savedGallery = JSON.parse(localStorage.getItem('galleryItems'));
+            if (savedGallery) {
+                const gallery = document.getElementById('galleryContainer');
+                gallery.innerHTML = '';
+                savedGallery.forEach(item => {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'gallery-item';
+                    const media = item.type === 'video' ? document.createElement('video') : document.createElement('img');
+                    media.src = item.src;
+                    if (media.tagName === 'VIDEO') media.controls = true;
 
-    // Function to save gallery items
-    function saveGallery() {
-      const galleryItems = [];
-      document.querySelectorAll('#galleryContainer .gallery-item').forEach(item => {
-        const media = item.querySelector('img, video');
-        galleryItems.push({
-          src: media.src,
-          type: media.tagName.toLowerCase()
+                    const delBtn = document.createElement('button');
+                    delBtn.textContent = 'Delete';
+                    delBtn.onclick = () => {
+                        wrapper.remove();
+                        saveGallery();
+                    };
+
+                    wrapper.appendChild(media);
+                    wrapper.appendChild(delBtn);
+                    gallery.appendChild(wrapper);
+                });
+            }
+        }
+
+        document.getElementById('fileInput').addEventListener('change', function (event) {
+            const gallery = document.getElementById('galleryContainer');
+            Array.from(event.target.files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'gallery-item';
+                    const media = file.type.startsWith('video') ? document.createElement('video') : document.createElement('img');
+                    media.src = e.target.result;
+                    if (media.tagName === 'VIDEO') media.controls = true;
+                    const delBtn = document.createElement('button');
+                    delBtn.textContent = 'Delete';
+                    delBtn.onclick = () => {
+                        wrapper.remove();
+                        saveGallery();
+                    };
+                    wrapper.appendChild(media);
+                    wrapper.appendChild(delBtn);
+                    gallery.appendChild(wrapper);
+                    saveGallery();
+                };
+                reader.readAsDataURL(file);
+            });
         });
-      });
-      localStorage.setItem('galleryItems', JSON.stringify(galleryItems));
-    }
 
-    // Function to load gallery items
-    function loadGallery() {
-      const savedGallery = JSON.parse(localStorage.getItem('galleryItems'));
-      if (savedGallery) {
-        const gallery = document.getElementById('galleryContainer');
-        gallery.innerHTML = ''; // Clear existing items before loading
-        savedGallery.forEach(item => {
-          const wrapper = document.createElement('div');
-          wrapper.className = 'gallery-item';
-          const media = item.type === 'video' ? document.createElement('video') : document.createElement('img');
-          media.src = item.src;
-          if (media.tagName === 'VIDEO') media.controls = true;
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedHomeContent = localStorage.getItem('homeContent');
+            const homeParagraph = document.querySelector('#home p[contenteditable="true"]');
+            if (savedHomeContent && homeParagraph) {
+                homeParagraph.innerHTML = savedHomeContent;
+            }
 
-          const delBtn = document.createElement('button');
-          delBtn.textContent = 'Delete';
-          delBtn.onclick = () => {
-            wrapper.remove();
-            saveGallery(); // Re-save the gallery after an item is deleted
-          };
+            if (homeParagraph) {
+                homeParagraph.addEventListener('input', saveHomeContent);
+            }
 
-          wrapper.appendChild(media);
-          wrapper.appendChild(delBtn);
-          gallery.appendChild(wrapper);
+            loadGallery();
+            openTab('home');
         });
-      }
-    }
-
-    // Gallery upload and display logic
-    document.getElementById('fileInput').addEventListener('change', function (event) {
-      const gallery = document.getElementById('galleryContainer');
-      Array.from(event.target.files).forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const wrapper = document.createElement('div');
-          wrapper.className = 'gallery-item';
-          const media = file.type.startsWith('video') ? document.createElement('video') : document.createElement('img');
-          media.src = e.target.result;
-          if (media.tagName === 'VIDEO') media.controls = true;
-          const delBtn = document.createElement('button');
-          delBtn.textContent = 'Delete';
-          delBtn.onclick = () => {
-              wrapper.remove();
-              saveGallery(); // Save the updated gallery after deletion
-          };
-          wrapper.appendChild(media);
-          wrapper.appendChild(delBtn);
-          gallery.appendChild(wrapper);
-          saveGallery(); // Save the updated gallery after adding a new item
-        };
-        reader.readAsDataURL(file);
-      });
-    });
-
-    // On page load, show the Home tab by default and load saved content
-    document.addEventListener("DOMContentLoaded", function () {
-      // Load saved home content
-      const savedHomeContent = localStorage.getItem('homeContent');
-      const homeParagraph = document.querySelector('#home p[contenteditable="true"]');
-      if (savedHomeContent && homeParagraph) {
-        homeParagraph.innerHTML = savedHomeContent;
-      }
-      
-      // Attach a listener to save home content on change
-      if (homeParagraph) {
-        homeParagraph.addEventListener('input', saveHomeContent);
-      }
-
-      // Load saved gallery content
-      loadGallery();
-
-      openTab('home');
-    });
-  </script>
+    </script>
 </body>
 </html>
