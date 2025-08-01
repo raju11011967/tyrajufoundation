@@ -154,12 +154,12 @@
     <a href="https://sainikschoolamaravathinagar.edu.in">Amaravathi Nagar</a>
     <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
   </div>
-<section id="gallery" class="tabContent">
+  <div id="gallery" class="tabContent">
   <h2>Gallery</h2>
   <label for="upload">Upload Images or Videos</label><br>
   <input type="file" id="upload" multiple accept="image/*,video/*" onchange="previewFiles()" />
   <div id="previewContainer"></div>
-</section>
+  </div>
   <script>
     function openTab(id) {
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
@@ -377,13 +377,12 @@
   function previewFiles() {
     const preview = document.getElementById('previewContainer');
     const files = document.getElementById('upload').files;
-    preview.innerHTML = '';
+
     Array.from(files).forEach(file => {
       const reader = new FileReader();
       reader.onload = function (e) {
         const wrapper = document.createElement('div');
-        wrapper.style.position = 'relative';
-
+        wrapper.style.marginBottom = '20px';
         let media;
         if (file.type.startsWith('image/')) {
           media = document.createElement('img');
@@ -392,28 +391,23 @@
           media.controls = true;
         }
         media.src = e.target.result;
-        media.style.maxWidth = '200px';
+        media.style.maxWidth = '300px';
         media.style.display = 'block';
+        media.style.marginBottom = '5px';
 
-        const del = document.createElement('span');
-        del.textContent = '❌';
-        del.style.position = 'absolute';
-        del.style.top = '0';
-        del.style.right = '0';
-        del.style.cursor = 'pointer';
-        del.style.background = 'white';
-        del.style.border = '1px solid black';
-
-        del.onclick = () => wrapper.remove();
+        const delBtn = document.createElement('button');
+        delBtn.textContent = 'Delete';
+        delBtn.style.display = 'block';
+        delBtn.style.marginTop = '5px';
+        delBtn.onclick = () => wrapper.remove();
 
         wrapper.appendChild(media);
-        wrapper.appendChild(del);
+        wrapper.appendChild(delBtn);
         preview.appendChild(wrapper);
       };
       reader.readAsDataURL(file);
     });
   }
 </script>
-
 </body>
 </html>
