@@ -3,50 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TY RAJU FOUNDATION</title>
+  <meta name="description" content="TY Raju Foundation supports free education in Telangana from KG to PG, offering resources for scholarships, admissions, and more." />
+  <meta name="keywords" content="TY Raju Foundation, Telangana education, scholarships, gurukulas, sainik schools" />
+  <title>TY Raju Foundation - Free Education in Telangana</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #e8f0ff; margin: 0; padding: 0; }
-    header { background-color: #004080; color: white; padding: 1rem; text-align: center; }
-    nav { display: flex; flex-wrap: wrap; background-color: #0066cc; justify-content: center; }
-    nav button { background: none; color: white; border: none; padding: 1rem; cursor: pointer; }
-    nav button:hover, nav button.active { background-color: #004080; }
-    .tab-content { display: none; padding: 1rem; }
-    .tab-content.active { display: block; }
-    a { color: #003366; text-decoration: none; display: block; margin: 0.5rem 0; }
-    .lang-toggle { float: right; background: #004080; color: white; border: none; padding: 0.5rem; margin-top: -3rem; margin-right: 1rem; cursor: pointer; }
-    .gallery-item { display: inline-block; position: relative; margin: 0.5rem; }
-    .gallery-item img, .gallery-item video { max-width: 150px; height: auto; display: block; }
-    .gallery-item button { position: absolute; top: 0; right: 0; background: red; color: white; border: none; cursor: pointer; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f0ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #0066cc;
+      justify-content: center;
+    }
+    nav button {
+      background: none;
+      color: white;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    nav button:hover,
+    nav button.active {
+      background-color: #004080;
+    }
+    .tab-content {
+      display: none;
+      padding: 1rem;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    a {
+      color: #003366;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .lang-toggle {
+      float: right;
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      margin-top: -3rem;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+    .gallery-item {
+      display: inline-block;
+      margin: 0.5rem;
+      text-align: center; /* Center the button and media */
+    }
+    .gallery-item img,
+    .gallery-item video {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto; /* Center the media */
+    }
+    .gallery-item button {
+      display: block; /* Place button below media */
+      margin: 0.5rem auto; /* Center button with spacing */
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 0.3rem 0.6rem;
+    }
+    /* Accessibility improvements */
+    nav button:focus {
+      outline: 2px solid #fff;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>TY RAJU FOUNDATION</h1>
-    <button class="lang-toggle" onclick="toggleLanguage()">తెలుగు</button>
+    <h1>TY Raju Foundation</h1>
+    <button class="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle language between English and Telugu">తెలుగు</button>
   </header>
-  <nav id="tabs">
-    <button onclick="openTab('home')" class="active">Home</button>
-    <button onclick="openTab('overview')">Overview</button>
-    <button onclick="openTab('kgv')">KG–V</button>
-    <button onclick="openTab('vix')">VI–X</button>
-    <button onclick="openTab('intermediate')">Intermediate</button>
-    <button onclick="openTab('universities')">Universities</button>
-    <button onclick="openTab('scholarships')">Scholarships</button>
-    <button onclick="openTab('library')">Library Resources</button>
-    <button onclick="openTab('admissions')">Admissions</button>
-    <button onclick="openTab('gurukulas')">Gurukulas</button>
-    <button onclick="openTab('sainik')">Sainik Schools</button>
-    <button onclick="openTab('gallery')">Gallery</button>
+  <nav id="tabs" role="tablist">
+    <button onclick="openTab('home', this)" class="active" role="tab" aria-selected="true">Home</button>
+    <button onclick="openTab('overview', this)" role="tab">Overview</button>
+    <button onclick="openTab('kgv', this)" role="tab">KG–V</button>
+    <button onclick="openTab('vix', this)" role="tab">VI–X</button>
+    <button onclick="openTab('intermediate', this)" role="tab">Intermediate</button>
+    <button onclick="openTab('universities', this)" role="tab">Universities</button>
+    <button onclick="openTab('scholarships', this)" role="tab">Scholarships</button>
+    <button onclick="openTab('library', this)" role="tab">Library Resources</button>
+    <button onclick="openTab('admissions', this)" role="tab">Admissions</button>
+    <button onclick="openTab('gurukulas', this)" role="tab">Gurukulas</button>
+    <button onclick="openTab('sainik', this)" role="tab">Sainik Schools</button>
+    <button onclick="openTab('gallery', this)" role="tab">Gallery</button>
   </nav>
-  <div id="home" class="tab-content active">
+  <div id="home" class="tab-content active" role="tabpanel">
     <h2>Welcome to TY Raju Foundation</h2>
     <p contenteditable="true">You can edit this area to customize the home page text.</p>
   </div>
-  <div id="overview" class="tab-content">
+  <div id="overview" class="tab-content" role="tabpanel">
     <h2>Overview</h2>
     <p>TY Raju Foundation supports free education from KG to PG in Telangana. Explore scholarships, admissions, libraries, and special institutions.</p>
   </div>
-  <div id="kgv" class="tab-content">
+  <div id="kgv" class="tab-content" role="tabpanel">
     <h2>KG–V Schools in Telangana</h2>
     <a href="https://school.edu.telangana.gov.in/KGV1">Anganwadi Directory</a>
     <a href="https://www.dietku.org">DIET Karimnagar</a>
@@ -59,7 +127,7 @@
     <a href="https://www.tssa.telangana.gov.in">SSA Telangana</a>
     <a href="https://play.google.com/store/apps/details?id=com.eschool.ts">eSchool App</a>
   </div>
-  <div id="vix" class="tab-content">
+  <div id="vix" class="tab-content" role="tabpanel">
     <h2>VI–X Schools in Telangana</h2>
     <a href="https://schooledu.telangana.gov.in">School Education Dept</a>
     <a href="https://bsetelangana.org">Board of Secondary Education</a>
@@ -72,7 +140,7 @@
     <a href="https://samagra.telangana.gov.in">Samagra Shiksha</a>
     <a href="https://play.google.com/store/apps/details?id=in.gov.tgscert">SCERT App</a>
   </div>
-  <div id="intermediate" class="tab-content">
+  <div id="intermediate" class="tab-content" role="tabpanel">
     <h2>Intermediate Colleges</h2>
     <a href="https://tsbie.cgg.gov.in">TSBIE Official</a>
     <a href="https://tsbie.cgg.gov.in/junior_colleges">Junior Colleges List</a>
@@ -85,7 +153,7 @@
     <a href="https://manabadi.co.in">Manabadi</a>
     <a href="https://bie.tg.nic.in">Intermediate Updates</a>
   </div>
-  <div id="universities" class="tab-content">
+  <div id="universities" class="tab-content" role="tabpanel">
     <h2>Universities</h2>
     <a href="https://www.osmania.ac.in/">Osmania University</a>
     <a href="https://kakatiya.ac.in/">Kakatiya University</a>
@@ -98,7 +166,7 @@
     <a href="https://www.palamuruuniversity.ac.in/">Palamuru University</a>
     <a href="https://www.braou.ac.in/">BRAOU</a>
   </div>
-  <div id="scholarships" class="tab-content">
+  <div id="scholarships" class="tab-content" role="tabpanel">
     <h2>Scholarships</h2>
     <a href="https://scholarships.gov.in">NSP Portal</a>
     <a href="https://telanganaepass.cgg.gov.in">TS ePASS</a>
@@ -111,7 +179,7 @@
     <a href="https://education.gov.in/scholarships">MHRD Scholarships</a>
     <a href="https://ssp.postmatric.karnataka.gov.in">SSP Postmatric</a>
   </div>
-  <div id="library" class="tab-content">
+  <div id="library" class="tab-content" role="tabpanel">
     <h2>Library Resources</h2>
     <a href="https://ndl.iitkgp.ac.in">National Digital Library</a>
     <a href="https://epgp.inflibnet.ac.in">ePGPathshala</a>
@@ -124,7 +192,7 @@
     <a href="https://ndl.gov.in">NDL Portal</a>
     <a href="https://libguides.tedu.in">Telangana EDU Lib</a>
   </div>
-  <div id="admissions" class="tab-content">
+  <div id="admissions" class="tab-content" role="tabpanel">
     <h2>Admissions</h2>
     <a href="https://tsbie.cgg.gov.in">Intermediate Admissions</a>
     <a href="https://dost.cgg.gov.in">Degree Online Services</a>
@@ -137,7 +205,7 @@
     <a href="https://tspolycet.nic.in">TS POLYCET</a>
     <a href="https://tsparamed.tsche.in">Paramedical</a>
   </div>
-  <div id="gurukulas" class="tab-content">
+  <div id="gurukulas" class="tab-content" role="tabpanel">
     <h2>Gurukulas</h2>
     <a href="https://tgtwgurukulam.telangana.gov.in">Tribal Gurukulam</a>
     <a href="https://tgtelanganagurukulam.telangana.gov.in">BC Gurukulam</a>
@@ -150,7 +218,7 @@
     <a href="https://tgtwgurukulam.telangana.gov.in/notifications">Notifications</a>
     <a href="https://mjptbcwreis.telangana.gov.in/studentLogin">Student Login</a>
   </div>
-  <div id="sainik" class="tab-content">
+  <div id="sainik" class="tab-content" role="tabpanel">
     <h2>Sainik Schools</h2>
     <a href="https://sainikschooltvm.nic.in">Sainik School TVM</a>
     <a href="https://sainikschooladmission.in">Admissions Portal</a>
@@ -158,68 +226,87 @@
     <a href="https://sainikschoolbijapur.org">Sainik School Bijapur</a>
     <a href="https://sskhapri.org">SS Khapri</a>
     <a href="https://sainikschoolchandrapur.com">Chandrapur Sainik</a>
-    <a href="https://sainikschoolkarnal.com">Karnal Sainik</a>
+    <a href="https://sainikschoolkarnal.com">Sainik School Karnal</a>
     <a href="https://sainikschoolrewa.ac.in">Rewa Sainik</a>
     <a href="https://sainikschoolamaravathinagar.edu.in">Amaravathi Nagar</a>
     <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
   </div>
-  <div id="gallery" class="tab-content">
+  <div id="gallery" class="tab-content" role="tabpanel">
     <h2>Gallery</h2>
     <label for="fileInput">Upload Images or Videos</label>
-    <input type="file" id="fileInput" multiple accept="image/*,video/*" /><br /><br />
+    <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,video/mp4" /><br /><br />
     <div id="galleryContainer" class="gallery-container"></div>
   </div>
 
   <script>
+    let isTelugu = true; // Track language state
+
     // Tab switching logic
-    function openTab(tabId) {
-      // Hide all tab content
+    function openTab(tabId, button) {
+      // Hide all tab content and remove aria-selected
       document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
       });
-      // Remove active class from all buttons
       document.querySelectorAll('#tabs button').forEach(btn => {
         btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
       });
       // Show the selected tab
       const selectedTab = document.getElementById(tabId);
       if (selectedTab) {
         selectedTab.classList.add('active');
       }
-      // Add active class to the clicked button
-      event.target.classList.add('active');
+      // Add active class and aria-selected to the clicked button
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
     }
 
     // Language toggle logic
     function toggleLanguage() {
-      const buttons = document.querySelectorAll("nav button");
+      isTelugu = !isTelugu;
+      const langButton = document.querySelector('.lang-toggle');
+      langButton.textContent = isTelugu ? 'English' : 'తెలుగు';
+      langButton.setAttribute('aria-label', `Toggle language to ${isTelugu ? 'English' : 'Telugu'}`);
+      const buttons = document.querySelectorAll('#tabs button');
       buttons.forEach(btn => {
-        btn.textContent = translateLabel(btn.textContent);
+        btn.textContent = translateLabel(btn.textContent, isTelugu);
       });
     }
 
-    function translateLabel(text) {
-      const telugu = {
-        "Home": "హోం",
-        "Overview": "అవలోకనం",
-        "KG–V": "కెజి–ఐదు",
-        "VI–X": "ఆరు–పది",
-        "Intermediate": "ఇంటర్మీడియట్",
-        "Universities": "విశ్వవిద్యాలయాలు",
-        "Scholarships": "ఉపకారవేతనాలు",
-        "Library Resources": "లైబ్రరీ వనరులు",
-        "Admissions": "ప్రవేశాలు",
-        "Gurukulas": "గురుకులాలు",
-        "Sainik Schools": "సైనిక్ పాఠశాలలు",
-        "Gallery": "గ్యాలరీ"
+    function translateLabel(text, toTelugu) {
+      const translations = {
+        Home: 'హోం',
+        Overview: 'అవలోకనం',
+        'KG–V': 'కెజి–ఐదు',
+        'VI–X': 'ఆరు–పది',
+        Intermediate: 'ఇంటర్మీడియట్',
+        Universities: 'విశ్వవిద్యాలయాలు',
+        Scholarships: 'ఉపకారవేతనాలు',
+        'Library Resources': 'లైబ్రరీ వనరులు',
+        Admissions: 'ప్రవేశాలు',
+        Gurukulas: 'గురుకులాలు',
+        'Sainik Schools': 'సైనిక్ పాఠశాలలు',
+        Gallery: 'గ్యాలరీ'
       };
-      return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
+      if (toTelugu) {
+        return translations[text] || text;
+      }
+      return Object.keys(translations).find(key => translations[key] === text) || text;
     }
 
     // Gallery upload and display logic
     document.getElementById('fileInput').addEventListener('change', function (event) {
+      const validTypes = ['image/jpeg', 'image/png', 'video/mp4'];
       const gallery = document.getElementById('galleryContainer');
       Array.from(event.target.files).forEach(file => {
+        if (!validTypes.includes(file.type)) {
+          alert(`Unsupported file type: ${file.name}. Please upload JPEG, PNG, or MP4 files.`);
+          return;
+        }
+        if (file.size > 5 * 1024 * 1024) { // 5MB limit
+          alert(`File ${file.name} is too large. Maximum size is 5MB.`);
+          return;
+        }
         const reader = new FileReader();
         reader.onload = function (e) {
           const wrapper = document.createElement('div');
@@ -228,7 +315,8 @@
           media.src = e.target.result;
           if (media.tagName === 'VIDEO') media.controls = true;
           const delBtn = document.createElement('button');
-          delBtn.textContent = 'delete';
+          delBtn.textContent = 'X';
+          delBtn.setAttribute('aria-label', `Delete ${file.name}`);
           delBtn.onclick = () => wrapper.remove();
           wrapper.appendChild(media);
           wrapper.appendChild(delBtn);
@@ -239,8 +327,9 @@
     });
 
     // On page load, show the Home tab by default
-    document.addEventListener("DOMContentLoaded", function () {
-      openTab('home');
+    document.addEventListener('DOMContentLoaded', function () {
+      const homeButton = document.querySelector('#tabs button');
+      openTab('home', homeButton);
     });
   </script>
 </body>
