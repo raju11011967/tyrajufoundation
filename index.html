@@ -165,7 +165,9 @@
     <a href="https://sainikschoolpunglwa.nic.in">Punglwa Sainik</a>
   </div>
   <div id="gallery" class="tabContent">
-  <h2>Gallery</h2>
+  <input type="file" id="fileInput" multiple accept="image/*,video/*"><br><br>
+  <div id="galleryContainer" class="gallery-container"></div>
+   <h2>Gallery</h2>
   <label for="upload">Upload Images or Videos</label><br>
   <input type="file" id="upload" multiple accept="image/*,video/*" onchange="previewFiles()" />
   <div id="previewContainer"></div>
@@ -441,6 +443,90 @@
       reader.readAsDataURL(file);
     });
   }
+</script>
+<script>
+  function openTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.style.display = 'none');
+
+    const buttons = document.querySelectorAll('#tabs button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    const activeTab = document.getElementById(tabId);
+    if (activeTab) activeTab.style.display = 'block';
+
+    event.target.classList.add('active');
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    openTab('home'); // Default tab
+
+    // Gallery upload + delete
+    const fileInput = document.getElementById('fileInput');
+    const gallery = document.getElementById('galleryContainer');
+
+    if (fileInput && gallery) {
+      fileInput.addEventListener('change', function (event) {
+        Array.from(event.target.files).forEach(file => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'gallery-item';
+
+            const media = file.type.startsWith('video') ?
+              document.createElement('video') :
+              document.createElement('img');
+
+            media.src = e.target.result;
+            if (media.tagName === 'VIDEO') media.controls = true;
+
+            const delBtn = document.createElement('button');
+            delBtn.textContent = 'Delete';
+            delBtn.className = 'delete-button';
+            delBtn.onclick = () => wrapper.remove();
+
+            wrapper.appendChild(media);
+            wrapper.appendChild(document.createElement('br'));
+            wrapper.appendChild(delBtn);
+            gallery.appendChild(wrapper);
+          };
+          reader.readAsDataURL(file);
+        });
+      });
+    }
+
+    // Language toggle
+    const telugu = {
+      "Home": "హోం",
+      "Overview": "అవలోకనం",
+      "KG–V": "కెజి–ఐదు",
+      "VI–X": "ఆరు–పది",
+      "Intermediate": "ఇంటర్మీడియట్",
+      "Universities": "విశ్వవిద్యాలయాలు",
+      "Scholarships": "ఉపకారవేతనాలు",
+      "Library Resources": "లైబ్రరీ వనరులు",
+      "Admissions": "ప్రవేశాలు",
+      "Gurukulas": "గురుకులాలు",
+      "Sainik Schools": "సైనిక్ పాఠశాలలు",
+      "Gallery": "గ్యాలరీ",
+      "Contact Us": "మమ్మల్ని సంప్రదించండి"
+    };
+
+    let currentLang = 'en';
+    document.getElementById('langToggleBtn').addEventListener('click', () => {
+      const buttons = document.querySelectorAll("#tabs button");
+      buttons.forEach(btn => {
+        const label = btn.textContent.trim();
+        if (currentLang === 'en' && telugu[label]) {
+          btn.textContent = telugu[label];
+        } else {
+          const key = Object.keys(telugu).find(k => telugu[k] === label);
+          if (key) btn.textContent = key;
+        }
+      });
+      currentLang = currentLang === 'en' ? 'te' : 'en';
+    });
+  });
 </script>
 </body>
 </html>
