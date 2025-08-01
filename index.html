@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TY Raju Foundation supports free education in Telangana from KG to PG, offering resources for scholarships, admissions, and more." />
-  <meta name="keywords" content="TY Raju Foundation, Telangana education, scholarships, gurukulas, sainik schools" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TY Raju Foundation supports free education in Telangana from KG to PG, offering resources for scholarships, admissions, and more.">
+  <meta name="keywords" content="TY Raju Foundation, Telangana education, scholarships, gurukulas, sainik schools">
   <title>TY Raju Foundation - Free Education in Telangana</title>
   <style>
     body {
@@ -63,25 +63,24 @@
     .gallery-item {
       display: inline-block;
       margin: 0.5rem;
-      text-align: center; /* Center the button and media */
+      text-align: center;
     }
     .gallery-item img,
     .gallery-item video {
       max-width: 150px;
       height: auto;
       display: block;
-      margin: 0 auto; /* Center the media */
+      margin: 0 auto;
     }
     .gallery-item button {
-      display: block; /* Place button below media */
-      margin: 0.5rem auto; /* Center button with spacing */
+      display: block;
+      margin: 0.5rem auto;
       background: red;
       color: white;
       border: none;
       cursor: pointer;
       padding: 0.3rem 0.6rem;
     }
-    /* Accessibility improvements */
     nav button:focus {
       outline: 2px solid #fff;
     }
@@ -93,34 +92,34 @@
     <button class="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle language between English and Telugu">తెలుగు</button>
   </header>
   <nav id="tabs" role="tablist">
-    <button onclick="openTab('home', this)" class="active" role="tab" aria-selected="true">Home</button>
-    <button onclick="openTab('overview', this)" role="tab">Overview</button>
-    <button onclick="openTab('kgv', this)" role="tab">KG–V</button>
-    <button onclick="openTab('vix', this)" role="tab">VI–X</button>
-    <button onclick="openTab('intermediate', this)" role="tab">Intermediate</button>
-    <button onclick="openTab('universities', this)" role="tab">Universities</button>
-    <button onclick="openTab('scholarships', this)" role="tab">Scholarships</button>
-    <button onclick="openTab('library', this)" role="tab">Library Resources</button>
-    <button onclick="openTab('admissions', this)" role="tab">Admissions</button>
-    <button onclick="openTab('gurukulas', this)" role="tab">Gurukulas</button>
-    <button onclick="openTab('sainik', this)" role="tab">Sainik Schools</button>
-    <button onclick="openTab('gallery', this)" role="tab">Gallery</button>
-    <button onclick="openTab('tyrflibrary')" data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</button>
+    <button onclick="openTab('home', this)" class="active" role="tab" aria-selected="true" data-en="Home" data-te="హోం">Home</button>
+    <button onclick="openTab('overview', this)" role="tab" data-en="Overview" data-te="అవలోకనం">Overview</button>
+    <button onclick="openTab('kgv', this)" role="tab" data-en="KG–V" data-te="కెజి–ఐదు">KG–V</button>
+    <button onclick="openTab('vix', this)" role="tab" data-en="VI–X" data-te="ఆరు–పది">VI–X</button>
+    <button onclick="openTab('intermediate', this)" role="tab" data-en="Intermediate" data-te="ఇంటర్మీడియట్">Intermediate</button>
+    <button onclick="openTab('universities', this)" role="tab" data-en="Universities" data-te="విశ్వవిద్యాలయాలు">Universities</button>
+    <button onclick="openTab('scholarships', this)" role="tab" data-en="Scholarships" data-te="ఉపకారవేతనాలు">Scholarships</button>
+    <button onclick="openTab('library', this)" role="tab" data-en="Library Resources" data-te="లైబ్రరీ వనరులు">Library Resources</button>
+    <button onclick="openTab('admissions', this)" role="tab" data-en="Admissions" data-te="ప్రవేశాలు">Admissions</button>
+    <button onclick="openTab('gurukulas', this)" role="tab" data-en="Gurukulas" data-te="గురుకులాలు">Gurukulas</button>
+    <button onclick="openTab('sainik', this)" role="tab" data-en="Sainik Schools" data-te="సైనిక్ పాఠశాలలు">Sainik Schools</button>
+    <button onclick="openTab('gallery', this)" role="tab" data-en="Gallery" data-te="గ్యాలరీ">Gallery</button>
+    <button onclick="openTab('tyrflibrary', this)" role="tab" data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</button>
   </nav>
   <div id="home" class="tab-content active" role="tabpanel">
-    <h2>Welcome to TY Raju Foundation</h2>
+    <h2 data-en="Welcome to TY Raju Foundation" data-te="టివై రాజు ఫౌండేషన్‌కు స్వాగతం">Welcome to TY Raju Foundation</h2>
     <p contenteditable="true">You can edit this area to customize the home page text.</p>
   </div>
-  <div id="tyrflibrary" class="tab-content">
+  <div id="tyrflibrary" class="tab-content" role="tabpanel">
     <h2 data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</h2>
     <p data-en="Welcome to the TYRFLibrary section." data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ విభాగానికి స్వాగతం.">Welcome to the TYRFLibrary section.</p>
   </div>
   <div id="overview" class="tab-content" role="tabpanel">
-    <h2>Overview</h2>
-    <p>TY Raju Foundation supports free education from KG to PG in Telangana. Explore scholarships, admissions, libraries, and special institutions.</p>
+    <h2 data-en="Overview" data-te="అవలోకనం">Overview</h2>
+    <p data-en="TY Raju Foundation supports free education from KG to PG in Telangana. Explore scholarships, admissions, libraries, and special institutions." data-te="టివై రాజు ఫౌండేషన్ తెలంగాణలో కెజి నుండి పిజి వరకు ఉచిత విద్యకు మద్దతు ఇస్తుంది. స్కాలర్‌షిప్‌లు, ప్రవేశాలు, లైబ్రరీలు మరియు ప్రత్యేక సంస్థలను అన్వేషించండి.">TY Raju Foundation supports free education from KG to PG in Telangana. Explore scholarships, admissions, libraries, and special institutions.</p>
   </div>
   <div id="kgv" class="tab-content" role="tabpanel">
-    <h2>KG–V Schools in Telangana</h2>
+    <h2 data-en="KG–V Schools in Telangana" data-te="తెలంగాణలో కెజి–ఐదు పాఠశాలలు">KG–V Schools in Telangana</h2>
     <a href="https://schooledu.telangana.gov.in/" target="_blank">School Education Department</a>
     <a href="https://www.telangana.gov.in/departments/school-education-se-wing/" target="_blank">School Education Wing</a>
     <a href="https://www.telangana.gov.in" target="_blank">Telangana Govt Portal</a>
@@ -133,7 +132,7 @@
     <a href="https://play.google.com/store/apps/details?id=com.eschool.ts" target="_blank">eSchool App</a>
   </div>
   <div id="vix" class="tab-content" role="tabpanel">
-    <h2>VI–X Schools in Telangana</h2>
+    <h2 data-en="VI–X Schools in Telangana" data-te="తెలంగాణలో ఆరు–పది పాఠశాలలు">VI–X Schools in Telangana</h2>
     <a href="https://schooledu.telangana.gov.in/" target="_blank">School Education Dept</a>
     <a href="https://bse.telangana.gov.in/" target="_blank">Board of Secondary Education</a>
     <a href="https://bse.telangana.gov.in/" target="_blank">BSE Telangana</a>
@@ -146,7 +145,7 @@
     <a href="https://play.google.com/store/apps/details?id=in.gov.tgscert" target="_blank">SCERT App</a>
   </div>
   <div id="intermediate" class="tab-content" role="tabpanel">
-    <h2>Intermediate Colleges</h2>
+    <h2 data-en="Intermediate Colleges" data-te="ఇంటర్మీడియట్ కళాశాలలు">Intermediate Colleges</h2>
     <a href="https://tsbie.cgg.gov.in/" target="_blank">TSBIE Official</a>
     <a href="https://tgbie.cgg.gov.in/" target="_blank">TG Board of Intermediate</a>
     <a href="https://tsbie.cgg.gov.in/home.do" target="_blank">TSBIE Home</a>
@@ -159,7 +158,7 @@
     <a href="https://tsbie.cgg.gov.in/" target="_blank">Intermediate Updates</a>
   </div>
   <div id="universities" class="tab-content" role="tabpanel">
-    <h2>Universities</h2>
+    <h2 data-en="Universities" data-te="విశ్వవిద్యాలయాలు">Universities</h2>
     <a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a>
     <a href="https://www.kakatiya.ac.in/" target="_blank">Kakatiya University</a>
     <a href="https://www.jntuh.ac.in/" target="_blank">JNTU Hyderabad</a>
@@ -172,7 +171,7 @@
     <a href="https://www.braou.ac.in/" target="_blank">BRAOU</a>
   </div>
   <div id="scholarships" class="tab-content" role="tabpanel">
-    <h2>Scholarships</h2>
+    <h2 data-en="Scholarships" data-te="ఉపకారవేతనాలు">Scholarships</h2>
     <a href="https://scholarships.gov.in" target="_blank">NSP Portal</a>
     <a href="https://telanganaepass.cgg.gov.in" target="_blank">TS ePASS</a>
     <a href="https://www.minorityaffairs.gov.in" target="_blank">Minority Scholarships</a>
@@ -185,7 +184,7 @@
     <a href="https://ssp.postmatric.karnataka.gov.in" target="_blank">SSP Postmatric</a>
   </div>
   <div id="library" class="tab-content" role="tabpanel">
-    <h2>Library Resources</h2>
+    <h2 data-en="Library Resources" data-te="లైబ్రరీ వనరులు">Library Resources</h2>
     <a href="https://ndl.iitkgp.ac.in" target="_blank">National Digital Library</a>
     <a href="https://epgp.inflibnet.ac.in" target="_blank">ePGPathshala</a>
     <a href="https://nptel.ac.in" target="_blank">NPTEL</a>
@@ -198,7 +197,7 @@
     <a href="https://libguides.tedu.in" target="_blank">Telangana EDU Lib</a>
   </div>
   <div id="admissions" class="tab-content" role="tabpanel">
-    <h2>Admissions</h2>
+    <h2 data-en="Admissions" data-te="ప్రవేశాలు">Admissions</h2>
     <a href="https://tsbie.cgg.gov.in" target="_blank">Intermediate Admissions</a>
     <a href="https://dost.cgg.gov.in" target="_blank">Degree Online Services</a>
     <a href="https://tslawcet.nic.in" target="_blank">TS LAWCET</a>
@@ -211,7 +210,7 @@
     <a href="https://tsparamed.tsche.in" target="_blank">Paramedical</a>
   </div>
   <div id="gurukulas" class="tab-content" role="tabpanel">
-    <h2>Gurukulas</h2>
+    <h2 data-en="Gurukulas" data-te="గురుకులాలు">Gurukulas</h2>
     <a href="https://tgtwgurukulam.telangana.gov.in" target="_blank">Tribal Gurukulam</a>
     <a href="https://tgtelanganagurukulam.telangana.gov.in" target="_blank">BC Gurukulam</a>
     <a href="https://mjptbcwreis.telangana.gov.in" target="_blank">MJP BC Welfare</a>
@@ -224,7 +223,7 @@
     <a href="https://mjptbcwreis.telangana.gov.in/studentLogin" target="_blank">Student Login</a>
   </div>
   <div id="sainik" class="tab-content" role="tabpanel">
-    <h2>Sainik Schools</h2>
+    <h2 data-en="Sainik Schools" data-te="సైనిక్ పాఠశాలలు">Sainik Schools</h2>
     <a href="https://sainikschooltvm.nic.in" target="_blank">Sainik School TVM</a>
     <a href="https://sainikschooladmission.in" target="_blank">Admissions Portal</a>
     <a href="https://sainikschoolnalanda.edu.in" target="_blank">Sainik School Nalanda</a>
@@ -236,168 +235,91 @@
     <a href="https://sainikschoolamaravathinagar.edu.in" target="_blank">Amaravathi Nagar</a>
     <a href="https://sainikschoolpunglwa.nic.in" target="_blank">Punglwa Sainik</a>
   </div>
-  <div id="gallery" class="tab-content">
-  <h2 data-en="Gallery" data-te="గ్యాలరీ">Gallery</h2>
-  <label for="upload" data-en="Upload Images or Videos" data-te="చిత్రాలు లేదా వీడియోలను అప్‌లోడ్ చేయండి">Upload Images or Videos</label><br>
-  <input type="file" id="upload" multiple accept="image/*,video/*" />
-  <div id="galleryContainer" class="gallery-container" style="margin-top: 1rem;"></div>
+  <div id="gallery" class="tab-content" role="tabpanel">
+    <h2 data-en="Gallery" data-te="గ్యాలరీ">Gallery</h2>
+    <label for="upload" data-en="Upload Images or Videos" data-te="చిత్రాలు లేదా వీడియోలను అప్‌లోడ్ చేయండి">Upload Images or Videos</label>
+    <input type="file" id="upload" multiple accept="image/*,video/*">
+    <div id="galleryContainer" class="gallery-container" style="margin-top: 1rem;"></div>
   </div>
-<script>
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    loadGalleryFromStorage();
-  });
-</script>
   <script>
-    let isTelugu = true; // Track language state
+    let isTelugu = true;
 
-    // Tab switching logic
     function openTab(tabId, button) {
-      // Hide all tab content and remove aria-selected
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.querySelectorAll('#tabs button').forEach(btn => {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
       });
-      // Show the selected tab
       const selectedTab = document.getElementById(tabId);
-      if (selectedTab) {
-        selectedTab.classList.add('active');
-      }
-      // Add active class and aria-selected to the clicked button
+      if (selectedTab) selectedTab.classList.add('active');
       button.classList.add('active');
       button.setAttribute('aria-selected', 'true');
     }
 
-    // Language toggle logic
     function toggleLanguage() {
       isTelugu = !isTelugu;
       const langButton = document.querySelector('.lang-toggle');
       langButton.textContent = isTelugu ? 'English' : 'తెలుగు';
       langButton.setAttribute('aria-label', `Toggle language to ${isTelugu ? 'English' : 'Telugu'}`);
-      const buttons = document.querySelectorAll('#tabs button');
-      buttons.forEach(btn => {
-        btn.textContent = translateLabel(btn.textContent, isTelugu);
+      document.querySelectorAll('[data-en][data-te]').forEach(element => {
+        element.textContent = isTelugu ? element.dataset.te : element.dataset.en;
       });
     }
 
-    function translateLabel(text, toTelugu) {
-      const translations = {
-        Home: 'హోం',
-        Overview: 'అవలోకనం',
-        'KG–V': 'కెజి–ఐదు',
-        'VI–X': 'ఆరు–పది',
-        Intermediate: 'ఇంటర్మీడియట్',
-        Universities: 'విశ్వవిద్యాలయాలు',
-        Scholarships: 'ఉపకారవేతనాలు',
-        'Library Resources': 'లైబ్రరీ వనరులు',
-        Admissions: 'ప్రవేశాలు',
-        Gurukulas: 'గురుకులాలు',
-        'Sainik Schools': 'సైనిక్ పాఠశాలలు',
-        Gallery: 'గ్యాలరీ'
-      };
-      if (toTelugu) {
-        return translations[text] || text;
-      }
-      return Object.keys(translations).find(key => translations[key] === text) || text;
+    function loadGalleryFromStorage() {
+      const stored = JSON.parse(localStorage.getItem("galleryMedia") || "[]");
+      const container = document.getElementById("galleryContainer");
+      container.innerHTML = "";
+      stored.forEach((item, index) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "gallery-item";
+        const media = item.type === "video" ? document.createElement("video") : document.createElement("img");
+        media.src = item.data;
+        if (item.type === "video") media.controls = true;
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.setAttribute("aria-label", `Delete ${item.type} ${index + 1}`);
+        delBtn.onclick = () => {
+          stored.splice(index, 1);
+          localStorage.setItem("galleryMedia", JSON.stringify(stored));
+          loadGalleryFromStorage();
+        };
+        wrapper.appendChild(media);
+        wrapper.appendChild(delBtn);
+        container.appendChild(wrapper);
+      });
     }
 
-    // Gallery upload and display logic
-    document.getElementById('fileInput').addEventListener('change', function (event) {
+    document.getElementById("upload").addEventListener("change", function (event) {
       const validTypes = ['image/jpeg', 'image/png', 'video/mp4'];
-      const gallery = document.getElementById('galleryContainer');
-      Array.from(event.target.files).forEach(file => {
+      const files = Array.from(event.target.files);
+      const stored = JSON.parse(localStorage.getItem("galleryMedia") || "[]");
+      files.forEach(file => {
         if (!validTypes.includes(file.type)) {
           alert(`Unsupported file type: ${file.name}. Please upload JPEG, PNG, or MP4 files.`);
           return;
         }
-        if (file.size > 5 * 1024 * 1024) { // 5MB limit
+        if (file.size > 5 * 1024 * 1024) {
           alert(`File ${file.name} is too large. Maximum size is 5MB.`);
           return;
         }
         const reader = new FileReader();
         reader.onload = function (e) {
-          const wrapper = document.createElement('div');
-          wrapper.className = 'gallery-item';
-          const media = file.type.startsWith('video') ? document.createElement('video') : document.createElement('img');
-          media.src = e.target.result;
-          if (media.tagName === 'VIDEO') media.controls = true;
-          const delBtn = document.createElement('button');
-          delBtn.textContent = 'delete';
-          delBtn.setAttribute('aria-label', `Delete ${file.name}`);
-          delBtn.onclick = () => wrapper.remove();
-          wrapper.appendChild(media);
-          wrapper.appendChild(delBtn);
-          gallery.appendChild(wrapper);
+          const base64 = e.target.result;
+          const type = file.type.startsWith("video") ? "video" : "image";
+          stored.push({ data: base64, type: type });
+          localStorage.setItem("galleryMedia", JSON.stringify(stored));
+          loadGalleryFromStorage();
         };
         reader.readAsDataURL(file);
       });
     });
 
-    // On page load, show the Home tab by default
     document.addEventListener('DOMContentLoaded', function () {
+      loadGalleryFromStorage();
       const homeButton = document.querySelector('#tabs button');
       openTab('home', homeButton);
     });
- function loadGalleryFromStorage() {
-    const stored = JSON.parse(localStorage.getItem("galleryMedia") || "[]");
-    const container = document.getElementById("galleryContainer");
-    container.innerHTML = "";
-
-    stored.forEach((item, index) => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "gallery-item";
-      wrapper.style.margin = "10px";
-      wrapper.style.display = "inline-block";
-      wrapper.style.textAlign = "center";
-
-      const media = item.type === "video"
-        ? document.createElement("video")
-        : document.createElement("img");
-
-      media.src = item.data;
-      if (item.type === "video") {
-        media.controls = true;
-        media.style.width = "200px";
-      } else {
-        media.style.width = "200px";
-        media.style.height = "auto";
-      }
-      media.style.display = "block";
-      media.style.marginBottom = "5px";
-
-      const delBtn = document.createElement("button");
-      delBtn.textContent = "Delete";
-      delBtn.onclick = () => {
-        stored.splice(index, 1);
-        localStorage.setItem("galleryMedia", JSON.stringify(stored));
-        loadGalleryFromStorage();
-      };
-
-      wrapper.appendChild(media);
-      wrapper.appendChild(delBtn);
-      container.appendChild(wrapper);
-    });
-  }
-
-  document.getElementById("upload").addEventListener("change", function (event) {
-    const files = Array.from(event.target.files);
-    const stored = JSON.parse(localStorage.getItem("galleryMedia") || "[]");
-
-    files.forEach(file => {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const base64 = e.target.result;
-        const type = file.type.startsWith("video") ? "video" : "image";
-        stored.push({ data: base64, type: type });
-        localStorage.setItem("galleryMedia", JSON.stringify(stored));
-        loadGalleryFromStorage();
-      };
-      reader.readAsDataURL(file);
-    });
-  });
   </script>
 </body>
 </html>
