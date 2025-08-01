@@ -315,7 +315,7 @@
           media.src = e.target.result;
           if (media.tagName === 'VIDEO') media.controls = true;
           const delBtn = document.createElement('button');
-          delBtn.textContent = 'X';
+          delBtn.textContent = 'delete';
           delBtn.setAttribute('aria-label', `Delete ${file.name}`);
           delBtn.onclick = () => wrapper.remove();
           wrapper.appendChild(media);
