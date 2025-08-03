@@ -86,9 +86,36 @@
       border: none;
       cursor: pointer;
       padding: 0.3rem 0.6rem;
+      border-radius: 4px;
     }
     nav button:focus {
       outline: 2px solid #fff;
+    }
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .link-card {
+      background: #fff;
+      padding: 0.5rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .editable {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      min-height: 100px;
+    }
+    @media (max-width: 600px) {
+      nav button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+      .gallery-item img,
+      .gallery-item video {
+        max-width: 100px;
+      }
     }
   </style>
 </head>
@@ -115,484 +142,144 @@
   
   <div id="home" class="tab-content active" role="tabpanel">
     <h2 data-en="Welcome to TY Raju Foundation" data-te="టివై రాజు ఫౌండేషన్‌కు స్వాగతం">Welcome to TY Raju Foundation</h2>
-    <p contenteditable="true">యావత్ ప్రపంచాన్ని కుగ్రామంగా మార్చిన నేటి ఇంటర్నెట్ యుగం.. గొప్ప అవకాశాలతోపాటు గొప్ప సవాళ్లనూ తీసుకొచ్చింది. ఉదాహరణకు.. కుప్పలు తెప్పలుగా అందుబాటులో ఉన్న సమాచారం ఎక్కడెక్కడో ఉన్న ఎన్నెన్నో విషయాలను తెలియజేస్తుంది. అదే సమయంలో ఆ సమాచార సముద్రం నుంచి మనకు కావాల్సిన దాన్ని వెదికి పట్టుకోవటం తలకు మించిన భారంగా తయారైంది. ఈ నేపథ్యంలోనే ఒక మార్గదర్శకత్వం కీలక అవసరంగా మారింది. ఇది ముఖ్యంగా.. విద్యార్థులకు.ఉద్యోగాల వేటలో ఉన్న అభ్యర్థులకు, ఉన్నత చదువులు చదివి జీవితంలో బాగా స్థిరపడాలనుకునే ఆశయసాధకులకు అత్యంత అవసరం. ఇదొక విజ్ఞాన గని వంటిది. ఇక్కడ మీకు వివిధ రంగాలకు చెందిన సబ్జెక్టులపై ప్రామాణిక గ్రంథాలు, మ్యాగజైన్లు అందుబాటులో ఉంటాయి. కెరీర్ ఓరియెంటెడ్ పుస్తకాలు, పత్రికలుంటాయి. ఏ అభిరుచులు, సామర్థ్యాలు, నైపుణ్యాలు ఉన్న వాళ్లు ఏ రంగాన్ని ఎంచుకోవాలన్న నిపుణుల సూచనలతో కూడిన వ్యాసాలు, వీడియోలు ఉంటాయి. ఆన్లైన్లో కూడా వివిధ పుస్తకాలను, పత్రికలను చదువుకునే సదుపాయం ఉంది. ఈ మేరకు కంప్యూటర్లను ఈ కేంద్రంలో ఏర్పాటు చేయటం జరిగింది. అత్యాధునిక ప్రొజెక్టర్, టీవీలు, కంప్యూటర్లలో అంతర్జాతీయ స్థాయి ప్రమాణాలతో నెలకొల్పిన నాలెడ్జ్ సెంటర్ ఇది. పాఠశాల విద్యార్థుల నుంచి యూనివర్సిటీ విద్యార్థుల వరకూ ఏ స్థాయి స్టూడెంట్స్ అయినా ఇక్కడికి వచ్చి చదువుకోవచ్చు. కొన్ని వేల పుస్తకలు ఆన్లైన్లో అందుబాటులో ఉన్నాయి. ఈ మేరకు TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్ వెబ్సైట్ను పూర్తి సమగ్రంగా రూపొందించాం. ఒకటో తరగతి నుంచి విదేశి యూనివర్సిటీల వరకూ చదువుకోవటానికి ఉన్న అవకాశాలు, మార్గాల గురించి ఈ వెబ్సైట్లో వివరాలుంటాయి. దేశ విదేశాల్లోని అత్యున్నత విద్యాసంస్థలు అందించే కోర్సులు, అడ్మిషన్ కోసం అవి నిర్వహించే టెస్టులు, అవి అందించే స్కాలర్షిప్లు, ప్రభుత్వ పరంగా లభించే ఆర్థిక సహాయం వంటి వివరాలను తెలుసుకోవచ్చు. విద్యతో పాటు ఉద్యోగ రంగంలోని అవకాశాలూ ఇక్కడ పూర్తి స్థాయిలో అందుబాటులో ఉంటాయి. కేంద్ర, రాష్ట్ర ప్రభుత్వాలు వేసే ఉద్యోగ నోటిఫికేషన్ల గురించి, ప్రైవేటు రంగంలో ఉన్న ఉద్యోగావకాశాల గురించి, ఉపాది అవకాశాల గురించి కూడా ఇక్కడ తెలుసుకోవచ్చు. ఆయా ఉద్యోగాలకు నిర్వహించే పోటీ పరీక్షల్లో ఏ తరహా ప్రశ్నా పత్రాలుంటాయి, ఇంటర్వ్యూ విధానం ఎలా ఉంటుంది అన్నదానిపై వివరాలు ఉంటాయి. ఈ మేరకు తగిన పుస్తకాలు, స్టడీ మెటీరియల్ ఇక్కడ విద్యార్థులకు, ఉద్యోగార్థులకు అందుబాటులో ఉంటాయి. వివిధ తెలుగు పత్రికలు ప్రచురించే కెరీర్ గైడెన్స్ అనుబంధాలన్నీ ఇక్కడ కంప్యూటర్ స్కీన్పై ఒక కంప్యూటర్ క్లిక్ తో మీకు అందుబాటులో ఉంటాయి. అంతేకాదు, ఐక్యూ స్థాయిని లెక్కించే విధానం కూడా ఇక్కడ ఉంటుంది. అంటే విద్యార్థి ఏ స్థాయి శక్తిని కలిగి ఉన్నాడు? ఎటువంటి ఉద్యోగాలకు ప్రయత్నించవచ్చు? వంటి ఐక్యూ టెస్ట్లు అందుబాటులో ఉంటాయి. దీని ద్వారా సదరు విద్యార్థి తన శక్తి సామర్ధ్యాలను తెలుసుకొని వాటికి అనుగుణమైన రంగాల్లో ఉన్నత విద్య, కెరీర్ పరంగా ప్రయత్నాలు చేసుకోవటం సులువవుతుంది. ఈ సేవలు, సదుపాయాలన్నీ ఉచితంగా అందుబాటులో ఉంటాయి. ఈ నేపథ్యంలోనే విద్య, ఆరోగ్యం, క్రీడలు తదితర రంగాల్లో స్వచ్ఛంద, ఉచిత సేవలు అందిస్తున్న 'తలకొక్కుల ఎల్లయ్య గారి రాజు ఫౌండేషన్' TYR FOUNDATION ఒక వినూత్నమైన ఆలోచనతో ముందుకొచ్చింది. అదే 'TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్', విద్యార్థులకు, ఉద్యోగార్థులకు పూర్తి స్థాయి కెరీర్ గైడెన్స్ ను ఉచితంగా అందించే కేంద్రం ఇది. స్క్రిప్ట్ తో అడుగుపెడితే చాలు సినిమాను పూర్తి చేసుకొని వెళ్లొచ్చు అంటూ హాలీవుడ్ లోని ప్రఖ్యాత సినీ స్టూడియోల గురించి ప్రపంచమంతటా ఘనంగా చెప్పుకుంటూ ఉంటారు. ఇదే విధంగా TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్. నేటి విద్యార్థులకు, ఉద్యోగార్థులకు ఒక హామీ ఇస్తున్నది. కెరీర్ లో స్థిరపడాలన్న ధృఢసంకల్పం మీలో ఉంటే చాలు.. మీ భవిష్యత్ ఆశయాలు, లక్ష్యాల గురించి పూర్తి గైడెన్స్ ఇక్కడ లభిస్తుంది. మీరు ప్రాథమిక విద్య నుండి విదేశి యూనివర్సిటీల వరకు ఏ స్థాయి విద్యార్థి అయినా కావచ్చు.. మీకు ఇక్కడ ఆ గైడెన్స్ అందుబాటులో ఉంటుంది. నేటి యువత.. ముఖ్యంగా గ్రామీణ ప్రాంతాలు, పేద, మధ్య తరగతి కుటుంబాలకు చెందిన అనేక మంది యువతీ యువకులు తమ కెరీర్ లో ఎటువెళ్లాలో తెలియని అనిశ్చితిని ఎదుర్కొంటున్నారు. సరైన మార్గనిర్దేశకత్వం లేక చిన్నాచితక ఉద్యోగాలతో, పనులతో కెరీర్ కు ఫుల్ స్టాప్ పెడుతున్నారు. వీరిలో ఎంతోమంది ప్రతిభావంతులు, కష్టపడి చదువుకునే వారు కూడా ఉండటం విషాదం. ఇది ఆయా వ్యక్తులకు, వారి కుటుంబాలకు మాత్రమే జరుగుతున్న నష్టం కాదు. యావత్ దేశానికి జరుగుతున్న నష్టం. దేశ భవిష్యత్తును నిర్మించే యువతరం ప్రతిభా పాటవాలు సంపూర్ణంగా వికసించనప్పుడు దేశం ఏ విధంగా బాగుపడుతుంది? ఈ ఆవేదన, ఈ ఆలోచనలో నుంచి పుట్టినదే TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్. ఇప్పటికే టి.వై.ఆర్. ఫౌండేషన్ గజ్వేల్ చుట్టుప్రక్కల గ్రామాలు, పట్టణాల్లోని పాఠశాలల్లో పలు గ్రంధాలయాలను ఏర్పాటు చేసింది. కొన్ని ప్రాంతాల్లో యువజన సంఘాల కోరిక మేరకు, విడిగా గ్రంధాలయాలను నెలకొల్పింది. సమీప భవిష్యత్తులో 100 గ్రంధాలయాలను ఏర్పాటు చేసి, గ్రంధాలయోద్యమాన్ని ఈ ఆధునిక కాలానికి తగినట్లుగా పున:ప్రారంభించాలనే సంకల్పంతో పని చేస్తున్నది. విద్యారంగంలో సేవలను మరింత విస్తరించాలనే యోచనతో లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్ ప్రారంభించింది. ఈ భవనంలోని 2వ అంతస్తు రాజకీయ, ఆర్ధిక, సామాజిక, పర్యావరణ అంశాలపై సంబందించిన నిపుణులను ప్రత్యేకంగా రప్పించి తరుచుగా లెక్చర్లు ఇప్పించడంతో పాటు, వీటికి సంబందించిన అన్ని రంగాలకు చెందిన తత్వవేత్తలు భోదించిన, రాసిన పుస్తకాలను గ్రంధాలయంలో పెట్టడం జరిగింది. ఇటువంటి ఎన్నో వినూత్న కార్యక్రమాలకు TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్ వేదికగా నిలువనుంది. అలాగే ఇది కేవలం విద్యార్ధులకు, ఉద్యోగర్ధులకు యువతకు పరిమితం కాకుండ చిన్న పిల్లల నుండి మొదలకుకొని అన్ని రకాల వయస్సు గల వారికి అవసరమైన పుస్తకలను, వార్త పత్రికలను, వార, మాస పత్రికలు, మ్యాగ్జన్లను ఉచితంగా చదువుకోవచ్చు. పాఠకులకు అవసరమైన ప్రింట్ ఆవుట్లను తీసుకోవడానికి అధునాతనమైన ప్రింటంర్తో పాటు జిరాక్స్ మిషన్ ్ను కూడా అందుబాటులో ఉంచడం జరిగింది. కాంపిటేటివ్ పరీక్షల్లో పాల్గోనే వారిని సన్నద్థపరచటానికి TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్ ఒక ఫౌండేషన్ కోర్సును ప్రారంభించింది. దీంట్లో చేరటానికి ఆన్లైన్లోగానీ, స్వయంగా వచ్చిగానీ దరఖాస్తు ఇవ్వవచ్చు. అలాగే, లైబ్రరీలో చదువుకోవటానికి అవసరమైన రిజిస్ట్రేషన్ ప్రక్రియను కూడా ప్రారంభించాం. గజ్వేల్ పట్టణంలో ఇంటిగ్రేటెడ్ మార్కెట్కు సమీపంలో ఉన్న టి.వై.ఆర్. ప్రైడ్ భవనంలో రెండు అంతస్తులను ఈ లైబ్రరీ, నాలెడ్జ్ సెంటర్కు కేటాయించడం జరిగింది. తెలంగాణ భావితరాలు తలెత్తుకొని జీవించాలన్న సదాశయంతో నెలకొల్పిన ఈ విజ్ఞాన కేంద్రానికి మీకు మా ఇదే స్వాగతం.</p>
+    <p class="editable" contenteditable="true" oninput="saveHomeContent(this)">యావత్ ప్రపంచాన్ని కుగ్రామంగా మార్చిన నేటి ఇంటర్నెట్ యుగం.. గొప్ప అవకాశాలతోపాటు గొప్ప సవాళ్లనూ తీసుకొచ్చింది. ఈ నేపథ్యంలోనే ఒక మార్గదర్శకత్వం కీలక అవసరంగా మారింది. ఇది ముఖ్యంగా విద్యార్థులకు, ఉద్యోగాల వేటలో ఉన్న అభ్యర్థులకు, ఉన్నత చదువులు చదివి జీవితంలో బాగా స్థిరపడాలనుకునే ఆశయసాధకులకు అత్యంత అవసరం. TYR Foundation లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్ విద్యార్థులకు, ఉద్యోగార్థులకు పూర్తి స్థాయి కెరీర్ గైడెన్స్‌ను ఉచితంగా అందిస్తుంది.</p>
   </div>
 
   <div id="overview" class="tab-content" role="tabpanel">
-    <h2>Overview</h2>
+    <h2 data-en="Overview" data-te="అవలోకనం">Overview</h2>
     <p>TY Raju Foundation is dedicated to providing comprehensive educational resources for students in Telangana from kindergarten to postgraduate levels. Our mission is to support free education and make quality educational opportunities accessible to all.</p>
   </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TY RAJU FOUNDATION</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e8f0ff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #0066cc;
-      justify-content: center;
-    }
-    nav button {
-      background: none;
-      color: white;
-      border: none;
-      padding: 1rem;
-      cursor: pointer;
-    }
-    nav button:hover,
-    nav button.active {
-      background-color: #004080;
-    }
-    .tab-content {
-      display: none;
-      padding: 1rem;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    a {
-      color: #003366;
-      text-decoration: none;
-      display: block;
-      margin: 0.5rem 0;
-    }
-    .lang-toggle {
-      float: right;
-      background: #004080;
-      color: white;
-      border: none;
-      padding: 0.5rem;
-      margin-top: -3rem;
-      margin-right: 1rem;
-      cursor: pointer;
-    }
-    .gallery-item {
-      display: inline-block;
-      position: relative;
-      margin: 0.5rem;
-    }
-    .gallery-item img,
-    .gallery-item video {
-      max-width: 150px;
-      height: auto;
-      display: block;
-    }
-    .gallery-item button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: red;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>TY RAJU FOUNDATION</h1>
-    <button class="lang-toggle" onclick="toggleLanguage()">తెలుగు</button>
-  </header>
-  <nav id="tabs">
-    <button onclick="openTab('home')" class="active">Home</button>
-    <button onclick="openTab('overview')">Overview</button>
-    <button onclick="openTab('kgv')">KG–V</button>
-    <button onclick="openTab('vix')">VI–X</button>
-    <button onclick="openTab('intermediate')">Intermediate</button>
-    <button onclick="openTab('universities')">Universities</button>
-    <button onclick="openTab('scholarships')">Scholarships</button>
-    <button onclick="openTab('library')">Library Resources</button>
-    <button onclick="openTab('admissions')">Admissions</button>
-    <button onclick="openTab('gurukulas')">Gurukulas</button>
-    <button onclick="openTab('sainik')">Sainik Schools</button>
-    <button onclick="openTab('gallery')">Gallery</button>
-  </nav>
-  <div id="home" class="tab-content active">
-    <h2>Welcome to TY Raju Foundation</h2>
-    <p contenteditable="true">You can edit this area to customize the home page text.</p>
-  </div>
-  <div id="overview" class="tab-content">
-    <h2>Overview</h2>
-    <p>TY Raju Foundation supports free education from KG to PG in Telangana. Explore scholarships, admissions, libraries, and special institutions.</p>
-  </div>
-  <div id="kgv" class="tab-content active">
-            <h2>🏫 KG–V Schools in Telangana</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Department</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.telangana.gov.in/departments/school-education-se-wing/" target="_blank" rel="noopener noreferrer">SE Wing - Telangana</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://scert.telangana.gov.in/" target="_blank" rel="noopener noreferrer">SCERT Telangana</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://samagra.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Samagra Shiksha</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://schools.org.in/telangana/" target="_blank" rel="noopener noreferrer">School Directory</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://play.google.com/store/apps/details?id=com.eschool.ts" target="_blank" rel="noopener noreferrer">eSchool App</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://diksha.gov.in/" target="_blank" rel="noopener noreferrer">DIKSHA Platform</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.education.gov.in/nep-state/telangana" target="_blank" rel="noopener noreferrer">NEP Implementation</a>
-                </div>
-            </div>
-        </div>
 
-        <div id="vix" class="tab-content">
-            <h2>🎒 VI–X Schools in Telangana</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Dept</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://bse.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Board of Secondary Education</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://results.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Exam Results Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://scert.telangana.gov.in/" target="_blank" rel="noopener noreferrer">SCERT Telangana</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">National Scholarships</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://samagra.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Samagra Shiksha</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://tstet.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TS TET Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://manabadi.co.in/" target="_blank" rel="noopener noreferrer">Manabadi Results</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="intermediate" class="tab-content">
-            <h2>🎓 Intermediate Colleges</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://tsbie.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TSBIE Official</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://results.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Inter Results Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://dost.cgg.gov.in/" target="_blank" rel="noopener noreferrer">DOST Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://tgche.ac.in/" target="_blank" rel="noopener noreferrer">TG Council Higher Education</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">Scholarships Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://manabadi.co.in/" target="_blank" rel="noopener noreferrer">Manabadi</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.telangana.gov.in/departments/higher-education/" target="_blank" rel="noopener noreferrer">Higher Education Dept</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TS ePASS</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="universities" class="tab-content">
-            <h2>🏛️ Universities</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://www.osmania.ac.in/" target="_blank" rel="noopener noreferrer">Osmania University</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://kakatiya.ac.in/" target="_blank" rel="noopener noreferrer">Kakatiya University</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.jntuh.ac.in/" target="_blank" rel="noopener noreferrer">JNTU Hyderabad</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.uohyd.ac.in/" target="_blank" rel="noopener noreferrer">University of Hyderabad</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.mguniversity.ac.in/" target="_blank" rel="noopener noreferrer">Mahatma Gandhi University</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.telanganauniversity.ac.in/" target="_blank" rel="noopener noreferrer">Telangana University</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.pjtsau.edu.in/" target="_blank" rel="noopener noreferrer">PJTS Agricultural University</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.satavahana.ac.in/" target="_blank" rel="noopener noreferrer">Satavahana University</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.palamuruuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Palamuru University</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.braou.ac.in/" target="_blank" rel="noopener noreferrer">BR Ambedkar Open University</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="scholarships" class="tab-content">
-            <h2>💰 Scholarships</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">National Scholarship Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TS ePASS Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.minorityaffairs.gov.in/" target="_blank" rel="noopener noreferrer">Minority Affairs Ministry</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.ugc.ac.in/" target="_blank" rel="noopener noreferrer">UGC Scholarships</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer">AICTE Schemes</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer">NTA Scholarships</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://dst.gov.in/" target="_blank" rel="noopener noreferrer">DST INSPIRE</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.education.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Education</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="library" class="tab-content">
-            <h2>📚 Library Resources</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">National Digital Library</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://epgp.inflibnet.ac.in/" target="_blank" rel="noopener noreferrer">ePG Pathshala</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer">NPTEL</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.swayam.gov.in/" target="_blank" rel="noopener noreferrer">SWAYAM</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://swayamprabha.gov.in/" target="_blank" rel="noopener noreferrer">SWAYAM Prabha</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://diksha.gov.in/" target="_blank" rel="noopener noreferrer">DIKSHA</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://ignou.ac.in/" target="_blank" rel="noopener noreferrer">IGNOU eGyanKosh</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://egranthalaya.nic.in/" target="_blank" rel="noopener noreferrer">eGranthalaya</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="admissions" class="tab-content">
-            <h2>📝 Admissions & Entrance Exams</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://tgeapcet.nic.in/" target="_blank" rel="noopener noreferrer">TS EAMCET</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://icet.tgche.ac.in/" target="_blank" rel="noopener noreferrer">TS ICET</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://lawcet.tsche.ac.in/" target="_blank" rel="noopener noreferrer">TS LAWCET</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://ecet.tsche.ac.in/" target="_blank" rel="noopener noreferrer">TS ECET</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://edcet.tsche.ac.in/" target="_blank" rel="noopener noreferrer">TS EdCET</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://polycet.tgche.ac.in/" target="_blank" rel="noopener noreferrer">TS POLYCET</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://dost.cgg.gov.in/" target="_blank" rel="noopener noreferrer">DOST Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://tgche.ac.in/" target="_blank" rel="noopener noreferrer">TGCHE</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="gurukulas" class="tab-content">
-            <h2>🏡 Gurukula Schools</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://tgtwgurukulam.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Tribal Welfare Gurukulas</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://mjptbcwreis.telangana.gov.in/" target="_blank" rel="noopener noreferrer">BC Welfare Residential Schools</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://tswreis.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Social Welfare Residential Schools</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://tgresidential.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Residential Schools Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://minoritywelfare.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Minority Welfare Schools</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Student Scholarships</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Dept</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://admissions.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Admissions Portal</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="sainik" class="tab-content">
-            <h2>⚔️ Sainik Schools</h2>
-            <div class="link-grid">
-                <div class="link-card">
-                    <a href="https://www.sainikschooladmission.in/" target="_blank" rel="noopener noreferrer">Sainik School Admission Portal</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer">NTA (Exam Authority)</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://sainikschool.ncert.gov.in/" target="_blank" rel="noopener noreferrer">Sainik School Society</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.mod.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Defence</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://sainikschoolkorukonda.edu.in/" target="_blank" rel="noopener noreferrer">Sainik School Korukonda</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.jawaharnavodaya.gov.in/" target="_blank" rel="noopener noreferrer">Navodaya Vidyalayas</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://kvsangathan.nic.in/" target="_blank" rel="noopener noreferrer">Kendriya Vidyalayas</a>
-                </div>
-                <div class="link-card">
-                    <a href="https://www.education.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Education</a>
-                </div>
-            </div>
-        </div>
+  <div id="kgv" class="tab-content" role="tabpanel">
+    <h2 data-en="🏫 KG–V Schools in Telangana" data-te="🏫 కెజి–ఐదు పాఠశాలలు">🏫 KG–V Schools in Telangana</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Department</a></div>
+      <div class="link-card"><a href="https://www.telangana.gov.in/departments/school-education-se-wing/" target="_blank" rel="noopener noreferrer">SE Wing - Telangana</a></div>
+      <div class="link-card"><a href="https://scert.telangana.gov.in/" target="_blank" rel="noopener noreferrer">SCERT Telangana</a></div>
+      <div class="link-card"><a href="https://samagra.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Samagra Shiksha</a></div>
+      <div class="link-card"><a href="https://schools.org.in/telangana/" target="_blank" rel="noopener noreferrer">School Directory</a></div>
+      <div class="link-card"><a href="https://play.google.com/store/apps/details?id=com.eschool.ts" target="_blank" rel="noopener noreferrer">eSchool App</a></div>
+      <div class="link-card"><a href="https://diksha.gov.in/" target="_blank" rel="noopener noreferrer">DIKSHA Platform</a></div>
+      <div class="link-card"><a href="https://www.education.gov.in/nep-state/telangana" target="_blank" rel="noopener noreferrer">NEP Implementation</a></div>
     </div>
-  <div id="gallery" class="tab-content">
-    <h2>Gallery</h2>
-    <label for="fileInput">Upload Images or Videos</label>
-    <input type="file" id="fileInput" multiple accept="image/*,video/*" /><br /><br />
-    <div id="galleryContainer" class="gallery-container"></div>
   </div>
-  <script>
-    // Tab switching logic
-    function openTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.querySelectorAll('#tabs button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      const selectedTab = document.getElementById(tabId);
-      if (selectedTab) {
-        selectedTab.classList.add('active');
-      }
-      event.target.classList.add('active');
-    }
-    // Language toggle logic
-    function toggleLanguage() {
-      const buttons = document.querySelectorAll("nav button");
-      buttons.forEach(btn => {
-        btn.textContent = translateLabel(btn.textContent);
-      });
-    }
-    function translateLabel(text) {
-      const telugu = {
-        "Home": "హోం",
-        "Overview": "అవలోకనం",
-        "KG–V": "కెజి–ఐదు",
-        "VI–X": "ఆరు–పది",
-        "Intermediate": "ఇంటర్మీడియట్",
-        "Universities": "విశ్వవిద్యాలయాలు",
-        "Scholarships": "ఉపకారవేతనాలు",
-        "Library Resources": "లైబ్రరీ వనరులు",
-        "Admissions": "ప్రవేశాలు",
-        "Gurukulas": "గురుకులాలు",
-        "Sainik Schools": "సైనిక్ పాఠశాలలు",
-        "Gallery": "గ్యాలరీ"
-      };
-      return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
-    }
-    // Gallery upload and display logic
-    document.getElementById('fileInput').addEventListener('change', function (event) {
-      const gallery = document.getElementById('galleryContainer');
-      Array.from(event.target.files).forEach(file => {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const wrapper = document.createElement('div');
-          wrapper.className = 'gallery-item';
-          const media = file.type.startsWith('video') ? document.createElement('video') : document.createElement('img');
-          media.src = e.target.result;
-          if (media.tagName === 'VIDEO') media.controls = true;
-          const delBtn = document.createElement('button');
-          delBtn.textContent = 'X';
-          delBtn.onclick = () => wrapper.remove();
-          wrapper.appendChild(media);
-          wrapper.appendChild(delBtn);
-          gallery.appendChild(wrapper);
-        };
-        reader.readAsDataURL(file);
-      });
-    });
-    // Ensure all links open in a new window
-    function setLinksToNewWindow() {
-      document.querySelectorAll('a').forEach(link => {
-        link.setAttribute('target', '_blank');
-        if (!link.hasAttribute('rel')) {
-          link.setAttribute('rel', 'noopener noreferrer');
-        }
-      });
-    }
-    // On page load, show the Home tab and set links to open in new window
-    document.addEventListener("DOMContentLoaded", function () {
-      openTab('home');
-      setLinksToNewWindow();
-    });
-  </script>
-</body>
-</html>
+
+  <div id="vix" class="tab-content" role="tabpanel">
+    <h2 data-en="🎒 VI–X Schools in Telangana" data-te="🎒 ఆరు–పది పాఠశాలలు">🎒 VI–X Schools in Telangana</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Dept</a></div>
+      <div class="link-card"><a href="https://bse.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Board of Secondary Education</a></div>
+      <div class="link-card"><a href="https://results.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Exam Results Portal</a></div>
+      <div class="link-card"><a href="https://scert.telangana.gov.in/" target="_blank" rel="noopener noreferrer">SCERT Telangana</a></div>
+      <div class="link-card"><a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">National Scholarships</a></div>
+      <div class="link-card"><a href="https://samagra.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Samagra Shiksha</a></div>
+      <div class="link-card"><a href="https://tstet.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TS TET Portal</a></div>
+      <div class="link-card"><a href="https://manabadi.co.in/" target="_blank" rel="noopener noreferrer">Manabadi Results</a></div>
     </div>
-  
-  <div id="gallery" class="tab-content">
-    <h2>Gallery</h2>
+  </div>
+
+  <div id="intermediate" class="tab-content" role="tabpanel">
+    <h2 data-en="🎓 Intermediate Colleges" data-te="🎓 ఇంటర్మీడియట్ కళాశాలలు">🎓 Intermediate Colleges</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://tsbie.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TSBIE Official</a></div>
+      <div class="link-card"><a href="https://results.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Inter Results Portal</a></div>
+      <div class="link-card"><a href="https://dost.cgg.gov.in/" target="_blank" rel="noopener noreferrer">DOST Portal</a></div>
+      <div class="link-card"><a href="https://tgche.ac.in/" target="_blank" rel="noopener noreferrer">TG Council Higher Education</a></div>
+      <div class="link-card"><a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">Scholarships Portal</a></div>
+      <div class="link-card"><a href="https://manabadi.co.in/" target="_blank" rel="noopener noreferrer">Manabadi</a></div>
+      <div class="link-card"><a href="https://www.telangana.gov.in/departments/higher-education/" target="_blank" rel="noopener noreferrer">Higher Education Dept</a></div>
+      <div class="link-card"><a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TS ePASS</a></div>
+    </div>
+  </div>
+
+  <div id="universities" class="tab-content" role="tabpanel">
+    <h2 data-en="🏛️ Universities" data-te="🏛️ విశ్వవిద్యాలయాలు">🏛️ Universities</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://www.osmania.ac.in/" target="_blank" rel="noopener noreferrer">Osmania University</a></div>
+      <div class="link-card"><a href="https://kakatiya.ac.in/" target="_blank" rel="noopener noreferrer">Kakatiya University</a></div>
+      <div class="link-card"><a href="https://www.jntuh.ac.in/" target="_blank" rel="noopener noreferrer">JNTU Hyderabad</a></div>
+      <div class="link-card"><a href="https://www.uohyd.ac.in/" target="_blank" rel="noopener noreferrer">University of Hyderabad</a></div>
+      <div class="link-card"><a href="https://www.mguniversity.ac.in/" target="_blank" rel="noopener noreferrer">Mahatma Gandhi University</a></div>
+      <div class="link-card"><a href="https://www.telanganauniversity.ac.in/" target="_blank" rel="noopener noreferrer">Telangana University</a></div>
+      <div class="link-card"><a href="https://www.pjtsau.edu.in/" target="_blank" rel="noopener noreferrer">PJTS Agricultural University</a></div>
+      <div class="link-card"><a href="https://www.satavahana.ac.in/" target="_blank" rel="noopener noreferrer">Satavahana University</a></div>
+      <div class="link-card"><a href="https://www.palamuruuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Palamuru University</a></div>
+      <div class="link-card"><a href="https://www.braou.ac.in/" target="_blank" rel="noopener noreferrer">BR Ambedkar Open University</a></div>
+    </div>
+  </div>
+
+  <div id="scholarships" class="tab-content" role="tabpanel">
+    <h2 data-en="💰 Scholarships" data-te="💰 ఉపకారవేతనాలు">💰 Scholarships</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">National Scholarship Portal</a></div>
+      <div class="link-card"><a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TS ePASS Portal</a></div>
+      <div class="link-card"><a href="https://www.minorityaffairs.gov.in/" target="_blank" rel="noopener noreferrer">Minority Affairs Ministry</a></div>
+      <div class="link-card"><a href="https://www.ugc.ac.in/" target="_blank" rel="noopener noreferrer">UGC Scholarships</a></div>
+      <div class="link-card"><a href="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer">AICTE Schemes</a></div>
+      <div class="link-card"><a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer">NTA Scholarships</a></div>
+      <div class="link-card"><a href="https://dst.gov.in/" target="_blank" rel="noopener noreferrer">DST INSPIRE</a></div>
+      <div class="link-card"><a href="https://www.education.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Education</a></div>
+    </div>
+  </div>
+
+  <div id="library" class="tab-content" role="tabpanel">
+    <h2 data-en="📚 Library Resources" data-te="📚 లైబ్రరీ వనరులు">📚 Library Resources</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">National Digital Library</a></div>
+      <div class="link-card"><a href="https://epgp.inflibnet.ac.in/" target="_blank" rel="noopener noreferrer">ePG Pathshala</a></div>
+      <div class="link-card"><a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer">NPTEL</a></div>
+      <div class="link-card"><a href="https://www.swayam.gov.in/" target="_blank" rel="noopener noreferrer">SWAYAM</a></div>
+      <div class="link-card"><a href="https://swayamprabha.gov.in/" target="_blank" rel="noopener noreferrer">SWAYAM Prabha</a></div>
+      <div class="link-card"><a href="https://diksha.gov.in/" target="_blank" rel="noopener noreferrer">DIKSHA</a></div>
+      <div class="link-card"><a href="https://ignou.ac.in/" target="_blank" rel="noopener noreferrer">IGNOU eGyanKosh</a></div>
+      <div class="link-card"><a href="https://egranthalaya.nic.in/" target="_blank" rel="noopener noreferrer">eGranthalaya</a></div>
+    </div>
+  </div>
+
+  <div id="admissions" class="tab-content" role="tabpanel">
+    <h2 data-en="📝 Admissions & Entrance Exams" data-te="📝 ప్రవేశాలు & ప్రవేశ పరీక్షలు">📝 Admissions & Entrance Exams</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://tgeapcet.nic.in/" target="_blank" rel="noopener noreferrer">TS EAMCET</a></div>
+      <div class="link-card"><a href="https://icet.tgche.ac.in/" target="_blank" rel="noopener noreferrer">TS ICET</a></div>
+      <div class="link-card"><a href="https://lawcet.tsche.ac.in/" target="_blank" rel="noopener noreferrer">TS LAWCET</a></div>
+      <div class="link-card"><a href="https://ecet.tsche.ac.in/" target="_blank" rel="noopener noreferrer">TS ECET</a></div>
+      <div class="link-card"><a href="https://edcet.tsche.ac.in/" target="_blank" rel="noopener noreferrer">TS EdCET</a></div>
+      <div class="link-card"><a href="https://polycet.tgche.ac.in/" target="_blank" rel="noopener noreferrer">TS POLYCET</a></div>
+      <div class="link-card"><a href="https://dost.cgg.gov.in/" target="_blank" rel="noopener noreferrer">DOST Portal</a></div>
+      <div class="link-card"><a href="https://tgche.ac.in/" target="_blank" rel="noopener noreferrer">TGCHE</a></div>
+    </div>
+  </div>
+
+  <div id="gurukulas" class="tab-content" role="tabpanel">
+    <h2 data-en="🏡 Gurukula Schools" data-te="🏡 గురుకుల పాఠశాలలు">🏡 Gurukula Schools</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://tgtwgurukulam.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Tribal Welfare Gurukulas</a></div>
+      <div class="link-card"><a href="https://mjptbcwreis.telangana.gov.in/" target="_blank" rel="noopener noreferrer">BC Welfare Residential Schools</a></div>
+      <div class="link-card"><a href="https://tswreis.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Social Welfare Residential Schools</a></div>
+      <div class="link-card"><a href="https://tgresidential.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Residential Schools Portal</a></div>
+      <div class="link-card"><a href="https://minoritywelfare.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Minority Welfare Schools</a></div>
+      <div class="link-card"><a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Student Scholarships</a></div>
+      <div class="link-card"><a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Dept</a></div>
+      <div class="link-card"><a href="https://admissions.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Admissions Portal</a></div>
+    </div>
+  </div>
+
+  <div id="sainik" class="tab-content" role="tabpanel">
+    <h2 data-en="⚔️ Sainik Schools" data-te="⚔️ సైనిక్ పాఠశాలలు">⚔️ Sainik Schools</h2>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://www.sainikschooladmission.in/" target="_blank" rel="noopener noreferrer">Sainik School Admission Portal</a></div>
+      <div class="link-card"><a href="https://www.nta.ac.in/" target="_blank" rel="noopener noreferrer">NTA (Exam Authority)</a></div>
+      <div class="link-card"><a href="https://sainikschool.ncert.gov.in/" target="_blank" rel="noopener noreferrer">Sainik School Society</a></div>
+      <div class="link-card"><a href="https://www.mod.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Defence</a></div>
+      <div class="link-card"><a href="https://sainikschoolkorukonda.edu.in/" target="_blank" rel="noopener noreferrer">Sainik School Korukonda</a></div>
+      <div class="link-card"><a href="https://www.jawaharnavodaya.gov.in/" target="_blank" rel="noopener noreferrer">Navodaya Vidyalayas</a></div>
+      <div class="link-card"><a href="https://kvsangathan.nic.in/" target="_blank" rel="noopener noreferrer">Kendriya Vidyalayas</a></div>
+      <div class="link-card"><a href="https://www.education.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Education</a></div>
+    </div>
+  </div>
+
+  <div id="gallery" class="tab-content" role="tabpanel">
+    <h2 data-en="Gallery" data-te="గ్యాలరీ">Gallery</h2>
     <div style="margin-bottom: 1rem;">
       <label for="fileInput">Upload Images or Videos (max 5MB each)</label><br>
       <input type="file" id="fileInput" multiple accept="image/*,video/*" style="margin: 0.5rem 0;" />
@@ -605,33 +292,30 @@
   </div>
 
   <div id="tyrflibrary" class="tab-content" role="tabpanel">
-    <h2>TYRFLibrary</h2>
+    <h2 data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</h2>
     <p>Access our comprehensive digital library resources for students and educators.</p>
-    <a href="https://archive.org/details/texts" target="_blank" rel="noopener noreferrer"></a>
-    <a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer"></a>
-    <a href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer"></a>
-    <a href="https://www.pdfdrive.com/" target="_blank" rel="noopener noreferrer">PDF Drive</a>
-    <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <div class="link-grid">
+      <div class="link-card"><a href="https://archive.org/details/texts" target="_blank" rel="noopener noreferrer">Internet Archive</a></div>
+      <div class="link-card"><a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">Project Gutenberg</a></div>
+      <div class="link-card"><a href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer">Open Library</a></div>
+      <div class="link-card"><a href="https://www.pdfdrive.com/" target="_blank" rel="noopener noreferrer">PDF Drive</a></div>
+      <div class="link-card"><a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a></div>
+    </div>
   </div>
 
   <script>
     // Tab switching logic
     function openTab(tabId, clickedButton) {
-      // Hide all tab content
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      // Remove active class from all buttons
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.querySelectorAll('#tabs button').forEach(btn => {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
       });
-      // Show the selected tab
       const selectedTab = document.getElementById(tabId);
       if (selectedTab) {
         selectedTab.classList.add('active');
+        selectedTab.querySelector('h2')?.focus();
       }
-      // Add active class to the clicked button
       if (clickedButton) {
         clickedButton.classList.add('active');
         clickedButton.setAttribute('aria-selected', 'true');
@@ -639,71 +323,77 @@
     }
 
     // Language toggle logic
+    let isTelugu = false;
     function toggleLanguage() {
-      const buttons = document.querySelectorAll("nav button");
-      buttons.forEach(btn => {
-        btn.textContent = translateLabel(btn.textContent);
+      isTelugu = !isTelugu;
+      const langButton = document.querySelector('.lang-toggle');
+      langButton.textContent = isTelugu ? 'English' : 'తెలుగు';
+      langButton.setAttribute('aria-label', `Switch to ${isTelugu ? 'English' : 'Telugu'}`);
+      document.querySelectorAll('[data-en]').forEach(elem => {
+        elem.textContent = isTelugu ? elem.dataset.te : elem.dataset.en;
       });
     }
 
-    function translateLabel(text) {
-      const telugu = {
-        "Home": "హోం",
-        "Overview": "అవలోకనం",
-        "KG–V": "కెజి–ఐదు",
-        "VI–X": "ఆరు–పది",
-        "Intermediate": "ఇంటర్మీడియట్",
-        "Universities": "విశ్వవిద్యాలయాలు",
-        "Scholarships": "ఉపకారవేతనాలు",
-        "Library Resources": "లైబ్రరీ వనరులు",
-        "Admissions": "ప్రవేశాలు",
-        "Gurukulas": "గురుకులాలు",
-        "Sainik Schools": "సైనిక్ పాఠశాలలు",
-        "Gallery": "గ్యాలరీ",
-        "TYRFLibrary": "టివైఆర్‌ఎఫ్ లైబ్రరీ"
-      };
-      return telugu[text] || Object.keys(telugu).find(key => telugu[key] === text) || text;
+    // Save and load editable home content
+    function saveHomeContent(element) {
+      try {
+        localStorage.setItem('tyrfHomeContent', element.innerHTML);
+      } catch (error) {
+        console.log('Unable to save home content:', error);
+      }
+    }
+
+    function loadHomeContent() {
+      try {
+        const savedContent = localStorage.getItem('tyrfHomeContent');
+        if (savedContent) {
+          document.querySelector('.editable').innerHTML = savedContent;
+        }
+      } catch (error) {
+        console.log('Unable to load home content:', error);
+      }
     }
 
     // Gallery storage and management
     let galleryItems = [];
+    const MAX_STORAGE_SIZE = 5 * 1024 * 1024; // 5MB total storage limit
 
-    // Load gallery items from localStorage on page load
     function loadGalleryFromStorage() {
       try {
         const stored = localStorage.getItem('tyrfGallery');
         if (stored) {
           galleryItems = JSON.parse(stored);
-          galleryItems.forEach((item, index) => {
-            displayGalleryItem(item.data, item.type, item.name, index);
-          });
+          refreshGallery();
         }
       } catch (error) {
-        console.log('LocalStorage not available, using session storage');
+        console.log('LocalStorage not available:', error);
         galleryItems = [];
       }
     }
 
-    // Save gallery items to localStorage
     function saveGalleryToStorage() {
       try {
+        const totalSize = JSON.stringify(galleryItems).length;
+        if (totalSize > MAX_STORAGE_SIZE) {
+          alert('Storage limit exceeded. Please remove some items before adding more.');
+          return false;
+        }
         localStorage.setItem('tyrfGallery', JSON.stringify(galleryItems));
+        return true;
       } catch (error) {
-        console.log('LocalStorage not available');
+        console.log('LocalStorage not available:', error);
+        return false;
       }
     }
 
-    // Display a single gallery item
-    function displayGalleryItem(data, type, name, index) {
+    function displayGalleryItem(data, type, name, index, size, date) {
       const gallery = document.getElementById('galleryContainer');
       const wrapper = document.createElement('div');
       wrapper.className = 'gallery-item';
       
       const media = type.startsWith('video') ? document.createElement('video') : document.createElement('img');
       media.src = data;
-      if (media.tagName === 'VIDEO') {
-        media.controls = true;
-      }
+      if (media.tagName === 'VIDEO') media.controls = true;
       
       const nameLabel = document.createElement('p');
       nameLabel.textContent = name;
@@ -711,32 +401,35 @@
       nameLabel.style.margin = '5px 0';
       nameLabel.style.wordBreak = 'break-word';
       
+      const infoLabel = document.createElement('p');
+      infoLabel.textContent = `Size: ${(size / 1024).toFixed(2)} KB | Added: ${new Date(date).toLocaleDateString()}`;
+      infoLabel.style.fontSize = '10px';
+      infoLabel.style.color = '#666';
+      
       const delBtn = document.createElement('button');
       delBtn.textContent = 'Delete';
       delBtn.onclick = () => {
         wrapper.remove();
         galleryItems.splice(index, 1);
         saveGalleryToStorage();
-        // Refresh gallery to update indices
         refreshGallery();
       };
       
       wrapper.appendChild(media);
       wrapper.appendChild(nameLabel);
+      wrapper.appendChild(infoLabel);
       wrapper.appendChild(delBtn);
       gallery.appendChild(wrapper);
     }
 
-    // Refresh gallery display
     function refreshGallery() {
       const gallery = document.getElementById('galleryContainer');
       gallery.innerHTML = '';
       galleryItems.forEach((item, index) => {
-        displayGalleryItem(item.data, item.type, item.name, index);
+        displayGalleryItem(item.data, item.type, item.name, index, item.size, item.dateAdded);
       });
     }
 
-    // Clear all gallery items
     function clearGallery() {
       if (confirm('Are you sure you want to delete all gallery items?')) {
         galleryItems = [];
@@ -745,15 +438,12 @@
       }
     }
 
-    // Gallery upload and display logic
     document.getElementById('fileInput').addEventListener('change', function (event) {
       Array.from(event.target.files).forEach(file => {
-        // Check file size (limit to 5MB per file for localStorage)
         if (file.size > 5 * 1024 * 1024) {
           alert(`File ${file.name} is too large. Please choose files smaller than 5MB.`);
           return;
         }
-
         const reader = new FileReader();
         reader.onload = function (e) {
           const newItem = {
@@ -763,25 +453,24 @@
             size: file.size,
             dateAdded: new Date().toISOString()
           };
-          
           galleryItems.push(newItem);
-          saveGalleryToStorage();
-          
-          const index = galleryItems.length - 1;
-          displayGalleryItem(newItem.data, newItem.type, newItem.name, index);
+          if (saveGalleryToStorage()) {
+            displayGalleryItem(newItem.data, newItem.type, newItem.name, galleryItems.length - 1, newItem.size, newItem.dateAdded);
+          } else {
+            galleryItems.pop();
+          }
         };
         reader.readAsDataURL(file);
       });
-      
-      // Clear the file input
       event.target.value = '';
     });
 
-    // On page load, show the Home tab by default and load gallery
+    // Initialize page
     document.addEventListener("DOMContentLoaded", function () {
       const homeButton = document.querySelector('#tabs button[onclick*="home"]');
       openTab('home', homeButton);
       loadGalleryFromStorage();
+      loadHomeContent();
     });
   </script>
 </body>
