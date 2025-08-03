@@ -62,9 +62,9 @@
       color: white;
       border: none;
       padding: 0.5rem;
-      margin-top: -3rem;
-      margin-right: 1rem;
+      margin: 1rem;
       cursor: pointer;
+      border-radius: 4px;
     }
     .gallery-item {
       display: inline-block;
@@ -77,6 +77,7 @@
       height: auto;
       display: block;
       margin: 0 auto;
+      loading: lazy;
     }
     .gallery-item button {
       display: block;
@@ -107,6 +108,11 @@
       padding: 0.5rem;
       min-height: 100px;
     }
+    .storage-info {
+      font-size: 12px;
+      color: #666;
+      margin-top: 0.5rem;
+    }
     @media (max-width: 600px) {
       nav button {
         padding: 0.5rem;
@@ -117,6 +123,14 @@
         max-width: 100px;
       }
     }
+    @media (max-width: 400px) {
+      nav button {
+        font-size: 0.8rem;
+      }
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -125,31 +139,29 @@
     <button class="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle language between English and Telugu">తెలుగు</button>
   </header>
   <nav id="tabs" role="tablist">
-    <button onclick="openTab('home', this)" class="active" role="tab" aria-selected="true" data-en="Home" data-te="హోం">Home</button>
-    <button onclick="openTab('overview', this)" role="tab" data-en="Overview" data-te="అవలోకనం">Overview</button>
-    <button onclick="openTab('kgv', this)" role="tab" data-en="KG–V" data-te="కెజి–ఐదు">KG–V</button>
-    <button onclick="openTab('vix', this)" role="tab" data-en="VI–X" data-te="ఆరు–పది">VI–X</button>
-    <button onclick="openTab('intermediate', this)" role="tab" data-en="Intermediate" data-te="ఇంటర్మీడియట్">Intermediate</button>
-    <button onclick="openTab('universities', this)" role="tab" data-en="Universities" data-te="విశ్వవిద్యాలయాలు">Universities</button>
-    <button onclick="openTab('scholarships', this)" role="tab" data-en="Scholarships" data-te="ఉపకారవేతనాలు">Scholarships</button>
-    <button onclick="openTab('library', this)" role="tab" data-en="Library Resources" data-te="లైబ్రరీ వనరులు">Library Resources</button>
-    <button onclick="openTab('admissions', this)" role="tab" data-en="Admissions" data-te="ప్రవేశాలు">Admissions</button>
-    <button onclick="openTab('gurukulas', this)" role="tab" data-en="Gurukulas" data-te="గురుకులాలు">Gurukulas</button>
-    <button onclick="openTab('sainik', this)" role="tab" data-en="Sainik Schools" data-te="సైనిక్ పాఠశాలలు">Sainik Schools</button>
-    <button onclick="openTab('gallery', this)" role="tab" data-en="Gallery" data-te="గ్యాలరీ">Gallery</button>
-    <button onclick="openTab('tyrflibrary', this)" role="tab" data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</button>
+    <button onclick="openTab('home', this)" class="active" role="tab" aria-selected="true" aria-controls="home" data-en="Home" data-te="హోం">Home</button>
+    <button onclick="openTab('overview', this)" role="tab" aria-controls="overview" data-en="Overview" data-te="అవలోకనం">Overview</button>
+    <button onclick="openTab('kgv', this)" role="tab" aria-controls="kgv" data-en="KG–V" data-te="కెజి–ఐదు">KG–V</button>
+    <button onclick="openTab('vix', this)" role="tab" aria-controls="vix" data-en="VI–X" data-te="ఆరు–పది">VI–X</button>
+    <button onclick="openTab('intermediate', this)" role="tab" aria-controls="intermediate" data-en="Intermediate" data-te="ఇంటర్మీడియట్">Intermediate</button>
+    <button onclick="openTab('universities', this)" role="tab" aria-controls="universities" data-en="Universities" data-te="విశ్వవిద్యాలయాలు">Universities</button>
+    <button onclick="openTab('scholarships', this)" role="tab" aria-controls="scholarships" data-en="Scholarships" data-te="ఉపకారవేతనాలు">Scholarships</button>
+    <button onclick="openTab('library', this)" role="tab" aria-controls="library" data-en="Library Resources" data-te="లైబ్రరీ వనరులు">Library Resources</button>
+    <button onclick="openTab('admissions', this)" role="tab" aria-controls="admissions" data-en="Admissions" data-te="ప్రవేశాలు">Admissions</button>
+    <button onclick="openTab('gurukulas', this)" role="tab" aria-controls="gurukulas" data-en="Gurukulas" data-te="గురుకులాలు">Gurukulas</button>
+    <button onclick="openTab('sainik', this)" role="tab" aria-controls="sainik" data-en="Sainik Schools" data-te="సైనిక్ పాఠశాలలు">Sainik Schools</button>
+    <button onclick="openTab('gallery', this)" role="tab" aria-controls="gallery" data-en="Gallery" data-te="గ్యాలరీ">Gallery</button>
+    <button onclick="openTab('tyrflibrary', this)" role="tab" aria-controls="tyrflibrary" data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</button>
   </nav>
-  <div  
-  <div id="home" class="tab-content active" role="tabpanel">
+  <div id="home" class="tab-content active" role="tabpanel" tabindex="-1">
     <h2 data-en="Welcome to TY Raju Foundation" data-te="టివై రాజు ఫౌండేషన్‌కు స్వాగతం">Welcome to TY Raju Foundation</h2>
-    <p class="editable" contenteditable="true" oninput="saveHomeContent(this)"><pయావత్ ప్రపంచాన్ని కుగ్రామంగా మార్చిన నేటి ఇంటర్నెట్ యుగం.. గొప్ప అవకాశాలతోపాటు గొప్ప సవాళ్లనూ తీసుకొచ్చింది. ఉదాహరణకు.. కుప్పలు తెప్పలుగా అందుబాటులో ఉన్న సమాచారం ఎక్కడెక్కడో ఉన్న ఎన్నెన్నో విషయాలను తెలియజేస్తుంది. అదే సమయంలో ఆ సమాచార సముద్రం నుంచి మనకు కావాల్సిన దాన్ని వెదికి పట్టుకోవటం తలకు మించిన భారంగా తయారైంది. ఈ నేపథ్యంలోనే ఒక మార్గదర్శకత్వం కీలక అవసరంగా మారింది. ఇది ముఖ్యంగా.. విద్యార్థులకు, ఉద్యోగాల వేటలో ఉన్న అభ్యర్థులకు, ఉన్నత చదువులు చదివి జీవితంలో బాగా స్థిరపడాలనుకునే ఆశయసాధకులకు అత్యంత అవసరం. ఇదొక విజ్ఞాన గని వంటిది. ఇక్కడ మీకు వివిధ రంగాలకు చెందిన సబ్జెక్టులపై ప్రామాణిక గ్రంథాలు, మ్యాగజైన్లు అందుబాటులో ఉంటాయి. కెరీర్ ఓరియెంటెడ్ పుస్తకాలు, పత్రికలుంటాయి. ఏ అభిరుచులు, సామర్థ్యాలు, నైపుణ్యాలు ఉన్న వాళ్లు ఏ రంగాన్ని ఎంచుకోవాలన్న నిపుణుల సూచనలతో కూడిన వ్యాసాలు, వీడియోలు ఉంటాయి. ఆన్లైన్లో కూడా వివిధ పుస్తకాలను, పత్రికలను చదువుకునే సదుపాయం ఉంది. ఈ మేరకు కంప్యూటర్లను ఈ కేంద్రంలో ఏర్పాటు చేయటం జరిగింది. అత్యాధునిక ప్రొజెక్టర్, టీవీలు, కంప్యూటర్లలో అంతర్జాతీయ స్థాయి ప్రమాణాలతో నెలకొల్పిన నాలెడ్జ్ సెంటర్ ఇది. పాఠశాల విద్యార్థుల నుంచి యూనివర్సిటీ విద్యార్థుల వరకూ ఏ స్థాయి స్టూడెంట్స్ అయినా ఇక్కడికి వచ్చి చదువుకోవచ్చు. కొన్ని వేల పుస్తకలు ఆన్లైన్లో అందుబాటులో ఉన్నాయి. ఈ మేరకు TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్ వెబ్సైట్ను పూర్తి సమగ్రంగా రూపొందించాం. ఒకటో తరగతి నుంచి విదేశి యూనివర్సిటీల వరకూ చదువుకోవటానికి ఉన్న అవకాశాలు, మార్గాల గురించి ఈ వెబ్సైట్లో వివరాలుంటాయి. దేశ విదేశాల్లోని అత్యున్నత విద్యాసంస్థలు అందించే కోర్సులు, అడ్మిషన్ కోసం అవి నిర్వహించే టెస్టులు, అవి అందించే స్కాలర్షిప్లు, ప్రభుత్వ పరంగా లభించే ఆర్థిక సహాయం వంటి వివరాలను తెలుసుకోవచ్చు. విద్యతో పాటు ఉద్యోగ రంగంలోని అవకాశాలూ ఇక్కడ పూర్తి స్థాయిలో అందుబాటులో ఉంటాయి. కేంద్ర, రాష్ట్ర ప్రభుత్వాలు వేసే ఉద్యోగ నోటిఫికేషన్ల గురించి, ప్రైవేటు రంగంలో ఉన్న ఉద్యోగావకాశాల గురించి, ఉపాది అవకాశాల గురించి కూడా ఇక్కడ తెలుసుకోవచ్చు. ఆయా ఉద్యోగాలకు నిర్వహించే పోటీ పరీక్షల్లో ఏ తరహా ప్రశ్నా పత్రాలుంటాయి, ఇంటర్వ్యూ విధానం ఎలా ఉంటుంది అన్నదానిపై వివరాలు ఉంటాయి. ఈ మేరకు తగిన పుస్తకాలు, స్టడీ మెటీరియల్ ఇక్కడ విద్యార్థులకు, ఉద్యోగార్థులకు అందుబాటులో ఉంటాయి. వివిధ తెలుగు పత్రికలు ప్రచురించే కెరీర్ గైడెన్స్ అనుబంధాలన్నీ ఇక్కడ కంప్యూటర్ స్కీన్పై ఒక కంప్యూటర్ క్లిక్ తో మీకు అందుబాటులో ఉంటాయి. అంతేకాదు, ఐక్యూ స్థాయిని లెక్కించే విధానం కూడా ఇక్కడ ఉంటుంది. అంటే విద్యార్థి ఏ స్థాయి శక్తిని కలిగి ఉన్నాడు? ఎటువంటి ఉద్యోగాలకు ప్రయత్నించవచ్చు? వంటి ఐక్యూ టెస్ట్లు అందుబాటులో ఉంటాయి. దీని ద్వారా సదరు విద్యార్థి తన శక్తి సామర్ధ్యాలను తెలుసుకొని వాటికి అనుగుణమైన రంగాల్లో ఉన్నత విద్య, కెరీర్ పరంగా ప్రయత్నాలు చేసుకోవటం సులువవుతుంది. ఈ సేవలు, సదుపాయాలన్నీ ఉచితంగా అందుబాటులో ఉంటాయి. ఈ నేపథ్యంలోనే విద్య, ఆరోగ్యం, క్రీడలు తదితర రంగాల్లో స్వచ్ఛంద, ఉచిత సేవలు అందిస్తున్న'తలకొక్కుల ఎల్లయ్య గారి రాజు ఫౌండేషన్' TYR FOUNDATION ఒక వినూత్నమైన ఆలోచనతో ముందుకొచ్చింది. అదే 'TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్', విద్యార్థులకు, ఉద్యోగార్థులకు పూర్తి స్థాయి కెరీర్ గైడెన్స్ ను ఉచితంగా అందించే కేంద్రం ఇది. స్క్రిప్ట్ తో అడుగుపెడితే చాలు సినిమాను పూర్తి చేసుకొని వెళ్లొచ్చు అంటూ హాలీవుడ్ లోని ప్రఖ్యాత సినీ స్టూడియోల గురించి ప్రపంచమంతటా ఘనంగా చెప్పుకుంటూ ఉంటారు. ఇదే విధంగా TYR FOUNDATION లైబ్రరీ అండ్ నాలెడ్జ్ సెంటర్. నేటి విద్యార్థులకు, ఉద్యోగార్థులకు ఒక హామీ ఇస్తున్నది. కెరీర్ లో స్థిరపడాలన్న ధృఢసంకల్పం మీలో ఉంటే చాలు.. మీ భవిష్యత్</p>
+    <p class="editable" contenteditable="true" oninput="saveHomeContent(this)">In today’s internet age, which has turned the world into a global village, vast opportunities come with great challenges. For instance, the abundance of available information enlightens us about countless subjects from all corners. However, sifting through this ocean of information to find what we need has become an overwhelming task. In this context, guidance has become a critical need, especially for students, job seekers, and aspirants aiming to excel in higher education and establish themselves in life. This is a knowledge hub, offering access to authentic books and magazines across various fields. Career-oriented books, journals, expert advice articles, and videos tailored to different interests, skills, and aptitudes are available here. You can also access various books and magazines online, facilitated by computers set up at this center. Equipped with state-of-the-art projectors, TVs, and computers, this knowledge center adheres to international standards. Students from school to university levels can study here. Thousands of books are available online. The TYR Foundation Library and Knowledge Center website has been comprehensively designed to provide details about educational opportunities and pathways from Class 1 to foreign universities. You can explore courses offered by top national and international institutions, entrance tests, scholarships, and government financial aid. Alongside education, job opportunities are fully accessible here. Information about central and state government job notifications, private sector opportunities, and employment prospects is available. Details about competitive exams, question paper formats, and interview processes are also provided. Relevant books and study materials are accessible to students and job seekers. Career guidance supplements from various Telugu newspapers are available at the click of a button on computer screens. Additionally, tools to assess IQ levels are provided, helping students understand their capabilities and pursue suitable fields for higher education and careers. These services and facilities are offered free of charge. In this spirit, the Talakokkula Ellayya Gari Raju Foundation (TYR Foundation) has pioneered a novel initiative—the TYR Foundation Library and Knowledge Center, a hub providing comprehensive, free career guidance to students and job seekers. Just as Hollywood studios are renowned for turning scripts into finished films, TYR Foundation Library and Knowledge Center assures today’s students and job seekers: with determination to succeed in your career, your future is secure.</p>
   </div>
-  <div id="overview" class="tab-content" role="tabpanel">
+  <div id="overview" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="Overview" data-te="అవలోకనం">Overview</h2>
     <p>TY Raju Foundation is dedicated to providing comprehensive educational resources for students in Telangana from kindergarten to postgraduate levels. Our mission is to support free education and make quality educational opportunities accessible to all.</p>
   </div>
-
-  <div id="kgv" class="tab-content" role="tabpanel">
+  <div id="kgv" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="🏫 KG–V Schools in Telangana" data-te="🏫 కెజి–ఐదు పాఠశాలలు">🏫 KG–V Schools in Telangana</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Department</a></div>
@@ -162,8 +174,7 @@
       <div class="link-card"><a href="https://www.education.gov.in/nep-state/telangana" target="_blank" rel="noopener noreferrer">NEP Implementation</a></div>
     </div>
   </div>
-
-  <div id="vix" class="tab-content" role="tabpanel">
+  <div id="vix" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="🎒 VI–X Schools in Telangana" data-te="🎒 ఆరు–పది పాఠశాలలు">🎒 VI–X Schools in Telangana</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Dept</a></div>
@@ -176,8 +187,7 @@
       <div class="link-card"><a href="https://manabadi.co.in/" target="_blank" rel="noopener noreferrer">Manabadi Results</a></div>
     </div>
   </div>
-
-  <div id="intermediate" class="tab-content" role="tabpanel">
+  <div id="intermediate" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="🎓 Intermediate Colleges" data-te="🎓 ఇంటర్మీడియట్ కళాశాలలు">🎓 Intermediate Colleges</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://tsbie.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TSBIE Official</a></div>
@@ -190,8 +200,7 @@
       <div class="link-card"><a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer">TS ePASS</a></div>
     </div>
   </div>
-
-  <div id="universities" class="tab-content" role="tabpanel">
+  <div id="universities" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="🏛️ Universities" data-te="🏛️ విశ్వవిద్యాలయాలు">🏛️ Universities</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://www.osmania.ac.in/" target="_blank" rel="noopener noreferrer">Osmania University</a></div>
@@ -206,8 +215,7 @@
       <div class="link-card"><a href="https://www.braou.ac.in/" target="_blank" rel="noopener noreferrer">BR Ambedkar Open University</a></div>
     </div>
   </div>
-
-  <div id="scholarships" class="tab-content" role="tabpanel">
+  <div id="scholarships" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="💰 Scholarships" data-te="💰 ఉపకారవేతనాలు">💰 Scholarships</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">National Scholarship Portal</a></div>
@@ -220,8 +228,7 @@
       <div class="link-card"><a href="https://www.education.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Education</a></div>
     </div>
   </div>
-
-  <div id="library" class="tab-content" role="tabpanel">
+  <div id="library" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="📚 Library Resources" data-te="📚 లైబ్రరీ వనరులు">📚 Library Resources</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">National Digital Library</a></div>
@@ -234,8 +241,7 @@
       <div class="link-card"><a href="https://egranthalaya.nic.in/" target="_blank" rel="noopener noreferrer">eGranthalaya</a></div>
     </div>
   </div>
-
-  <div id="admissions" class="tab-content" role="tabpanel">
+  <div id="admissions" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="📝 Admissions & Entrance Exams" data-te="📝 ప్రవేశాలు & ప్రవేశ పరీక్షలు">📝 Admissions & Entrance Exams</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://tgeapcet.nic.in/" target="_blank" rel="noopener noreferrer">TS EAMCET</a></div>
@@ -248,8 +254,7 @@
       <div class="link-card"><a href="https://tgche.ac.in/" target="_blank" rel="noopener noreferrer">TGCHE</a></div>
     </div>
   </div>
-
-  <div id="gurukulas" class="tab-content" role="tabpanel">
+  <div id="gurukulas" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="🏡 Gurukula Schools" data-te="🏡 గురుకుల పాఠశాలలు">🏡 Gurukula Schools</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://tgtwgurukulam.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Tribal Welfare Gurukulas</a></div>
@@ -262,8 +267,7 @@
       <div class="link-card"><a href="https://admissions.cgg.gov.in/" target="_blank" rel="noopener noreferrer">Admissions Portal</a></div>
     </div>
   </div>
-
-  <div id="sainik" class="tab-content" role="tabpanel">
+  <div id="sainik" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="⚔️ Sainik Schools" data-te="⚔️ సైనిక్ పాఠశాలలు">⚔️ Sainik Schools</h2>
     <div class="link-grid">
       <div class="link-card"><a href="https://www.sainikschooladmission.in/" target="_blank" rel="noopener noreferrer">Sainik School Admission Portal</a></div>
@@ -276,21 +280,20 @@
       <div class="link-card"><a href="https://www.education.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Education</a></div>
     </div>
   </div>
-
-  <div id="gallery" class="tab-content" role="tabpanel">
+  <div id="gallery" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="Gallery" data-te="గ్యాలరీ">Gallery</h2>
-    <div style="margin-bottom: 1rem;">
+    <div>
       <label for="fileInput">Upload Images or Videos (max 5MB each)</label><br>
       <input type="file" id="fileInput" multiple accept="image/*,video/*" style="margin: 0.5rem 0;" />
       <button onclick="clearGallery()" style="background: #dc3545; color: white; border: none; padding: 0.5rem 1rem; margin-left: 1rem; cursor: pointer; border-radius: 4px;">Clear All</button>
     </div>
     <div id="galleryContainer" class="gallery-container"></div>
-    <div style="margin-top: 1rem; font-size: 12px; color: #666;">
+    <div class="storage-info">
+      <p><strong>Storage:</strong> <span id="storageUsage">Calculating...</span></p>
       <p><strong>Note:</strong> Photos and videos are stored locally in your browser. They will persist between sessions but may be cleared if you clear your browser data.</p>
     </div>
   </div>
-
-  <div id="tyrflibrary" class="tab-content" role="tabpanel">
+  <div id="tyrflibrary" class="tab-content" role="tabpanel" tabindex="-1">
     <h2 data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</h2>
     <p>Access our comprehensive digital library resources for students and educators.</p>
     <div class="link-grid">
@@ -301,7 +304,6 @@
       <div class="link-card"><a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a></div>
     </div>
   </div>
-
   <script>
     // Tab switching logic
     function openTab(tabId, clickedButton) {
@@ -313,7 +315,7 @@
       const selectedTab = document.getElementById(tabId);
       if (selectedTab) {
         selectedTab.classList.add('active');
-        selectedTab.querySelector('h2')?.focus();
+        selectedTab.focus();
       }
       if (clickedButton) {
         clickedButton.classList.add('active');
@@ -331,6 +333,7 @@
       document.querySelectorAll('[data-en]').forEach(elem => {
         elem.textContent = isTelugu ? elem.dataset.te : elem.dataset.en;
       });
+      document.documentElement.lang = isTelugu ? 'te' : 'en';
     }
 
     // Save and load editable home content
@@ -338,7 +341,8 @@
       try {
         localStorage.setItem('tyrfHomeContent', element.innerHTML);
       } catch (error) {
-        console.log('Unable to save home content:', error);
+        console.error('Unable to save home content:', error);
+        alert('Failed to save content. Storage may be full or unavailable.');
       }
     }
 
@@ -349,13 +353,23 @@
           document.querySelector('.editable').innerHTML = savedContent;
         }
       } catch (error) {
-        console.log('Unable to load home content:', error);
+        console.error('Unable to load home content:', error);
       }
     }
 
     // Gallery storage and management
     let galleryItems = [];
     const MAX_STORAGE_SIZE = 5 * 1024 * 1024; // 5MB total storage limit
+
+    function updateStorageUsage() {
+      try {
+        const totalSize = JSON.stringify(galleryItems).length * 2; // UTF-16 encoding
+        const percentage = ((totalSize / MAX_STORAGE_SIZE) * 100).toFixed(2);
+        document.getElementById('storageUsage').textContent = `${(totalSize / 1024).toFixed(2)} KB of ${(MAX_STORAGE_SIZE / 1024).toFixed(2)} KB used (${percentage}%)`;
+      } catch (error) {
+        document.getElementById('storageUsage').textContent = 'Storage unavailable';
+      }
+    }
 
     function loadGalleryFromStorage() {
       try {
@@ -365,22 +379,25 @@
           refreshGallery();
         }
       } catch (error) {
-        console.log('LocalStorage not available:', error);
+        console.error('LocalStorage not available:', error);
         galleryItems = [];
       }
+      updateStorageUsage();
     }
 
     function saveGalleryToStorage() {
       try {
-        const totalSize = JSON.stringify(galleryItems).length;
+        const totalSize = JSON.stringify(galleryItems).length * 2; // UTF-16 encoding
         if (totalSize > MAX_STORAGE_SIZE) {
           alert('Storage limit exceeded. Please remove some items before adding more.');
           return false;
         }
         localStorage.setItem('tyrfGallery', JSON.stringify(galleryItems));
+        updateStorageUsage();
         return true;
       } catch (error) {
-        console.log('LocalStorage not available:', error);
+        console.error('LocalStorage not available:', error);
+        alert('Failed to save gallery. Storage may be full or unavailable.');
         return false;
       }
     }
@@ -392,6 +409,7 @@
       
       const media = type.startsWith('video') ? document.createElement('video') : document.createElement('img');
       media.src = data;
+      media.loading = 'lazy';
       if (media.tagName === 'VIDEO') media.controls = true;
       
       const nameLabel = document.createElement('p');
@@ -427,6 +445,7 @@
       galleryItems.forEach((item, index) => {
         displayGalleryItem(item.data, item.type, item.name, index, item.size, item.dateAdded);
       });
+      updateStorageUsage();
     }
 
     function clearGallery() {
