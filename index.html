@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  #contact-form input, #contact-form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+#contact-form button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TY Raju Foundation supports free education in Telangana from KG to PG, offering resources for scholarships, admissions, and more.">
@@ -152,6 +172,7 @@
     <button onclick="openTab('sainik', this)" role="tab" aria-controls="sainik" data-en="Sainik Schools" data-te="సైనిక్ పాఠశాలలు">Sainik Schools</button>
     <button onclick="openTab('gallery', this)" role="tab" aria-controls="gallery" data-en="Gallery" data-te="గ్యాలరీ">Gallery</button>
     <button onclick="openTab('tyrflibrary', this)" role="tab" aria-controls="tyrflibrary" data-en="TYRFLibrary" data-te="టివైఆర్‌ఎఫ్ లైబ్రరీ">TYRFLibrary</button>
+    <button onclick="openTab('contactus')">Contact Us</button>
   </nav>
   <div id="home" class="tab-content active" role="tabpanel" tabindex="-1">
     <h2 data-en="Welcome to TY Raju Foundation" data-te="టివై రాజు ఫౌండేషన్‌కు స్వాగతం">Welcome to TY Raju Foundation</h2>
@@ -286,6 +307,7 @@
       <label for="fileInput">Upload Images or Videos (max 5MB each)</label><br>
       <input type="file" id="fileInput" multiple accept="image/*,video/*" style="margin: 0.5rem 0;" />
       <button onclick="clearGallery()" style="background: #dc3545; color: white; border: none; padding: 0.5rem 1rem; margin-left: 1rem; cursor: pointer; border-radius: 4px;">Clear All</button>
+    <button onclick="openTab('contactus')">Contact Us</button>
     </div>
     <div id="galleryContainer" class="gallery-container"></div>
     <div class="storage-info">
@@ -491,5 +513,6 @@
       loadHomeContent();
     });
   </script>
+
 </body>
 </html>
